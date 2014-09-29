@@ -1,0 +1,14 @@
+@(carForm: Form[Car])
+@import helper._
+@implicitField = @{FieldConstructor(views.html.template.myInputConstructor.f) }
+@main("ebeanDEMO") {
+    <div class="container">
+        <h1 class="page-header">汽车录入</h1>
+        <div>
+                @form(action = routes.EbeanDemo.saveCar(),'class->"form-horizontal",'role->"form",'method->"post"){
+                    <p>品牌：<input name="name"></p>
+                    <input type="submit" class="btn btn-default" value="保存">
+                }
+        </div>
+    </div>
+}

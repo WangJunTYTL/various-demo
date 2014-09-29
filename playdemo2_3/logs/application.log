@@ -1,0 +1,771 @@
+2014-09-20 00:01:07,636 - [INFO] - from play in pool-6-thread-3 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2014-09-20 00:04:58,536 - [DEBUG] - from Global in play-internal-execution-context-1 
+beforeStart...
+
+2014-09-20 00:04:58,851 - [DEBUG] - from com.jolbox.bonecp.BoneCPDataSource in play-internal-execution-context-1 
+JDBC URL = jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8, Username = root, partitions = 1, max (per partition) = 30, min (per partition) = 5, idle max age = 10 min, idle test period = 1 min, strategy = DEFAULT
+
+2014-09-20 00:04:59,124 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8
+
+2014-09-20 00:04:59,183 - [DEBUG] - from org.reflections.Reflections in play-internal-execution-context-1 
+going to scan these urls:
+	jar:file:/Users/wangjun/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.3.1.jar!/
+	file:/Users/wangjun/ideaWorkSpace/myapp/playdemo2_3/target/scala-2.11/classes/
+
+
+2014-09-20 00:04:59,239 - [INFO] - from org.reflections.Reflections in play-internal-execution-context-1 
+Reflections took 55 ms to scan 2 urls, producing 10 keys and 19 values 
+
+2014-09-20 00:04:59,285 - [INFO] - from com.avaje.ebeaninternal.server.core.DefaultServerFactory in play-internal-execution-context-1 
+DatabasePlatform name:default platform:mysql
+
+2014-09-20 00:04:59,324 - [DEBUG] - from com.avaje.ebeaninternal.api.ClassLoadContext in play-internal-execution-context-1 
+Context ClassLoader play.PlayRun$$anonfun$11$$anon$2 child of Caller ClassLoader play.PlayRun$$anonfun$10$$anon$1
+
+2014-09-20 00:04:59,332 - [DEBUG] - from com.avaje.ebeaninternal.server.type.DefaultTypeManager in play-internal-execution-context-1 
+Registering Joda data types
+
+2014-09-20 00:04:59,351 - [INFO] - from com.avaje.ebeaninternal.server.resource.ResourceManagerFactory in play-internal-execution-context-1 
+ResourceManager initialised: type[file] [/Users/wangjun/ideaWorkSpace/myapp/playdemo2_3/war/WEB-INF]
+
+2014-09-20 00:04:59,384 - [DEBUG] - from com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager in play-internal-execution-context-1 
+BeanPersistControllers[0] BeanFinders[0] BeanPersistListeners[0] BeanQueryAdapters[0]
+
+2014-09-20 00:04:59,435 - [WARN] - from com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager in play-internal-execution-context-1 
+Bean [models.Publish] has no unique id set
+
+2014-09-20 00:04:59,465 - [INFO] - from com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager in play-internal-execution-context-1 
+Entities enhanced[4]
+
+2014-09-20 00:04:59,536 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ObjectName = JMImplementation:type=MBeanServerDelegate
+
+2014-09-20 00:04:59,536 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+name = JMImplementation:type=MBeanServerDelegate
+
+2014-09-20 00:04:59,537 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+Send create notification of object JMImplementation:type=MBeanServerDelegate
+
+2014-09-20 00:04:59,538 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+JMX.mbean.registered JMImplementation:type=MBeanServerDelegate
+
+2014-09-20 00:04:59,544 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ObjectName = Ebean:server=default2,key=AutoFetch
+
+2014-09-20 00:04:59,544 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+name = Ebean:server=default2,key=AutoFetch
+
+2014-09-20 00:04:59,545 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+Send create notification of object Ebean:key=AutoFetch,server=default2
+
+2014-09-20 00:04:59,545 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+JMX.mbean.registered Ebean:server=default2,key=AutoFetch
+
+2014-09-20 00:04:59,546 - [DEBUG] - from com.avaje.ebean.Ebean in play-internal-execution-context-1 
+GlobalProperties.isSkipPrimaryServer()
+
+2014-09-20 00:04:59,567 - [DEBUG] - from net.sf.ehcache.config.ConfigurationFactory in play-internal-execution-context-1 
+Configuring ehcache from URL: jar:file:/Users/wangjun/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.3.1.jar!/ehcache-default.xml
+
+2014-09-20 00:04:59,569 - [DEBUG] - from net.sf.ehcache.config.ConfigurationFactory in play-internal-execution-context-1 
+Configuring ehcache from InputStream
+
+2014-09-20 00:04:59,599 - [DEBUG] - from net.sf.ehcache.config.BeanHandler in play-internal-execution-context-1 
+Ignoring ehcache attribute xmlns:xsi
+
+2014-09-20 00:04:59,599 - [DEBUG] - from net.sf.ehcache.config.BeanHandler in play-internal-execution-context-1 
+Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+
+2014-09-20 00:04:59,615 - [DEBUG] - from net.sf.ehcache.CacheManager in play-internal-execution-context-1 
+Creating new CacheManager with config URL: jar:file:/Users/wangjun/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.3.1.jar!/ehcache-default.xml
+
+2014-09-20 00:04:59,623 - [DEBUG] - from net.sf.ehcache.util.PropertyUtil in play-internal-execution-context-1 
+propertiesString is null.
+
+2014-09-20 00:04:59,639 - [DEBUG] - from net.sf.ehcache.config.ConfigurationHelper in play-internal-execution-context-1 
+No CacheManagerEventListenerFactory class specified. Skipping...
+
+2014-09-20 00:04:59,661 - [DEBUG] - from net.sf.ehcache.Cache in play-internal-execution-context-1 
+No BootstrapCacheLoaderFactory class specified. Skipping...
+
+2014-09-20 00:04:59,661 - [DEBUG] - from net.sf.ehcache.Cache in play-internal-execution-context-1 
+CacheWriter factory not configured. Skipping...
+
+2014-09-20 00:04:59,663 - [DEBUG] - from net.sf.ehcache.config.ConfigurationHelper in play-internal-execution-context-1 
+No CacheExceptionHandlerFactory class specified. Skipping...
+
+2014-09-20 00:04:59,691 - [DEBUG] - from net.sf.ehcache.store.MemoryStore in play-internal-execution-context-1 
+Initialized net.sf.ehcache.store.NotifyingMemoryStore for play
+
+2014-09-20 00:04:59,698 - [DEBUG] - from net.sf.ehcache.Cache in play-internal-execution-context-1 
+Initialised cache: play
+
+2014-09-20 00:04:59,698 - [DEBUG] - from net.sf.ehcache.config.ConfigurationHelper in play-internal-execution-context-1 
+CacheDecoratorFactory not configured for defaultCache. Skipping for 'play'.
+
+2014-09-20 00:04:59,699 - [DEBUG] - from Global in play-internal-execution-context-1 
+onStart...
+
+2014-09-20 00:04:59,949 - [INFO] - from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 
+Slf4jLogger started
+
+2014-09-20 00:04:59,958 - [DEBUG] - from akka.event.EventStream in application-akka.actor.default-dispatcher-2 
+logger log1-Slf4jLogger started
+
+2014-09-20 00:04:59,960 - [DEBUG] - from akka.event.EventStream in application-akka.actor.default-dispatcher-2 
+Default Loggers started
+
+2014-09-20 00:04:59,963 - [INFO] - from play in play-internal-execution-context-1 
+Starting application default Akka system.
+
+2014-09-20 00:04:59,968 - [INFO] - from actor.MyThread in application-akka.actor.default-dispatcher-4 
+MyThread start ...
+
+2014-09-20 00:04:59,971 - [INFO] - from actor.MyActor in application-akka.actor.default-dispatcher-4 
+计划任务开始...
+
+2014-09-20 00:04:59,972 - [INFO] - from actor.Scheduling in application-akka.actor.default-dispatcher-2 
+计划任务结束
+
+2014-09-20 00:04:59,973 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2014-09-20 00:04:59,986 - [DEBUG] - from Global in New I/O worker #1 
+onRouteRequest...
+
+2014-09-20 00:05:00,037 - [DEBUG] - from Global in New I/O worker #1 
+filters...
+
+2014-09-20 00:05:00,058 - [INFO] - from akka.event.slf4j.Slf4jLogger in play-akka.actor.default-dispatcher-3 
+Slf4jLogger started
+
+2014-09-20 00:05:00,148 - [DEBUG] - from Global in play-akka.actor.default-dispatcher-2 
+onRequest...
+
+2014-09-20 00:05:01,062 - [DEBUG] - from Global in play-internal-execution-context-1 
+onStop...
+
+2014-09-20 00:05:01,062 - [INFO] - from play in play-internal-execution-context-1 
+Shutdown application default Akka system.
+
+2014-09-20 00:05:01,073 - [DEBUG] - from akka.event.EventStream in application-akka.actor.default-dispatcher-2 
+shutting down: StandardOutLogger started
+
+2014-09-20 00:05:01,086 - [INFO] - from actor.MyThread in application-akka.actor.default-dispatcher-4 
+MyThread start ...
+
+2014-09-20 00:05:01,092 - [INFO] - from com.jolbox.bonecp.BoneCP in play-internal-execution-context-1 
+Shutting down connection pool...
+
+2014-09-20 00:05:01,093 - [DEBUG] - from com.jolbox.bonecp.PoolWatchThread in BoneCP-pool-watch-thread 
+Terminating pool watch thread
+
+2014-09-20 00:05:01,094 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ObjectName = JMImplementation:type=MBeanServerDelegate
+
+2014-09-20 00:05:01,094 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+name = JMImplementation:type=MBeanServerDelegate
+
+2014-09-20 00:05:01,095 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+Send create notification of object JMImplementation:type=MBeanServerDelegate
+
+2014-09-20 00:05:01,095 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+JMX.mbean.registered JMImplementation:type=MBeanServerDelegate
+
+2014-09-20 00:05:01,103 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ name = java.lang:type=ClassLoading
+
+2014-09-20 00:05:01,117 - [DEBUG] - from javax.management.misc in play-internal-execution-context-1 
+Building MBeanInfo for sun.management.ClassLoadingImpl
+
+2014-09-20 00:05:01,117 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ObjectName = java.lang:type=ClassLoading
+
+2014-09-20 00:05:01,118 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+name = java.lang:type=ClassLoading
+
+2014-09-20 00:05:01,118 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+Send create notification of object java.lang:type=ClassLoading
+
+2014-09-20 00:05:01,118 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+JMX.mbean.registered java.lang:type=ClassLoading
+
+2014-09-20 00:05:01,118 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ name = java.lang:type=Compilation
+
+2014-09-20 00:05:01,119 - [DEBUG] - from javax.management.misc in play-internal-execution-context-1 
+Building MBeanInfo for sun.management.CompilationImpl
+
+2014-09-20 00:05:01,119 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ObjectName = java.lang:type=Compilation
+
+2014-09-20 00:05:01,119 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+name = java.lang:type=Compilation
+
+2014-09-20 00:05:01,119 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+Send create notification of object java.lang:type=Compilation
+
+2014-09-20 00:05:01,119 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+JMX.mbean.registered java.lang:type=Compilation
+
+2014-09-20 00:05:01,121 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ name = java.lang:type=Memory
+
+2014-09-20 00:05:01,125 - [DEBUG] - from javax.management.misc in play-internal-execution-context-1 
+Building MBeanInfo for sun.management.MemoryImpl
+
+2014-09-20 00:05:01,125 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ObjectName = java.lang:type=Memory
+
+2014-09-20 00:05:01,125 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+name = java.lang:type=Memory
+
+2014-09-20 00:05:01,125 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+Send create notification of object java.lang:type=Memory
+
+2014-09-20 00:05:01,126 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+JMX.mbean.registered java.lang:type=Memory
+
+2014-09-20 00:05:01,128 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ name = java.lang:type=GarbageCollector,name=PS Scavenge
+
+2014-09-20 00:05:01,131 - [DEBUG] - from javax.management.misc in play-internal-execution-context-1 
+Building MBeanInfo for sun.management.GarbageCollectorImpl
+
+2014-09-20 00:05:01,131 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ObjectName = java.lang:type=GarbageCollector,name=PS Scavenge
+
+2014-09-20 00:05:01,131 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+name = java.lang:type=GarbageCollector,name=PS Scavenge
+
+2014-09-20 00:05:01,131 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+Send create notification of object java.lang:name=PS Scavenge,type=GarbageCollector
+
+2014-09-20 00:05:01,131 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+JMX.mbean.registered java.lang:type=GarbageCollector,name=PS Scavenge
+
+2014-09-20 00:05:01,131 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ name = java.lang:type=GarbageCollector,name=PS MarkSweep
+
+2014-09-20 00:05:01,131 - [DEBUG] - from javax.management.misc in play-internal-execution-context-1 
+Building MBeanInfo for sun.management.GarbageCollectorImpl
+
+2014-09-20 00:05:01,131 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ObjectName = java.lang:type=GarbageCollector,name=PS MarkSweep
+
+2014-09-20 00:05:01,132 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+name = java.lang:type=GarbageCollector,name=PS MarkSweep
+
+2014-09-20 00:05:01,132 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+Send create notification of object java.lang:name=PS MarkSweep,type=GarbageCollector
+
+2014-09-20 00:05:01,132 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+JMX.mbean.registered java.lang:type=GarbageCollector,name=PS MarkSweep
+
+2014-09-20 00:05:01,132 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ name = java.lang:type=MemoryManager,name=CodeCacheManager
+
+2014-09-20 00:05:01,132 - [DEBUG] - from javax.management.misc in play-internal-execution-context-1 
+Building MBeanInfo for sun.management.MemoryManagerImpl
+
+2014-09-20 00:05:01,132 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ObjectName = java.lang:type=MemoryManager,name=CodeCacheManager
+
+2014-09-20 00:05:01,133 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+name = java.lang:type=MemoryManager,name=CodeCacheManager
+
+2014-09-20 00:05:01,133 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+Send create notification of object java.lang:name=CodeCacheManager,type=MemoryManager
+
+2014-09-20 00:05:01,133 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+JMX.mbean.registered java.lang:type=MemoryManager,name=CodeCacheManager
+
+2014-09-20 00:05:01,133 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ name = java.lang:type=GarbageCollector,name=PS Scavenge
+
+2014-09-20 00:05:01,133 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ name = java.lang:type=GarbageCollector,name=PS MarkSweep
+
+2014-09-20 00:05:01,135 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ name = java.lang:type=MemoryPool,name=Code Cache
+
+2014-09-20 00:05:01,136 - [DEBUG] - from javax.management.misc in play-internal-execution-context-1 
+Building MBeanInfo for sun.management.MemoryPoolImpl
+
+2014-09-20 00:05:01,136 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ObjectName = java.lang:type=MemoryPool,name=Code Cache
+
+2014-09-20 00:05:01,136 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+name = java.lang:type=MemoryPool,name=Code Cache
+
+2014-09-20 00:05:01,136 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+Send create notification of object java.lang:name=Code Cache,type=MemoryPool
+
+2014-09-20 00:05:01,136 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+JMX.mbean.registered java.lang:type=MemoryPool,name=Code Cache
+
+2014-09-20 00:05:01,137 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ name = java.lang:type=MemoryPool,name=PS Eden Space
+
+2014-09-20 00:05:01,137 - [DEBUG] - from javax.management.misc in play-internal-execution-context-1 
+Building MBeanInfo for sun.management.MemoryPoolImpl
+
+2014-09-20 00:05:01,137 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ObjectName = java.lang:type=MemoryPool,name=PS Eden Space
+
+2014-09-20 00:05:01,137 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+name = java.lang:type=MemoryPool,name=PS Eden Space
+
+2014-09-20 00:05:01,137 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+Send create notification of object java.lang:name=PS Eden Space,type=MemoryPool
+
+2014-09-20 00:05:01,137 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+JMX.mbean.registered java.lang:type=MemoryPool,name=PS Eden Space
+
+2014-09-20 00:05:01,137 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ name = java.lang:type=MemoryPool,name=PS Survivor Space
+
+2014-09-20 00:05:01,137 - [DEBUG] - from javax.management.misc in play-internal-execution-context-1 
+Building MBeanInfo for sun.management.MemoryPoolImpl
+
+2014-09-20 00:05:01,137 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ObjectName = java.lang:type=MemoryPool,name=PS Survivor Space
+
+2014-09-20 00:05:01,137 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+name = java.lang:type=MemoryPool,name=PS Survivor Space
+
+2014-09-20 00:05:01,137 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+Send create notification of object java.lang:name=PS Survivor Space,type=MemoryPool
+
+2014-09-20 00:05:01,138 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+JMX.mbean.registered java.lang:type=MemoryPool,name=PS Survivor Space
+
+2014-09-20 00:05:01,138 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ name = java.lang:type=MemoryPool,name=PS Old Gen
+
+2014-09-20 00:05:01,138 - [DEBUG] - from javax.management.misc in play-internal-execution-context-1 
+Building MBeanInfo for sun.management.MemoryPoolImpl
+
+2014-09-20 00:05:01,138 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ObjectName = java.lang:type=MemoryPool,name=PS Old Gen
+
+2014-09-20 00:05:01,138 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+name = java.lang:type=MemoryPool,name=PS Old Gen
+
+2014-09-20 00:05:01,138 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+Send create notification of object java.lang:name=PS Old Gen,type=MemoryPool
+
+2014-09-20 00:05:01,138 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+JMX.mbean.registered java.lang:type=MemoryPool,name=PS Old Gen
+
+2014-09-20 00:05:01,138 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ name = java.lang:type=MemoryPool,name=PS Perm Gen
+
+2014-09-20 00:05:01,138 - [DEBUG] - from javax.management.misc in play-internal-execution-context-1 
+Building MBeanInfo for sun.management.MemoryPoolImpl
+
+2014-09-20 00:05:01,138 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ObjectName = java.lang:type=MemoryPool,name=PS Perm Gen
+
+2014-09-20 00:05:01,138 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+name = java.lang:type=MemoryPool,name=PS Perm Gen
+
+2014-09-20 00:05:01,138 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+Send create notification of object java.lang:name=PS Perm Gen,type=MemoryPool
+
+2014-09-20 00:05:01,138 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+JMX.mbean.registered java.lang:type=MemoryPool,name=PS Perm Gen
+
+2014-09-20 00:05:01,140 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ name = java.lang:type=OperatingSystem
+
+2014-09-20 00:05:01,140 - [DEBUG] - from javax.management.misc in play-internal-execution-context-1 
+Building MBeanInfo for com.sun.management.UnixOperatingSystem
+
+2014-09-20 00:05:01,140 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ObjectName = java.lang:type=OperatingSystem
+
+2014-09-20 00:05:01,141 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+name = java.lang:type=OperatingSystem
+
+2014-09-20 00:05:01,141 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+Send create notification of object java.lang:type=OperatingSystem
+
+2014-09-20 00:05:01,141 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+JMX.mbean.registered java.lang:type=OperatingSystem
+
+2014-09-20 00:05:01,141 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ name = java.lang:type=Runtime
+
+2014-09-20 00:05:01,143 - [DEBUG] - from javax.management.misc in play-internal-execution-context-1 
+Building MBeanInfo for sun.management.RuntimeImpl
+
+2014-09-20 00:05:01,143 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ObjectName = java.lang:type=Runtime
+
+2014-09-20 00:05:01,143 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+name = java.lang:type=Runtime
+
+2014-09-20 00:05:01,143 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+Send create notification of object java.lang:type=Runtime
+
+2014-09-20 00:05:01,143 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+JMX.mbean.registered java.lang:type=Runtime
+
+2014-09-20 00:05:01,145 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ name = java.lang:type=Threading
+
+2014-09-20 00:05:01,149 - [DEBUG] - from javax.management.misc in play-internal-execution-context-1 
+Building MBeanInfo for sun.management.ThreadImpl
+
+2014-09-20 00:05:01,149 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ObjectName = java.lang:type=Threading
+
+2014-09-20 00:05:01,149 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+name = java.lang:type=Threading
+
+2014-09-20 00:05:01,149 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+Send create notification of object java.lang:type=Threading
+
+2014-09-20 00:05:01,149 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+JMX.mbean.registered java.lang:type=Threading
+
+2014-09-20 00:05:01,149 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ name = java.util.logging:type=Logging
+
+2014-09-20 00:05:01,151 - [DEBUG] - from javax.management.misc in play-internal-execution-context-1 
+Building MBeanInfo for sun.management.ManagementFactoryHelper$PlatformLoggingImpl
+
+2014-09-20 00:05:01,151 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ObjectName = java.util.logging:type=Logging
+
+2014-09-20 00:05:01,152 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+name = java.util.logging:type=Logging
+
+2014-09-20 00:05:01,152 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+Send create notification of object java.util.logging:type=Logging
+
+2014-09-20 00:05:01,152 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+JMX.mbean.registered java.util.logging:type=Logging
+
+2014-09-20 00:05:01,152 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ name = java.nio:type=BufferPool,name=direct
+
+2014-09-20 00:05:01,153 - [DEBUG] - from javax.management.misc in play-internal-execution-context-1 
+Building MBeanInfo for sun.management.ManagementFactoryHelper$1
+
+2014-09-20 00:05:01,153 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ObjectName = java.nio:type=BufferPool,name=direct
+
+2014-09-20 00:05:01,153 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+name = java.nio:type=BufferPool,name=direct
+
+2014-09-20 00:05:01,153 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+Send create notification of object java.nio:name=direct,type=BufferPool
+
+2014-09-20 00:05:01,153 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+JMX.mbean.registered java.nio:type=BufferPool,name=direct
+
+2014-09-20 00:05:01,153 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ name = java.nio:type=BufferPool,name=mapped
+
+2014-09-20 00:05:01,153 - [DEBUG] - from javax.management.misc in play-internal-execution-context-1 
+Building MBeanInfo for sun.management.ManagementFactoryHelper$1
+
+2014-09-20 00:05:01,154 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ObjectName = java.nio:type=BufferPool,name=mapped
+
+2014-09-20 00:05:01,154 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+name = java.nio:type=BufferPool,name=mapped
+
+2014-09-20 00:05:01,154 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+Send create notification of object java.nio:name=mapped,type=BufferPool
+
+2014-09-20 00:05:01,154 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+JMX.mbean.registered java.nio:type=BufferPool,name=mapped
+
+2014-09-20 00:05:01,154 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ name = java.lang:type=GarbageCollector,name=PS Scavenge
+
+2014-09-20 00:05:01,154 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ name = java.lang:type=GarbageCollector,name=PS MarkSweep
+
+2014-09-20 00:05:01,154 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ name = java.lang:type=OperatingSystem
+
+2014-09-20 00:05:01,154 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ name = java.lang:type=OperatingSystem
+
+2014-09-20 00:05:01,155 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ name = com.sun.management:type=HotSpotDiagnostic
+
+2014-09-20 00:05:01,156 - [DEBUG] - from javax.management.misc in play-internal-execution-context-1 
+Building MBeanInfo for sun.management.HotSpotDiagnostic
+
+2014-09-20 00:05:01,156 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ObjectName = com.sun.management:type=HotSpotDiagnostic
+
+2014-09-20 00:05:01,157 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+name = com.sun.management:type=HotSpotDiagnostic
+
+2014-09-20 00:05:01,157 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+Send create notification of object com.sun.management:type=HotSpotDiagnostic
+
+2014-09-20 00:05:01,157 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+JMX.mbean.registered com.sun.management:type=HotSpotDiagnostic
+
+2014-09-20 00:05:01,157 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ name = com.jolbox.bonecp:type=BoneCP
+
+2014-09-20 00:05:01,157 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ name = com.jolbox.bonecp:type=BoneCPConfig
+
+2014-09-20 00:05:01,157 - [INFO] - from com.jolbox.bonecp.BoneCP in play-internal-execution-context-1 
+Connection pool has been shutdown.
+
+2014-09-20 00:05:01,157 - [DEBUG] - from com.jolbox.bonecp.BoneCPDataSource in play-internal-execution-context-1 
+Connection pool has been shut down
+
+2014-09-20 00:05:01,173 - [DEBUG] - from Global in play-internal-execution-context-1 
+onLoadConfig...
+
+2014-09-20 00:05:01,173 - [DEBUG] - from Global in play-internal-execution-context-1 
+onLoadConfig...
+
+2014-09-20 00:05:01,184 - [DEBUG] - from Global in play-internal-execution-context-1 
+beforeStart...
+
+2014-09-20 00:05:01,212 - [DEBUG] - from com.jolbox.bonecp.BoneCPDataSource in play-internal-execution-context-1 
+JDBC URL = jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8, Username = root, partitions = 1, max (per partition) = 30, min (per partition) = 5, idle max age = 10 min, idle test period = 1 min, strategy = DEFAULT
+
+2014-09-20 00:05:01,263 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8
+
+2014-09-20 00:05:01,264 - [DEBUG] - from org.reflections.Reflections in play-internal-execution-context-1 
+going to scan these urls:
+	jar:file:/Users/wangjun/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.3.1.jar!/
+	file:/Users/wangjun/ideaWorkSpace/myapp/playdemo2_3/target/scala-2.11/classes/
+
+
+2014-09-20 00:05:01,282 - [INFO] - from org.reflections.Reflections in play-internal-execution-context-1 
+Reflections took 18 ms to scan 2 urls, producing 10 keys and 19 values 
+
+2014-09-20 00:05:01,287 - [INFO] - from com.avaje.ebeaninternal.server.core.DefaultServerFactory in play-internal-execution-context-1 
+DatabasePlatform name:default platform:mysql
+
+2014-09-20 00:05:01,287 - [DEBUG] - from com.avaje.ebeaninternal.api.ClassLoadContext in play-internal-execution-context-1 
+Context ClassLoader play.PlayRun$$anonfun$11$$anon$2 child of Caller ClassLoader play.PlayRun$$anonfun$10$$anon$1
+
+2014-09-20 00:05:01,287 - [DEBUG] - from com.avaje.ebeaninternal.server.type.DefaultTypeManager in play-internal-execution-context-1 
+Registering Joda data types
+
+2014-09-20 00:05:01,291 - [INFO] - from com.avaje.ebeaninternal.server.resource.ResourceManagerFactory in play-internal-execution-context-1 
+ResourceManager initialised: type[file] [/Users/wangjun/ideaWorkSpace/myapp/playdemo2_3/war/WEB-INF]
+
+2014-09-20 00:05:01,292 - [DEBUG] - from com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager in play-internal-execution-context-1 
+BeanPersistControllers[0] BeanFinders[0] BeanPersistListeners[0] BeanQueryAdapters[0]
+
+2014-09-20 00:05:01,296 - [WARN] - from com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager in play-internal-execution-context-1 
+Bean [models.Publish] has no unique id set
+
+2014-09-20 00:05:01,298 - [INFO] - from com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager in play-internal-execution-context-1 
+Entities enhanced[4]
+
+2014-09-20 00:05:01,298 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+ObjectName = Ebean:server=default3,key=AutoFetch
+
+2014-09-20 00:05:01,298 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+name = Ebean:server=default3,key=AutoFetch
+
+2014-09-20 00:05:01,299 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+Send create notification of object Ebean:key=AutoFetch,server=default3
+
+2014-09-20 00:05:01,299 - [DEBUG] - from javax.management.mbeanserver in play-internal-execution-context-1 
+JMX.mbean.registered Ebean:server=default3,key=AutoFetch
+
+2014-09-20 00:05:01,299 - [WARN] - from com.avaje.ebean.Ebean in play-internal-execution-context-1 
+Existing EbeanServer [default] is being replaced?
+
+2014-09-20 00:05:01,299 - [DEBUG] - from net.sf.ehcache.config.ConfigurationFactory in play-internal-execution-context-1 
+Configuring ehcache from URL: jar:file:/Users/wangjun/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.3.1.jar!/ehcache-default.xml
+
+2014-09-20 00:05:01,299 - [DEBUG] - from net.sf.ehcache.config.ConfigurationFactory in play-internal-execution-context-1 
+Configuring ehcache from InputStream
+
+2014-09-20 00:05:01,301 - [DEBUG] - from net.sf.ehcache.config.BeanHandler in play-internal-execution-context-1 
+Ignoring ehcache attribute xmlns:xsi
+
+2014-09-20 00:05:01,301 - [DEBUG] - from net.sf.ehcache.config.BeanHandler in play-internal-execution-context-1 
+Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+
+2014-09-20 00:05:01,302 - [DEBUG] - from net.sf.ehcache.CacheManager in play-internal-execution-context-1 
+Creating new CacheManager with config URL: jar:file:/Users/wangjun/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.3.1.jar!/ehcache-default.xml
+
+2014-09-20 00:05:01,302 - [DEBUG] - from net.sf.ehcache.util.PropertyUtil in play-internal-execution-context-1 
+propertiesString is null.
+
+2014-09-20 00:05:01,302 - [DEBUG] - from net.sf.ehcache.config.ConfigurationHelper in play-internal-execution-context-1 
+No CacheManagerEventListenerFactory class specified. Skipping...
+
+2014-09-20 00:05:01,302 - [DEBUG] - from net.sf.ehcache.Cache in play-internal-execution-context-1 
+No BootstrapCacheLoaderFactory class specified. Skipping...
+
+2014-09-20 00:05:01,302 - [DEBUG] - from net.sf.ehcache.Cache in play-internal-execution-context-1 
+CacheWriter factory not configured. Skipping...
+
+2014-09-20 00:05:01,303 - [DEBUG] - from net.sf.ehcache.config.ConfigurationHelper in play-internal-execution-context-1 
+No CacheExceptionHandlerFactory class specified. Skipping...
+
+2014-09-20 00:05:01,303 - [DEBUG] - from net.sf.ehcache.store.MemoryStore in play-internal-execution-context-1 
+Initialized net.sf.ehcache.store.NotifyingMemoryStore for play
+
+2014-09-20 00:05:01,304 - [DEBUG] - from net.sf.ehcache.Cache in play-internal-execution-context-1 
+Initialised cache: play
+
+2014-09-20 00:05:01,304 - [DEBUG] - from net.sf.ehcache.config.ConfigurationHelper in play-internal-execution-context-1 
+CacheDecoratorFactory not configured for defaultCache. Skipping for 'play'.
+
+2014-09-20 00:05:01,304 - [DEBUG] - from Global in play-internal-execution-context-1 
+onStart...
+
+2014-09-20 00:05:01,312 - [INFO] - from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-5 
+Slf4jLogger started
+
+2014-09-20 00:05:01,313 - [DEBUG] - from akka.event.EventStream in application-akka.actor.default-dispatcher-5 
+logger log1-Slf4jLogger started
+
+2014-09-20 00:05:01,314 - [INFO] - from play in play-internal-execution-context-1 
+Starting application default Akka system.
+
+2014-09-20 00:05:01,314 - [DEBUG] - from akka.event.EventStream in application-akka.actor.default-dispatcher-5 
+Default Loggers started
+
+2014-09-20 00:05:01,315 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2014-09-20 00:05:01,315 - [INFO] - from actor.MyThread in application-akka.actor.default-dispatcher-5 
+MyThread start ...
+
+2014-09-20 00:05:01,315 - [DEBUG] - from Global in New I/O worker #2 
+onRouteRequest...
+
+2014-09-20 00:05:01,316 - [INFO] - from actor.MyActor in application-akka.actor.default-dispatcher-2 
+计划任务开始...
+
+2014-09-20 00:05:01,316 - [INFO] - from actor.Scheduling in application-akka.actor.default-dispatcher-4 
+计划任务结束
+
+2014-09-20 00:05:01,317 - [DEBUG] - from Global in New I/O worker #4 
+onRouteRequest...
+
+2014-09-20 00:05:01,317 - [DEBUG] - from Global in New I/O worker #3 
+onRouteRequest...
+
+2014-09-20 00:05:01,317 - [DEBUG] - from Global in New I/O worker #1 
+onRouteRequest...
+
+2014-09-20 00:05:01,323 - [DEBUG] - from Global in New I/O worker #2 
+filters...
+
+2014-09-20 00:05:01,324 - [DEBUG] - from Global in play-akka.actor.default-dispatcher-3 
+onRequest...
+
+2014-09-20 00:05:01,348 - [DEBUG] - from Global in New I/O worker #3 
+filters...
+
+2014-09-20 00:05:01,348 - [DEBUG] - from Global in New I/O worker #4 
+filters...
+
+2014-09-20 00:05:01,348 - [DEBUG] - from Global in New I/O worker #1 
+filters...
+
+2014-09-20 00:05:01,355 - [DEBUG] - from Global in New I/O worker #2 
+onRouteRequest...
+
+2014-09-20 00:05:01,355 - [DEBUG] - from Global in New I/O worker #2 
+filters...
+
+2014-09-20 00:05:01,356 - [DEBUG] - from Global in New I/O worker #5 
+onRouteRequest...
+
+2014-09-20 00:05:01,356 - [DEBUG] - from Global in New I/O worker #5 
+filters...
+
+2014-09-20 00:05:01,357 - [DEBUG] - from Global in New I/O worker #6 
+onRouteRequest...
+
+2014-09-20 00:05:01,357 - [DEBUG] - from Global in New I/O worker #6 
+filters...
+
+2014-09-20 00:05:03,319 - [INFO] - from actor.MyThread in application-akka.actor.default-dispatcher-5 
+MyThread start ...
+
+2014-09-20 00:05:03,319 - [INFO] - from actor.Scheduling in application-akka.actor.default-dispatcher-2 
+计划任务结束
+
+2014-09-20 00:05:03,320 - [INFO] - from actor.MyActor in application-akka.actor.default-dispatcher-4 
+计划任务开始...
+
+2014-09-20 00:05:05,330 - [INFO] - from actor.MyThread in application-akka.actor.default-dispatcher-2 
+MyThread start ...
+
+2014-09-20 00:05:05,330 - [INFO] - from actor.Scheduling in application-akka.actor.default-dispatcher-5 
+计划任务结束
+
+2014-09-20 00:05:05,330 - [INFO] - from actor.MyActor in application-akka.actor.default-dispatcher-4 
+计划任务开始...
+
+2014-09-20 00:05:07,140 - [DEBUG] - from Global in New I/O worker #7 
+onRouteRequest...
+
+2014-09-20 00:05:07,141 - [DEBUG] - from Global in New I/O worker #7 
+filters...
+
+2014-09-20 00:05:07,329 - [INFO] - from actor.MyThread in application-akka.actor.default-dispatcher-5 
+MyThread start ...
+
+2014-09-20 00:05:07,329 - [INFO] - from actor.Scheduling in application-akka.actor.default-dispatcher-2 
+计划任务结束
+
+2014-09-20 00:05:07,330 - [INFO] - from actor.MyActor in application-akka.actor.default-dispatcher-4 
+计划任务开始...
+
+2014-09-20 00:05:09,329 - [INFO] - from actor.MyThread in application-akka.actor.default-dispatcher-2 
+MyThread start ...
+
+2014-09-20 00:05:09,330 - [INFO] - from actor.Scheduling in application-akka.actor.default-dispatcher-5 
+计划任务结束
+
+2014-09-20 00:05:09,330 - [INFO] - from actor.MyActor in application-akka.actor.default-dispatcher-4 
+计划任务开始...
+
+2014-09-20 00:05:10,483 - [DEBUG] - from com.avaje.ebeaninternal.server.lib.ShutdownManager in Thread-11 
+Shutting down
+
+2014-09-20 00:05:10,484 - [DEBUG] - from com.avaje.ebeaninternal.server.core.DefaultServer in Thread-11 
+Shutting down EbeanServer default
+
+2014-09-20 00:05:10,484 - [DEBUG] - from com.avaje.ebeaninternal.server.core.TraditionalBackgroundExecutor in Thread-11 
+Shutting down
+
+2014-09-20 00:05:10,485 - [DEBUG] - from com.avaje.ebeaninternal.server.lib.thread.ThreadPool in Thread-11 
+ThreadPool [Ebean-default] Shutting down; threadCount[0] busyCount[0]
+
+2014-09-20 00:05:10,485 - [DEBUG] - from com.avaje.ebeaninternal.server.lib.DaemonScheduleThreadPool in Thread-11 
+DaemonScheduleThreadPool Ebean-default-periodic- shutting down...
+
+2014-09-20 00:05:10,485 - [DEBUG] - from com.avaje.ebeaninternal.server.core.DefaultServer in Thread-11 
+Shutting down EbeanServer default
+
+2014-09-20 00:05:10,485 - [DEBUG] - from com.avaje.ebeaninternal.server.core.TraditionalBackgroundExecutor in Thread-11 
+Shutting down
+
+2014-09-20 00:05:10,485 - [DEBUG] - from com.avaje.ebeaninternal.server.lib.thread.ThreadPool in Thread-11 
+ThreadPool [Ebean-default] Shutting down; threadCount[0] busyCount[0]
+
+2014-09-20 00:05:10,485 - [DEBUG] - from com.avaje.ebeaninternal.server.lib.DaemonScheduleThreadPool in Thread-11 
+DaemonScheduleThreadPool Ebean-default-periodic- shutting down...
+

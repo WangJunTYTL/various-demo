@@ -1,0 +1,114 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.wj</groupId>
+    <artifactId>playdemo</artifactId>
+    <version>${appversion}</version>
+    <name>playdemo</name>
+    <packaging>play2</packaging>
+    <repositories>
+        <repository>
+            <id>typesafe</id>
+            <url>http://repo.typesafe.com/typesafe/releases/</url>
+        </repository>
+    </repositories>
+    <properties>
+        <!--<play.version>2.8.1</play.version>-->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <play.version>2.3.1</play.version>
+    </properties>
+
+    <profiles>
+        <!-- 开发环境，默认激活 -->
+        <profile>
+            <id>dev</id>
+            <properties>
+                <env>dev</env>
+                <appversion>1.0-SNAPSHOT</appversion>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+                <!--默认启用的是dev环境配置-->
+            </activation>
+        </profile>
+        <!-- 生产环境 -->
+        <profile>
+            <id>prod</id>
+            <properties>
+                <env>prod</env>
+                <appversion>1.0</appversion>
+            </properties>
+        </profile>
+        <!-- 测试环境 -->
+        <profile>
+            <id>test</id>
+            <properties>
+                <env>test</env>
+                <appversion>1.0-SNAPSHOT</appversion>
+            </properties>
+        </profile>
+    </profiles>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.typesafe.play</groupId>
+            <artifactId>play_2.11</artifactId>
+            <version>${play.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.typesafe.play</groupId>
+            <artifactId>play-test_2.11</artifactId>
+            <version>${play.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.18</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <!-- Play source directory -->
+        <sourceDirectory>app</sourceDirectory>
+        <testSourceDirectory>test</testSourceDirectory>
+        <outputDirectory>${project.build.directory}/scala-2.11/classes</outputDirectory>
+        <filters>
+            <filter>${project.basedir}/mvn/filters/${env}.properties</filter>
+        </filters>
+        <resources>
+            <resource>
+                <filtering>true</filtering>
+                <directory>${project.basedir}/mvn/conf</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.nanoko.playframework</groupId>
+                <artifactId>play2-maven-plugin</artifactId>
+                <version>1.2.5</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <buildDist>false</buildDist>
+                    <!--   <additionalFiles>
+                           <additionalFile>war/WEB-INF/web.xml</additionalFile>
+                        </additionalFiles>-->
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.0.2</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

@@ -1,0 +1,23 @@
+This is your new Play 2.3 application
+=====================================================
+
+update by WangJun 2014-08-02
+
+===================================================
+play 2.2.X -> 2.3.X update
+
+update
+    Global：内部方法发生改变
+    构建完全采用sbt
+
+优化
+    编译优化：
+        resources：mvn resources:resources
+        class compile:sbt compile
+
+
+
+
+
+
+

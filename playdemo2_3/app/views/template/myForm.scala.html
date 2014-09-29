@@ -1,0 +1,15 @@
+@(label: String, name: String, id: String, placeholder: String)
+<div class="form-group">
+    <label for="@{
+        if(id == null || id == "") name else id
+    }" class="col-sm-3 control-label">@{
+        if(label == "" || label == null) name else label
+    }</label>
+    <div class="col-sm-9">
+        <input type="text" class="form-control" id="@{
+            if(id == null || id == "") name else id
+        }" placeholder="@{
+            if(placeholder == null || placeholder == "") name else placeholder
+        }" name="@name" >
+    </div>
+</div>

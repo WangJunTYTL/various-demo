@@ -1,0 +1,17 @@
+@main("Ebean的特性") {
+    <div class="container">
+        <h1 class="page-header">通过Autofetch进行自动查询调优；支持级联保存和删除。
+        </h1>
+        <fieldset>
+            <legend></legend>
+            <pre>
+                uid:<input id="userId" name="id"></pre>
+            <div id="result">
+
+            </div>
+        </fieldset>
+        <button fun="fetch" href="javascript:void(0)" class="btn btn-default" cascade="0">只查询user对象</button>
+        <button fun="fetch" href="javascript:void(0)" class="btn btn-default" cascade="1">查询user和address对象</button>
+        <button fun="fetch" href="javascript:void(0)" class="btn btn-default" cascade="2">查询user和car对象</button>
+    </div>
+}

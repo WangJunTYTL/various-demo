@@ -1,0 +1,23 @@
+@(userForm: Form[User])
+@import helper._
+    @implicitField = @{
+        FieldConstructor(views.html.template.myInputConstructor.f)
+    }
+@main("ebeanDEMO") {
+    <div class="container">
+        <h1 class="page-header">Eben</h1>
+        <div>
+            @form(action = routes.EbeanDemo.saveUser(), 'class -> "form-horizontal", 'role -> "form", 'method -> "post", 'id -> "saveUser") {
+                <p>用户名：<input name="username"></p>
+                <p>出生地：省-<input name="address.province">&nbsp;&nbsp;市-<input name="address.town"></p>
+                <p>配偶：<input></p>
+                <p>座驾：香车<input type="checkbox" value="1" name="cars[0].id">&nbsp;&nbsp;
+                    <input type="checkbox" value="2" name="cars[1].id">宝马</p>
+
+            }
+            <p><button class="btn btn-default" id="save">保存</button></p>
+            <p><button class="btn btn-default" id="cascadeSave">级联保存</button></p>
+        </div>
+    </div>
+    <script src="@routes.Assets.at("javascripts/ebeanDemo.js")"></script>
+}
