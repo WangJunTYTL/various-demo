@@ -1,7 +1,5 @@
 package com.peaceful.web.util;
 
-import com.google.common.base.Preconditions;
-import com.peaceful.util.MD5Utils;
 import com.peaceful.util.StringUtils;
 
 import javax.servlet.http.Cookie;
@@ -15,63 +13,32 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class Http {
 
-    public final static String SESSION_COOKIE = "session_cookie_";
-
+    /**
+     * 获得HttpServletRequest
+     *
+     * @return
+     */
     public static HttpServletRequest getRequest() {
         return HttpContext.requestThreadLocal.get();
     }
 
-    public static void setRequest(HttpServletRequest request) {
+    static void setRequest(HttpServletRequest request) {
         HttpContext.requestThreadLocal.set(request);
     }
 
+    /**
+     * 获得HttpServletResponse
+     *
+     * @return
+     */
     public static HttpServletResponse getResponse() {
         return HttpContext.responseThreadLocal.get();
     }
 
-    public static void setResponse(HttpServletResponse response) {
+    static void setResponse(HttpServletResponse response) {
         HttpContext.responseThreadLocal.set(response);
     }
 
-    /**
-     * 从session中取得为key的值
-     *
-     * @param key
-     * @return
-     */
-    public static String session(String key) {
-        if (StringUtils.isEmpty(key))
-            return null;
-        return getCookie(key, "/");
-    }
-
-    /**
-     * 加入session
-     *
-     * @param key
-     * @param value
-     */
-    public static void session(String key, String value) {
-        if (StringUtils.isEmpty(key)) {
-            Preconditions.checkArgument(false, "key is null");
-        }
-        addCookie(key, value, "/", -1, true);
-    }
-
-    /**
-     * 清除所有session
-     */
-    public static void clearAllSession() {
-        Cookie[] cookies = getRequest().getCookies();
-        if (cookies != null) {
-            for (Cookie cookie : cookies) {
-                if (StringUtils.isNotEmpty(cookie.getName())) {
-                    cookie.setMaxAge(0);
-                    getResponse().addCookie(cookie);
-                }
-            }
-        }
-    }
 
     public static String getCookie(String key, String path) {
         if (key == null)
@@ -163,22 +130,6 @@ public class Http {
                 }
             }
         }
-    }
-
-    public static String getCurrentUser() {
-        String key = getCookie("JSESSIONID", "/");
-        if (StringUtils.isEmpty(key))
-            return null;
-        key = MD5Utils.string2MD5(key);
-        return session(key);
-    }
-
-    public static void setCurrentUser(String name) {
-        String key = getCookie("JSESSIONID", "/");
-        if (StringUtils.isEmpty(key))
-            Preconditions.checkArgument(false, "没有得到会话id");
-        key = MD5Utils.string2MD5(key);
-        session(key, name);
     }
 
 

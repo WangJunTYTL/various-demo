@@ -14,7 +14,7 @@
     <artifactId>peaceful-web-utils</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <description>this is my common tools</description>
+    <description>this is  common web tools</description>
 
     <properties>
         <guava.version>16.0</guava.version>
