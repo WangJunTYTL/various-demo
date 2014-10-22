@@ -1,5 +1,7 @@
 package com.peaceful.util;
 
+import com.peaceful.util.PasswordObject;
+
 import java.util.Date;
 
 /**
@@ -9,6 +11,12 @@ import java.util.Date;
  */
 public class PasswordUtils {
 
+    /**
+     *
+     * @param lastUpdateTime 密码最近更新时间
+     * @param expireDay 有效期
+     * @return
+     */
     public static PasswordObject getPasswordObject(Date lastUpdateTime,int expireDay) {
         PasswordObject passwordObject = new PasswordObject();
         passwordObject.setExpireRemainDay(expireDay - (int) ((System.currentTimeMillis() - lastUpdateTime.getTime()) / (24 * 60 * 60 * 1000)));

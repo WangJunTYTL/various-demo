@@ -24,6 +24,7 @@
         <file.encoding>UTF-8</file.encoding>
         <slf4j.version>1.5.10</slf4j.version>
         <junit.version>4.11</junit.version>
+        <guava.version>16.0</guava.version>
         <peaceful.utils.version>1.0-SNAPSHOT</peaceful.utils.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -41,6 +42,8 @@
             <url>http://nexus.s.hehua.com/content/repositories/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
+
+
 
     <build>
         <plugins>
@@ -71,10 +74,14 @@
                 <executions>
                     <execution>
                         <id>attach-sources</id>
-                        <phase>deploy</phase>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>
+
 
             <!-- 发布javadoc -->
             <plugin>
@@ -92,6 +99,12 @@
             </plugin>
         </plugins>
     </build>
+
+    <!--管理jar包版本-->
+    <dependencyManagement>
+        <dependencies>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
 
@@ -122,9 +135,15 @@
 
         <!-- MY UNTIL -->
         <dependency>
-            <groupId>com.peaceful.nuggets</groupId>
-            <artifactId>peaceful-utils</artifactId>
+            <groupId>com.peaceful</groupId>
+            <artifactId>nuggets-peaceful-utils</artifactId>
             <version>${peaceful.utils.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
         </dependency>
     </dependencies>
 </project>

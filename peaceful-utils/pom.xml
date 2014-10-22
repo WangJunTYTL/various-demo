@@ -10,75 +10,21 @@
         <version>2.8</version>
     </parent>
 
-    <groupId>com.peaceful.nuggets</groupId>
-    <artifactId>peaceful-utils</artifactId>
+    <groupId>com.peaceful</groupId>
+    <artifactId>nuggets-peaceful-utils</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <description>this is my common tools</description>
 
-
     <properties>
-        <file.encoding>UTF-8</file.encoding>
-        <slf4j.version>1.5.10</slf4j.version>
-        <log4j.version>1.2.14</log4j.version>
-        <local.repository.host>dev.dajie-inc.com</local.repository.host>
-        <local.repository.port>80</local.repository.port>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <build>
         <plugins>
-            <plugin>
-                <inherited>true</inherited>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
-                    <optimize>true</optimize>
-                    <debug>true</debug>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <configuration>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
         </plugins>
-
     </build>
 
     <dependencies>
-
-        <!-- LOGGING DEPENDENCIES - LOG4J -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>${slf4j.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>${log4j.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <!--  JUNIT DEPENDENCY FOR TESTING -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.8.1</version>
-            <scope>test</scope>
-        </dependency>
-
 
     </dependencies>
 

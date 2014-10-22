@@ -4,6 +4,9 @@ import com.peaceful.util.StringUtils;
 import com.peaceful.util.Util;
 import org.junit.Test;
 
+import java.util.SortedMap;
+import java.util.TreeMap;
+
 import static org.junit.Assert.*;
 
 public class StringUtilsTest {
@@ -16,5 +19,17 @@ public class StringUtilsTest {
     @Test
     public void testContains() throws Exception {
         Util.report(StringUtils.contains("abcd", "ad") + "");
+    }
+
+
+    @Test
+    public void test(){
+        SortedMap<Integer,String> sortedMap = new TreeMap<Integer, String>();
+        sortedMap.put(6,"a");
+        sortedMap.put(5,"b");
+        sortedMap.put(7,"r");
+        sortedMap.put(8,"a");
+
+        Util.report(sortedMap);
     }
 }

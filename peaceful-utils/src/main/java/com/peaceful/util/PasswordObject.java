@@ -1,14 +1,22 @@
 package com.peaceful.util;
 
+import java.io.Serializable;
+
 /**
  * Date 14-10-11.
  * Author WangJun
  * Email wangjuntytl@163.com
  */
-public class PasswordObject {
+public class PasswordObject implements Serializable {
 
+    /**
+     * 密码剩余有限期
+     */
     public int expireRemainDay = 0;
-    public  boolean isExpire;
+    /**
+     * 是否过期
+     */
+    public boolean isExpire;
 
     PasswordObject() {
 
