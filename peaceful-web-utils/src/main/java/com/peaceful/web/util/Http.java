@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class Http {
 
-    private static String CURRENT_SESSION_USER = "current_session_user";
     public final static String SESSION_COOKIE = "session_cookie_";
 
     public static HttpServletRequest getRequest() {
