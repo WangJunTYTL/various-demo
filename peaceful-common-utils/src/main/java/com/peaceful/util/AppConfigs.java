@@ -27,4 +27,8 @@ public interface AppConfigs {
     java.lang.String getString(java.lang.String s, java.lang.String s1);
 
     java.util.Map<java.lang.String, java.lang.String> toMap();
+
+    java.lang.Boolean getBoolean(String s);
+
+    java.lang.Boolean getBoolean(String s, boolean s1);
 }

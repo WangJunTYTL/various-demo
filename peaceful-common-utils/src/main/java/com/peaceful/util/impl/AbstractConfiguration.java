@@ -17,6 +17,7 @@ public abstract class AbstractConfiguration implements AppConfigs {
     private static final Logger LOGGER = LoggerFactory.getLogger(AbstractConfiguration.class);
 
     protected abstract Map<String, String> getConfigData();
+
     protected abstract String getStringFromStore(String key);
 
     @Override
@@ -101,6 +102,25 @@ public abstract class AbstractConfiguration implements AppConfigs {
     }
 
     @Override
+    public Boolean getBoolean(String key) {
+        return getBoolean(key, false);
+    }
+
+    @Override
+    public Boolean getBoolean(String key, boolean defaultValue) {
+        String value = getString(key);
+        if (StringUtils.isEmpty(value)) {
+            return defaultValue;
+        }
+        try {
+            return Boolean.parseBoolean(value);
+        } catch (Exception e) {
+            LOGGER.error("failed to convert {} to Boolean, error is {}.", value, e);
+            return defaultValue;
+        }
+    }
+
+    @Override
     public String getString(String key, String defaultValue) {
         String value = getStringFromStore(key);
         if (StringUtils.isEmpty(value)) {
@@ -110,13 +130,11 @@ public abstract class AbstractConfiguration implements AppConfigs {
     }
 
 
-
     @Override
     public Map<String, String> toMap() {
         Map<String, String> result = new HashMap<String, String>(getConfigData());
         return Collections.unmodifiableMap(result);
     }
-
 
 
     @Override

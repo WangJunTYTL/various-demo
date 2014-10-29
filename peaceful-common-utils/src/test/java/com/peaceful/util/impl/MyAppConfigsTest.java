@@ -9,8 +9,8 @@ public class MyAppConfigsTest extends TestCase {
     AppConfigs myAppConfigs = null;
     AppConfigs myAppConfigs_ = null;
     public void setUp() throws Exception {
-        myAppConfigs = AppConfigsUtils.getMyAppConfigs("auth.properties");
-        myAppConfigs_ = AppConfigsUtils.getMyAppConfigs("auth2.properties");
+        myAppConfigs = AppConfigsImpl.getMyAppConfigs("auth.properties");
+        myAppConfigs_ = AppConfigsImpl.getMyAppConfigs("auth2.properties");
 
     }
 

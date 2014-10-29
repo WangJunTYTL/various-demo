@@ -4,11 +4,12 @@ package com.peaceful.util;
  * Date 14/10/21.
  * Author WangJun
  * Email wangjuntytl@163.com
+ *
+ *
  */
 public interface Cache {
 
     final String EMPTY="this_cache_is_empty";
-
 
     Object get(Object key);
 

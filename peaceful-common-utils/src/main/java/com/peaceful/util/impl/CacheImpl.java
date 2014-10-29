@@ -15,6 +15,8 @@ import java.util.concurrent.TimeUnit;
  * Date 14/10/21.
  * Author WangJun
  * Email wangjuntytl@163.com
+ *
+ * 基于Google guava包提供的缓存工具
  */
 public class CacheImpl implements Cache {
 

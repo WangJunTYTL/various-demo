@@ -1,7 +1,5 @@
 package com.peaceful.util;
 
-import com.peaceful.util.PasswordObject;
-
 import java.util.Date;
 
 /**

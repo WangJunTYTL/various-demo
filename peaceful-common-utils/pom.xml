@@ -19,13 +19,7 @@
     <properties>
     </properties>
 
-    <build>
-        <plugins>
-        </plugins>
-    </build>
-
     <dependencies>
-
     </dependencies>
 
 </project>
