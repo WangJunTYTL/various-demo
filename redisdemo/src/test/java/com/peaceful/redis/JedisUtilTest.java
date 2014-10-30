@@ -5,6 +5,7 @@ import org.junit.*;
 import org.junit.Test;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
+import redis.clients.jedis.ShardedJedisPool;
 
 import java.util.List;
 
@@ -44,5 +45,9 @@ public class JedisUtilTest {
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }
+    }
+
+    @Test
+    public void initPoolTest(){
     }
 }

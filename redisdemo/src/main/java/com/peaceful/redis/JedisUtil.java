@@ -4,11 +4,11 @@ import com.peaceful.util.AppConfigs;
 import com.peaceful.util.impl.AppConfigsImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisPool;
-import redis.clients.jedis.JedisPoolConfig;
+import redis.clients.jedis.*;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -17,6 +17,7 @@ import java.util.Map;
  * Email wangjuntytl@163.com
  */
 public class JedisUtil {
+
     private static final Logger logger = LoggerFactory.getLogger(JedisUtil.class);
     private static final AppConfigs redisConfig = AppConfigsImpl.getMyAppConfigs("app.properties");
     //最大分配的对象数
@@ -72,7 +73,28 @@ public class JedisUtil {
         return pool;
     }
 
+    private static ShardedJedisPool getShardedJedisPool(RedisClusterConfig redisClusterConfig) {
+        try {
+            JedisPoolConfig poolConfig = new JedisPoolConfig();
+            poolConfig.setTestWhileIdle(true);
+            poolConfig.setMaxTotal(500);
+            poolConfig.setMaxIdle(500);
+            poolConfig.setBlockWhenExhausted(true);
+            List<JedisShardInfo> shards = new ArrayList<JedisShardInfo>(redisClusterConfig.getRedisNodeConfigList().size());
+            for (RedisNodeConfig nodeConfig : redisClusterConfig.getRedisNodeConfigList()) {
+                JedisShardInfo jsi = new JedisShardInfo(nodeConfig.getHost(), nodeConfig.getPort(),
+                        0, nodeConfig.getHost() + ":" + nodeConfig.getPort());
+                shards.add(jsi);
+            }
+            return new ShardedJedisPool(poolConfig, shards);
+        } catch (Throwable e) {
+            logger.error("getShardedJedisPool:{}", e);
+            throw new RuntimeException(e);
+        }
+    }
+
     public static Jedis getJedis() {
         return getPool().getResource();
     }
+
 }

@@ -10,8 +10,13 @@ import com.peaceful.util.impl.AppConfigsImpl;
  */
 public class Global {
 
-    private static AppConfigs appConfigs = AppConfigsImpl.getMyAppConfigs("application.properties");
+    private static AppConfigs appConfigs = AppConfigsImpl.getMyAppConfigs("mis.properties");
 
+    /**
+     * 项目是否在dev环境运行
+     *
+     * @return
+     */
     public static boolean isDev() {
         String mode = appConfigs.getString("dev.mode");
         if (mode.equals("dev"))
@@ -20,6 +25,11 @@ public class Global {
             return false;
     }
 
+    /**
+     * 项目是否在test环境运行
+     *
+     * @return
+     */
     public static boolean isTest() {
         String mode = appConfigs.getString("dev.mode");
         if (mode.equals("test"))
@@ -28,6 +38,11 @@ public class Global {
             return false;
     }
 
+    /**
+     * 项目是否在product环境运行
+     *
+     * @return
+     */
     public static boolean isProduct() {
         String mode = appConfigs.getString("dev.mode");
         if (mode.equals("product"))
@@ -36,7 +51,12 @@ public class Global {
             return false;
     }
 
-    public static String getBuildVersion(){
+    /**
+     * 项目构建版本号
+     *
+     * @return
+     */
+    public static String getBuildVersion() {
         return appConfigs.getString("build.version");
     }
 }
