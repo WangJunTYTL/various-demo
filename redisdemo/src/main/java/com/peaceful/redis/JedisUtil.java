@@ -6,10 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import redis.clients.jedis.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Date 14/10/23.
@@ -65,7 +62,7 @@ public class JedisUtil {
                 pool = new JedisPool(config, redis_ip, redis_port, redis_pool_maxWait);
                 maps.put(key, pool);
             } catch (Exception e) {
-                logger.error("getPo0l:{}",e);
+                logger.error("getPo0l:{}", e);
             }
         } else {
             pool = maps.get(key);
@@ -93,8 +90,31 @@ public class JedisUtil {
         }
     }
 
+
+    //jedis 集群
+    public ShardedJedis createShardJedis(String name) {
+        RedisClusterConfig config = null;
+        List<JedisShardInfo> shards = new ArrayList<JedisShardInfo>(config.getRedisNodeConfigList().size());
+        for (RedisNodeConfig nodeConfig : config.getRedisNodeConfigList()) {
+            JedisShardInfo jsi = new JedisShardInfo(nodeConfig.getHost(), nodeConfig.getPort(), 0,
+                    nodeConfig.getHost() + ":" + nodeConfig.getPort());
+            shards.add(jsi);
+        }
+        return new ShardedJedis(shards);
+    }
+
     public static Jedis getJedis() {
         return getPool().getResource();
+    }
+
+    //jedis官网用例
+    public void clusterTest() {
+        Set<HostAndPort> jedisClusterNodes = new HashSet<HostAndPort>();
+        //Jedis Cluster will attempt to discover cluster nodes automatically
+        jedisClusterNodes.add(new HostAndPort("127.0.0.1", 7379));
+        JedisCluster jc = new JedisCluster(jedisClusterNodes);
+        jc.set("foo", "bar");
+        String value = jc.get("foo");
     }
 
 }
