@@ -7,10 +7,12 @@ import com.peaceful.util.impl.AppConfigsImpl;
  * Date 14/10/28.
  * Author WangJun
  * Email wangjuntytl@163.com
+ * <p/>
+ * <h3>web app 全局配置信息</h3>
  */
 public class Global {
 
-    private static AppConfigs appConfigs = AppConfigsImpl.getMyAppConfigs("mis.properties");
+    private static AppConfigs appConfigs = AppConfigsImpl.getMyAppConfigs("application.properties");
 
     /**
      * 项目是否在dev环境运行

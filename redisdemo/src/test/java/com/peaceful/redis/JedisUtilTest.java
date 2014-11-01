@@ -3,15 +3,20 @@ package com.peaceful.redis;
 import com.peaceful.util.Util;
 import org.junit.*;
 import org.junit.Test;
-import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisPool;
-import redis.clients.jedis.ShardedJedisPool;
+import redis.clients.jedis.*;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.List;
+import java.util.Set;
 
 import static org.junit.Assert.*;
 
 public class JedisUtilTest {
+
+
     Jedis jedis = null;
 
     @Before
@@ -48,6 +53,102 @@ public class JedisUtilTest {
     }
 
     @Test
-    public void initPoolTest(){
+    public void initPoolTest() {
     }
+
+    @Test
+    public void transactionTest() {
+        Transaction t = jedis.multi();
+        t.set("fool", "bar");
+        Response<String> result1 = t.get("fool");
+        t.zadd("foo", 1, "barowitch");
+        t.zadd("foo", 0, "barinsky");
+        t.zadd("foo", 0, "barikoviev");
+        Response<Set<String>> sose = t.zrange("foo", 0, -1);   // get the entire sortedset
+        List<Object> allResults = t.exec();
+        Util.report(result1.get());
+        Util.report(sose.get().toString());
+    }
+
+    @Test
+    public void pipelineTest() {
+        Pipeline p = jedis.pipelined();
+        p.set("fool", "bar");
+        p.zadd("foo", 1, "barowitch");
+        p.zadd("foo", 0, "barinsky");
+        p.zadd("foo", 0, "barikoviev");
+        Response<String> pipeString = p.get("fool");
+        Response<Set<String>> sose = p.zrange("foo", 0, -1);
+        p.sync();
+        Util.report(pipeString.get());
+        Util.report(sose.get().size());
+        Util.report(sose.get());
+    }
+
+
+    //redis 发布订阅
+    @Test
+    public void subscribeTest() {
+
+        MyListener l = new MyListener();
+
+        jedis.subscribe(l, "foo");
+    }
+
+    @Test
+    public void publishTest() {
+        jedis.publish("foo", "aaaa");
+    }
+
+    @Test
+    public void fileTest() throws IOException {
+        FileInputStream fileInputStream = new FileInputStream("/Users/wangjun/Downloads/FOXUSER.FPT");
+        int remain = fileInputStream.available();
+        String result = null;
+        while (remain > 0) {
+            byte[] bytes = new byte[1024];
+            fileInputStream.read(bytes);
+            result += new String(bytes, CharTest.UTF_8);
+            remain = fileInputStream.available();
+            Util.report(remain);
+        }
+        Util.report(result);
+    }
+
+    class MyListener extends JedisPubSub {
+        public void onMessage(String channel, String message) {
+            Util.report("onMessage->：message=" + message + "\tchannel=" + channel);
+        }
+
+        public void onPMessage(String pattern, String channel,
+                               String message) {
+            Util.report("onPSubscribe->pattern=" + pattern + "\tchannel=" + channel + "\tmessage" + message);
+
+
+        }
+
+        public void onSubscribe(String channel, int subscribedChannels) {
+            Util.report("onSubscribe->channel=" + channel + "\tsubscribedChannels=" + subscribedChannels);
+
+        }
+
+        public void onUnsubscribe(String channel, int subscribedChannels) {
+            Util.report("onUnsubscribe->channel=" + channel + "\tsubscribedChannels=" + subscribedChannels);
+
+        }
+
+        public void onPSubscribe(String pattern, int subscribedChannels) {
+            Util.report("onPSubscribe->pattern=" + pattern + "\tsubscribedChannels=" + subscribedChannels);
+
+        }
+
+        public void onPUnsubscribe(String pattern, int subscribedChannels) {
+            Util.report("onPUnsubscribe->pattern=" + pattern + "\tsubscribedChannels=" + subscribedChannels);
+
+
+        }
+
+
+    }
+
 }

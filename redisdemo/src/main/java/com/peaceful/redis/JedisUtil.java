@@ -39,6 +39,9 @@ public class JedisUtil {
 
     }
 
+
+
+
     private static Map<String, JedisPool> maps = new HashMap<String, JedisPool>();
 
     /**
@@ -116,5 +119,16 @@ public class JedisUtil {
         jc.set("foo", "bar");
         String value = jc.get("foo");
     }
+
+
+
+
+    //如果用到生成环境，不要直接使用单例jedis，A single Jedis instance is not threadsafe!
+    public void jedisPoolTest(){
+        JedisPool pool = new JedisPool(new JedisPoolConfig(), "localhost");
+
+    }
+
+
 
 }

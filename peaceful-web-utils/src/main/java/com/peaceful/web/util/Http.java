@@ -1,15 +1,22 @@
 package com.peaceful.web.util;
 
+import com.alibaba.fastjson.JSON;
 import com.peaceful.util.StringUtils;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * Date 14/10/21.
  * Author WangJun
  * Email wangjuntytl@163.com
+ * <p/>
+ * <h2>常用http对象</h2><p>需要配置httpContextFilter</p>
+ *
+ * @see com.peaceful.web.util.HttpContextFilter
  */
 public class Http {
 
@@ -132,11 +139,49 @@ public class Http {
         }
     }
 
+    /**
+     * 从当前线程上下文获得当前登录用户，前提已经把登录用户信息放入到线程上下文
+     *
+     * @return
+     */
+    public static String getCurrentUser() {
+        return HttpContext.currentUser.get();
+    }
+
+    /**
+     * 把登录用户信息放入到线程上下文，只放入最简单的登录用户名即可
+     *
+     * @param currentUser
+     */
+    public static void setCurrentUser(String currentUser) {
+        HttpContext.currentUser.set(currentUser);
+    }
 
     private static class HttpContext {
         static ThreadLocal<HttpServletRequest> requestThreadLocal = new ThreadLocal<HttpServletRequest>();
         static ThreadLocal<HttpServletResponse> responseThreadLocal = new ThreadLocal<HttpServletResponse>();
+        static ThreadLocal<String> currentUser = new ThreadLocal<String>();
 
+    }
+
+    /**
+     * 常用的最简单json数据返回 格式：{"code":1,"result","suc"}
+     * 请注意：该方法会向浏览器端响应数据，但不会自动终止其下面的代码继续执行
+     *
+     * @param code   返回状态码
+     * @param result 返回详细信息
+     */
+    public static void responseJSON(int code, String result) {
+        HttpServletResponse response = getResponse();
+        try {
+            response.setContentType("application/x-json");
+            PrintWriter writer = response.getWriter();
+            writer.write(JSON.toJSONString(new Response(code, result)));
+            writer.flush();
+            writer.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
 
