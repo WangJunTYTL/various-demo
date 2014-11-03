@@ -58,14 +58,12 @@
                         </goals>
                     </execution>
                 </executions>
-                <configuration>
                     <configuration>
                         <format>{0,date,yyyy-MM-dd HH:mm:ss}</format>
                         <items>
                             <item>timestamp</item>
                         </items>
                     </configuration>
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
