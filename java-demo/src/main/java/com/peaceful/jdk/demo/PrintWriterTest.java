@@ -14,7 +14,7 @@ import java.io.PrintWriter;
 public class PrintWriterTest {
 
     public static void main(String[] args) throws FileNotFoundException {
-        String targrtDir=System.getProperty("user.dir", "<NA>")+"/temp.txt";
+        String targrtDir = System.getProperty("user.dir", "<NA>") + "/temp.txt";
         Util.report(targrtDir);
         PrintWriter printWriter = new PrintWriter(new File(targrtDir));
         printWriter.write("###############################################\n");

@@ -1,6 +1,0 @@
-<?xml version="1.0"  encoding="UTF-8"?>
-<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure_9_0.dtd">
-<Configure class="org.eclipse.jetty.webapp.WebAppContext">
-    <Set name="contextPath">/</Set>
-    <Set name="resourceBase">/Users/wangjun/jetty-auto-deploy-demo/www/PROJECT_NAME</Set>
-</Configure>

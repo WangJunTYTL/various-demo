@@ -16,9 +16,9 @@
 PROJECT_NAME="PROJECT_NAME_HOLDER" #项目名
 BRANCH=$1; #部#署分支
 ENVIRONMENT=$2 #mvn -P 参数 
-CODE_DOWN=/Users/wangjun/jetty-auto-deploy-demo/src/${PROJECT_NAME} # 代码下载根目录
-CODE_BUILD=/Users/wangjun/jetty-auto-deploy-demo/www # 代码构建目录
-CONTROL_SCRIPT=/Users/wangjun/jetty-auto-deploy-demo/jetty-control/CONTROL_SCRIPT_NAME.sh # 控制脚本位置
+CODE_DOWN=BUILD_HOME/${PROJECT_NAME} # 代码下载根目录
+CODE_BUILD=WEBAPP_HOME # 代码构建目录
+CONTROL_SCRIPT=CONTROL_HOME/CONTROL_SCRIPT_NAME.sh # 控制脚本位置
 EMPTY=''
 
 #初始化

@@ -6,9 +6,9 @@
 # Set the name which is used by other variables.
 # Defaults to the file name without extension.
 ##################################################
-export JETTY_HOME=/Users/wangjun/software/server/jetty-distribution-9.2.2.v20140723
-export JETTY_BASE=/Users/wangjun/jetty-auto-deploy-demo/hehua-auth-8083-conf
-export JETTY_RUN=/Users/wangjun/jetty-auto-deploy-demo/hehua-auth-8083-conf
+export JETTY_HOME=JETTY_HOME_DIR
+export JETTY_BASE=WEB_CONF_DIR
+export JETTY_RUN=WEB_CONF_DIR
 NAME=$(echo $(basename $0) | sed -e 's/^[SK][0-9]*//' -e 's/\.sh$//')
 
 # To get the service to restart correctly on reboot, uncomment below (3 lines):
