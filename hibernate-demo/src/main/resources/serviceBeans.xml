@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="userService" class="com.wj.hibernate.ServiceImpl.UserServiceImpl">
+		<property name="systemDao" ref="systemDao"></property>
+		<property name="userDao" ref="userDao"></property>
+	</bean>
+
+    <bean id="menuService" class="com.wj.hibernate.ServiceImpl.MenuServiceImpl">
+        <property name="systemDao" ref="systemDao"></property>
+        <property name="menuDao" ref="menuDao"></property>
+    </bean>
+
+    <bean id="resourceService" class="com.wj.hibernate.ServiceImpl.ResourceServiceImpl">
+        <property name="systemDao" ref="systemDao"></property>
+        <property name="resourceDao" ref="resourceDao"></property>
+    </bean>
+
+    <bean id="roleService" class="com.wj.hibernate.ServiceImpl.RoleServiceImpl">
+        <property name="systemDao" ref="systemDao"></property>
+        <property name="roleDao" ref="roleDao"></property>
+    </bean>
+
+    <bean id="systemService" class="com.wj.hibernate.ServiceImpl.SystemServiceImpl">
+        <property name="systemDao" ref="systemDao"></property>
+    </bean>
+</beans>

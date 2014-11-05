@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+    http://www.springframework.org/schema/tx 
+    http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+	">
+    <context:component-scan base-package="com.wj.hibernate.daoImpl" />
+    <context:component-scan base-package="com.wj.hibernate.ServiceImpl" />
+    <!--<import resource="daoContext.xml"></import>-->
+    <!--<import resource="serviceBeans.xml"></import>-->
+    <!--  <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+        destroy-method="close">
+        <property name="driverClass" value="oracle.jdbc.driver.OracleDriver"></property>
+        <property name="jdbcUrl" value="jdbc:oracle:thin:@192.168.1.91:1521:orcl"></property>
+        <property name="user" value="wdb"></property>
+        <property name="password" value="110"></property>
+        <property name="minPoolSize" value="2"></property>
+        <property name="maxPoolSize" value="6"></property>
+     </bean> -->
+    <!-- 	 <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+            destroy-method="close">
+            <property name="driverClass" value="oracle.jdbc.driver.OracleDriver"></property>
+            <property name="jdbcUrl" value="jdbc:oracle:thin:@127.0.0.1:1521:orcl"></property>
+            <property name="user" value="scott"></property>
+            <property name="password" value="110"></property>
+            <property name="minPoolSize" value="2"></property>
+            <property name="maxPoolSize" value="6"></property>
+         </bean> -->
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+          destroy-method="close">
+        <property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+        <property name="jdbcUrl" value="jdbc:mysql://127.0.0.1:3306/auth"></property>
+        <property name="user" value="root"></property>
+        <property name="password" value="110"></property>
+        <property name="minPoolSize" value="2"></property>
+        <property name="maxPoolSize" value="6"></property>
+    </bean>
+
+    <!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy">
+         <property name="targetDataSource">
+             <bean class="org.logicalcobwebs.proxool.ProxoolDataSource">
+                 <property name="driver" value="com.mysql.jdbc.Driver" />
+                 <property name="driverUrl" value="jdbc:mysql://127.0.0.1:3306/test" />
+                 <property name="user" value="root" />
+                 <property name="password" value="110" />
+                 <property name="maximumConnectionCount" value="2" />
+                 <property name="minimumConnectionCount" value="1" />
+                 <property name="statistics" value="1m,15m,1h,1d" />
+                 <property name="simultaneousBuildThrottle" value="30" />
+                 <property name="trace" value="false" />
+             </bean>
+         </property>
+     </bean>
+ -->
+
+
+    <bean id="sessionFactory"
+          class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="configLocation" value="classpath:hibernate.cfg.xml">
+        </property>
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+
+    <bean id="transactionManger"
+          class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+
+    <!--切入点  -->
+    <tx:advice id="txAdvice" transaction-manager="transactionManger">
+        <tx:attributes>
+            <tx:method name="update*" propagation="REQUIRED" isolation="READ_COMMITTED"/>
+            <tx:method name="insert*" propagation="REQUIRED" isolation="READ_COMMITTED"/>
+            <tx:method name="delete*" propagation="REQUIRED"
+                       isolation="READ_COMMITTED"/>
+            <tx:method name="find*" propagation="REQUIRED"
+                       isolation="READ_COMMITTED"/>
+            <tx:method name="*" read-only="true" propagation="REQUIRED"/>
+        </tx:attributes>
+    </tx:advice>
+    <aop:config>
+        <aop:pointcut expression="execution(* com.wj.hibernate.ServiceImpl.*.*(..))" id="usermanageservicepointcut"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="usermanageservicepointcut"/>
+    </aop:config>
+
+
+</beans>
