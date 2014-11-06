@@ -1,11 +1,14 @@
 #!/usr/bin/python
-import sys
-x  = 5
+#coding=utf-8
+
+import sys  #使用模块 sys模块包含了与Python解释器和它的环境有关的函数
+import myModule
+x  = 5  #定义变量
 y = "hello world"
 z = '''welcome \
 everyone'''
 
-print y,z
+print y,z  
 
 if x==5:
 	print "x",x
@@ -29,3 +32,12 @@ print sys.copyright
 
 print sys.path
 
+print "hello world"
+
+print sys.argv #使用sys模块的argv变量
+
+print sys.path[0]
+
+myModule.say()
+
+print 'myModule version is ',myModule.version
