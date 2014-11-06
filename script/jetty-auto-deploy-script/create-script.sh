@@ -8,10 +8,12 @@
 # env init 
 source env.sh
 echo "JETTY_HOME:${JETTY_HOME_DIR}" #jetty dir
-echo "CONF_HOME:${CONF_HOME}" #web conf dir
-echo "LOG_HOME:${LOG_HOME}" #log dir
-echo "BUILD_HOME:${BUILD_HOME}" # build dir
-echo "WEBAPP_HOME:${WEBAPP_HOME}" #webapp dir
+echo "创建web配置文件在${CONF_HOME}" #web conf dir
+echo "webapp运行log文件在LOG_HOME:${LOG_HOME}" #log dir
+echo "webapp代码下载构建目录在${BUILD_HOME}" # build dir
+echo "webapp_home目录在${WEBAPP_HOME}" #webapp dir
+echo "控制webapp运行脚本在${CONTROL_HOME}"
+echo "部署webapp脚本在${DEPLOY_HOME}"
 
 [ ! -d $CONF_HOME ] &&  mkdir -p $CONF_HOME  &&  echo "mkdir ${CONF_HOME} success"
 [ ! -d $LOG_HOME ] &&  mkdir -p $LOG_HOME  &&  echo "mkdir ${LOG_HOME} success"
