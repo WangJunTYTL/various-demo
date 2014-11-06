@@ -1,8 +1,10 @@
 #!bin/bash
 #==========================================
-#  desc requerid params
 #  author WangJun
+#  email wangjuntytl@163.com
 #  date 2014-11-06
+#====================================
+#  desc requerie params
 #====================================
 #脚本输出根目录
 TARGET_DIR="/Users/wangjun/ideaWorkSpace/myapp/script/jetty-auto-deploy-script/target"

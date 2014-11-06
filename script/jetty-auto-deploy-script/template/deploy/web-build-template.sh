@@ -2,7 +2,7 @@
 #========================================
 #   date   2014-10-12					 
 #	Author WangJun						 
-#	Email  wangjuntyt@163.com 		     
+#	Email  wangjuntytl@163.com 		     
 ##=======================================
 #   desc: 
 # 		从vcs上获取代码到构建机器上进行构建  

@@ -1,10 +1,11 @@
 #!bin/bash
 #=======================================
-#desc create web deploy script
 #author WangJun
+#email wangjuntytl@163.com
 #date 2014-11-5
 #=======================================
-
+#desc create web deploy script
+#=======================================
 # env init 
 source env.sh
 echo "JETTY_HOME:${JETTY_HOME_DIR}" #jetty dir
