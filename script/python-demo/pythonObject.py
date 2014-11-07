@@ -1,5 +1,6 @@
 #!/usr/bin/python
 #coding=utf-8
+
 print "测试python list数据结构"
 print '-------------------------------------------'
 mylist=[1,2,3,4,5,6]
@@ -9,6 +10,7 @@ print '遍历'
 for x in mylist:
 	print x
 
+####
 mylist.append(0)
 print mylist
 mylist.sort()
@@ -31,3 +33,13 @@ print '-------------------------------------------'
 db={"No.1":"Wo","No.2":"Shi","No.3":"Ni","No.4":"Da","No.5":"Ye"}
 print db
 print db['No.1']
+
+
+class Person():
+	pass
+	
+	
+		
+p = Person();
+
+print p
