@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="/css/bootstrap/bootstrap.css" rel="stylesheet">
+    <script src="/js/jquery-1.9.1.js"></script>
+    <script src="/js/bootstrap/bootstrap.js"></script>
+</head>
+<body>
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist" id="myTab">
+    <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
+    <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
+    <li role="presentation"><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
+    <li role="presentation"><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">...</div>
+    <div role="tabpanel" class="tab-pane" id="profile">...</div>
+    <div role="tabpanel" class="tab-pane" id="messages">...</div>
+    <div role="tabpanel" class="tab-pane" id="settings">...</div>
+</div>
+<script>
+    $('#myTab a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+
+</script>
+</body>
+</html>

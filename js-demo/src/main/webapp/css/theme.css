@@ -1,0 +1,19 @@
+.navbar-inverse {
+    background-color: #563d7c;
+    border-color: #463265;
+    color: #fff;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #cdbfe3;
+}
+
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    background-color: #463265;
+    color: #fff;
+}
