@@ -9,6 +9,7 @@
 export JETTY_HOME=JETTY_HOME_DIR
 export JETTY_BASE=WEB_CONF_DIR
 export JETTY_RUN=WEB_CONF_DIR
+export JETTY_LOGS=LOG_HOME
 NAME=$(echo $(basename $0) | sed -e 's/^[SK][0-9]*//' -e 's/\.sh$//')
 
 # To get the service to restart correctly on reboot, uncomment below (3 lines):
