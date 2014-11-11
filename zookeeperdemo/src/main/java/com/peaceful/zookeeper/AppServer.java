@@ -15,13 +15,15 @@ public class AppServer {
     private String groupNode = "test";
     private String subNode = "sub";
 
+    private  String servers="127.0.0.1:12181,127.0.0.1:22181,127.0.0.1:32181";
+
     /**
      * 连接zookeeper
      *
      * @param address server的地址
      */
     public void connectZookeeper(String address) throws Exception {
-        ZooKeeper zk = new ZooKeeper("localhost:2181", 5000, new Watcher() {
+        ZooKeeper zk = new ZooKeeper("127.0.0.1:12181", 5000, new Watcher() {
             public void process(WatchedEvent event) {
                 // 不做处理
             }
@@ -30,7 +32,8 @@ public class AppServer {
         // 子节点的类型设置为EPHEMERAL_SEQUENTIAL, 表明这是一个临时节点, 且在子节点的名称后面加上一串数字后缀
         // 将server的地址数据关联到新创建的子节点上
         String createdPath = zk.create("/" + groupNode + "/" + subNode, address.getBytes("utf-8"),
-                ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
+                ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT_SEQUENTIAL);
+        zk.setData(createdPath,"hello world".getBytes(),0);
         System.out.println("create: " + createdPath);
     }
 
