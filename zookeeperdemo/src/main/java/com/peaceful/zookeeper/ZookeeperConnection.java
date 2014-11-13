@@ -16,12 +16,14 @@ public class ZookeeperConnection {
 
     private String servers = "127.0.0.1:12181,127.0.0.1:22181,127.0.0.1:32181";
 
-    public ZooKeeper connectZookeeper() throws Exception {
-        ZooKeeper zk = new ZooKeeper(servers, 5000,createWatcher());
+    public ZooKeeper getZookeeper() throws Exception {
+        ZooKeeper zk = new ZooKeeper(servers, 5000, getWatcher());
+        logger.debug("servers:{}",servers);
         return zk;
     }
 
-    public Watcher createWatcher(){
+    //操作节点时触发watcher，在操作时是否触发watcher可以指定
+    public Watcher getWatcher(){
         return  new Watcher(){
 
             @Override
@@ -31,8 +33,4 @@ public class ZookeeperConnection {
             }
         };
     }
-
-
-
-
 }

@@ -1,4 +1,11 @@
 #!/bin/sh
+#=================
+#author WangJun
+#email wangjuntytl@163.com
+#data 2014-11-11
+#===========================
+#desc 在同一台机器启动多个zookeeper服务
+#===================================
 CMD=$1
 [[ x${CMD} != "xstart" ]] && [[ x${CMD} != "xstop" ]] && echo " 参数错误：USAGE:sh $0 start | stop" && exit 1
 
