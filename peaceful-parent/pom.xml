@@ -29,6 +29,28 @@
         <buildtimestamp>${timestamp}</buildtimestamp>
     </properties>
 
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <project.environment>dev</project.environment>
+            </properties>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <project.environment>test</project.environment>
+            </properties>
+        </profile>
+        <profile>
+            <id>product</id>
+            <properties>
+                <project.environment>product</project.environment>
+            </properties>
+        </profile>
+    </profiles>
+
+
     <!-- 发布位置配置 -->
     <distributionManagement>
         <repository>

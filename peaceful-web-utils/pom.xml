@@ -7,12 +7,12 @@
     <parent>
         <groupId>com.peaceful</groupId>
         <artifactId>peaceful-parent</artifactId>
-        <version>2.8</version>
+        <version>1.0-SNAPSHOT</version>
     </parent>
 
     <groupId>com.peaceful</groupId>
     <artifactId>peaceful-web-utils</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <description>this is  common web tools</description>
 
