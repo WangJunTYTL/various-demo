@@ -1,7 +1,7 @@
 package com.peaceful.web.util;
 
 import com.alibaba.fastjson.JSON;
-import com.peaceful.util.StringUtils;
+import com.peaceful.common.util.StringUtils;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;

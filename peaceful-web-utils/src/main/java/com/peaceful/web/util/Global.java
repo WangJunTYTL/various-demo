@@ -1,7 +1,7 @@
 package com.peaceful.web.util;
 
-import com.peaceful.util.AppConfigs;
-import com.peaceful.util.impl.AppConfigsImpl;
+import com.peaceful.common.util.AppConfigs;
+import com.peaceful.common.util.impl.AppConfigsImpl;
 
 /**
  * Date 14/10/28.

@@ -1,7 +1,7 @@
 package com.peaceful.config.util;
 
-import com.peaceful.util.StringUtils;
-import com.peaceful.util.Util;
+import com.peaceful.common.util.StringUtils;
+import com.peaceful.common.util.Util;
 import org.junit.Test;
 
 import java.util.SortedMap;

@@ -13,12 +13,12 @@
     </function>
     <function>
         <name>formatDate</name>
-        <function-class>com.peaceful.util.DateUtils</function-class>
+        <function-class>com.peaceful.common.util.DateUtils</function-class>
         <function-signature>java.lang.String formatDate(java.util.Date)</function-signature>
     </function>
     <function>
         <name>formatDateTime</name>
-        <function-class>com.peaceful.util.DateUtils</function-class>
+        <function-class>com.peaceful.common.util.DateUtils</function-class>
         <function-signature>java.lang.String formatDateTime(java.util.Date)(java.util.Date)</function-signature>
     </function>
 

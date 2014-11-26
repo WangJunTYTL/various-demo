@@ -1,7 +1,7 @@
-package com.peaceful.util.impl;
+package com.peaceful.common.util.impl;
 
-import com.peaceful.util.AppConfigs;
-import com.peaceful.util.Util;
+import com.peaceful.common.util.AppConfigs;
+import com.peaceful.common.util.Util;
 import junit.framework.TestCase;
 
 public class MyAppConfigsTest extends TestCase {

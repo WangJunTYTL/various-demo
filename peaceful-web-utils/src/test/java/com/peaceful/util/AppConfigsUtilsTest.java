@@ -1,6 +1,6 @@
-package com.peaceful.util;
+package com.peaceful.common.util;
 
-import com.peaceful.util.impl.AppConfigsUtils;
+import com.peaceful.common.util.impl.AppConfigsUtils;
 import org.junit.Test;
 
 public class AppConfigsUtilsTest {

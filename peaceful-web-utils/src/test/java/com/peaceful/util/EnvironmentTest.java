@@ -1,4 +1,4 @@
-package com.peaceful.util;
+package com.peaceful.common.util;
 
 import org.junit.Test;
 import org.slf4j.Logger;
