@@ -14,7 +14,8 @@ import java.io.PrintWriter;
  * Author WangJun
  * Email wangjuntytl@163.com
  * <p/>
- * <h2>常用http对象</h2><p>需要配置httpContextFilter</p>
+ * <h2>常用http对象</h2>
+ * <p>需要配置httpContextFilter,可以从线程上下文拿到request和response对象</p>
  *
  * @see com.peaceful.web.util.HttpContextFilter
  */
@@ -46,6 +47,26 @@ public class Http {
         HttpContext.responseThreadLocal.set(response);
     }
 
+
+    /**
+     * getRequest().getAttribute(key);
+     *
+     * @param key
+     * @return
+     */
+    public static Object request(String key) {
+        return getRequest().getAttribute(key);
+    }
+
+    /**
+     * getRequest().setAttribute(key, value);
+     *
+     * @param key
+     * @param value
+     */
+    public static void request(String key, Object value) {
+        getRequest().setAttribute(key, value);
+    }
 
     public static String getCookie(String key, String path) {
         if (key == null)
@@ -139,28 +160,10 @@ public class Http {
         }
     }
 
-    /**
-     * 从当前线程上下文获得当前登录用户，前提已经把登录用户信息放入到线程上下文
-     *
-     * @return
-     */
-    public static String getCurrentUser() {
-        return HttpContext.currentUser.get();
-    }
-
-    /**
-     * 把登录用户信息放入到线程上下文，只放入最简单的登录用户名即可
-     *
-     * @param currentUser
-     */
-    public static void setCurrentUser(String currentUser) {
-        HttpContext.currentUser.set(currentUser);
-    }
 
     private static class HttpContext {
         static ThreadLocal<HttpServletRequest> requestThreadLocal = new ThreadLocal<HttpServletRequest>();
         static ThreadLocal<HttpServletResponse> responseThreadLocal = new ThreadLocal<HttpServletResponse>();
-        static ThreadLocal<String> currentUser = new ThreadLocal<String>();
 
     }
 

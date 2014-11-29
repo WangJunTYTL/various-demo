@@ -31,11 +31,16 @@
         </dependency>
 
         <dependency>
-            <groupId>com.hehua</groupId>
-            <artifactId>hehua-framework</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>com.peaceful</groupId>
+            <artifactId>peaceful-common-utils</artifactId>
             <scope>provided</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+
     </dependencies>
 
 

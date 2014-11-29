@@ -10,7 +10,7 @@ import com.peaceful.common.util.impl.AppConfigsImpl;
  * <p/>
  * <h3>web app 全局配置信息</h3>
  */
-public class Global {
+public class GlobalApp {
 
     private static AppConfigs appConfigs = AppConfigsImpl.getMyAppConfigs("application.properties");
 
