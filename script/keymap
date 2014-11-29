@@ -29,3 +29,9 @@ alias ll='ls -1ld *'
 alias la='ls -1a'
 
 alias vi='vim'
+
+alias brewinstall='brew install'
+
+alias brewuninstall='brew uninstall'
+
+alias brewlist='brew list'
