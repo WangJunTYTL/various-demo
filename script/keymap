@@ -1,0 +1,31 @@
+alias mvndeploy='mvn -Dmaven.test.skip=true clean deploy'
+
+alias mvninstall='mvn -Dmaven.test.skip=true clean install'
+
+alias mvncompile='mvn -Dmaven.test.skip=true clean compile'
+
+alias gitstatus='git status -s'
+
+alias gitupdate='git commit -a -m codeUpdate'
+
+alias gitcodeBackUp='git commit -a -m codeBackUp'
+
+alias gitpush='git push'
+
+alias gitcommit='git commit -a -m'
+
+alias gitpull='git pull'
+
+alias gitrm='git rm -rf  --cached'
+
+alias gitadd='git add  -A '
+
+alias gitcheckout='git checkout '
+
+alias gitbranch='git branch'
+
+alias ll='ls -1ld *'
+
+alias la='ls -1a'
+
+alias vi='vim'
