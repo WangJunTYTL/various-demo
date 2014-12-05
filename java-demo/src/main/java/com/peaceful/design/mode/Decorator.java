@@ -1,6 +1,6 @@
 package com.peaceful.design.mode;
 
-import com.wj.util.Util;
+import com.peaceful.common.util.Util;
 
 /**
  * Date 14/10/20.

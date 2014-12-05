@@ -1,6 +1,7 @@
 package com.wj;
 
-import com.wj.util.Util;
+
+import com.peaceful.common.util.Util;
 
 /**
  * Date 14-9-7.

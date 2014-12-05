@@ -1,7 +1,7 @@
 package com.peaceful.jdk.demo;
 
 import com.peaceful.jdk.demo.impl.User;
-import com.peaceful.util.Util;
+import com.peaceful.common.util.Util;
 
 /**
  * Date 14/11/15.
