@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration>
+    <!-- !!禁止使用stdout这个appender -->
+    <appender name="stdout" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.out"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yy-MM-dd HH:mm:ss,SSS} %-5p %c(%F:%L) ## %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="stdoutFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="/data/logs/hehua-mis/stdout.log"/>
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yy-MM-dd HH:mm:ss,SSS} %-5p %c(%F:%L) ## %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="deliveryFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="/data/logs/hehua-api/delivery.log"/>
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yy-MM-dd HH:mm:ss,SSS} %-5p %c(%F:%L) ## %m%n"/>
+        </layout>
+    </appender>
+
+    <logger name="org.springframework.beans.factory.support.DefaultListableBeanFactory">
+        <level value="INFO"></level>
+    </logger>
+
+    <logger name="org.springframework.beans.factory.annotation.InjectionMetadata">
+        <level value="INFO"></level>
+    </logger>
+    <logger name="org.springframework.security.web.util.AntPathRequestMatcher">
+        <level value="INFO"></level>
+    </logger>
+    <logger name="org.springframework.security.web.FilterChainProxy">
+        <level value="INFO"></level>
+    </logger>
+    <logger name="org.springframework.web.context.support.StandardServletEnvironment">
+        <level value="INFO"></level>
+    </logger>
+    <logger name="org.springframework.core.env.StandardEnvironment">
+        <level value="INFO"></level>
+    </logger>
+    <logger name="org.springframework.beans.factory.xml.PluggableSchemaResolver">
+        <level value="INFO"></level>
+    </logger>
+    <logger name="org.springframework.core.io.support.PathMatchingResourcePatternResolver">
+        <level value="INFO"></level>
+    </logger>
+    <logger name="org.apache.zookeeper.ClientCnxn">
+        <level value="ERROR"></level>
+    </logger>
+    <logger name="org.apache.zookeeper.ZooKeeper">
+        <level value="ERROR"></level>
+    </logger>
+    <logger name="org.springframework.aop.framework.Cglib2AopProxy">
+        <level value="ERROR"></level>
+    </logger>
+    <logger name="druid.sql.ResultSet">
+        <level value="ERROR"></level>
+    </logger>
+    <logger name="org.mybatis.spring.SqlSessionFactoryBean">
+        <level value="ERROR"></level>
+    </logger>
+    <logger name="com.hehua.framework.config.ZookeeperConfigManager">
+        <level value="ERROR"></level>
+    </logger>
+    <logger name="org.springframework.context.annotation.ClassPathBeanDefinitionScanner">
+        <level value="ERROR"></level>
+    </logger>
+    <logger name="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor">
+        <level value="INFO"></level>
+    </logger>
+    <logger name="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping">
+        <level value="INFO"></level>
+    </logger>
+
+    <logger name="com.hehua.order.service.DeliveryService" additivity="false">
+        <level value="INFO"></level>
+        <appender-ref ref="deliveryFile"></appender-ref>
+    </logger>
+    <logger name="org.mybatis.spring.mapper.ClassPathMapperScanner" additivity="false">
+        <level value="INFO"></level>
+        <appender-ref ref="deliveryFile"></appender-ref>
+    </logger>
+    <logger name="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+        <level value="ERROR"></level>
+    </logger>
+    <logger name="org.springframework.web.filter.RequestContextFilter">
+        <level value="INFO"></level>
+    </logger>
+    <logger name="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping">
+        <level value="INFO"></level>
+    </logger>
+    <logger name="org.springframework.beans.factory.xml.BeanDefinitionParserDelegate">
+        <level value="INFO"></level>
+    </logger>
+    <logger name="org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator">
+        <level value="INFO"></level>
+    </logger>
+    <logger name="druid.sql.Connection">
+        <level value="INFO"></level>
+    </logger>
+    <logger name="org.springframework.beans.factory.xml">
+        <level value="ERROR"></level>
+    </logger>
+    <logger name="org.apache.http">
+        <level value="INFO"></level>
+    </logger>
+    <logger name="org.springframework.web.servlet">
+        <level value="INFO"></level>
+    </logger>
+    <logger name="net.sf.ehcache">
+        <level value="ERROR"></level>
+    </logger>
+    <logger name="com.peaceful.auth">
+        <level value="INFO"></level>
+    </logger>
+
+    <root>
+        <level value="${log.level}"/>
+        <appender-ref ref="${log.appender}"/>
+    </root>
+
+</log4j:configuration>
