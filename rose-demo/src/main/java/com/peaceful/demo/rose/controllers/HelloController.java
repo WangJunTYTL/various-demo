@@ -6,6 +6,7 @@ package com.peaceful.demo.rose.controllers;
  * rose 默认扫描的controller必须在包controllers下
  */
 
+import com.peaceful.demo.rose.domain.User;
 import net.paoding.rose.web.annotation.Param;
 import net.paoding.rose.web.annotation.Path;
 import net.paoding.rose.web.annotation.rest.Get;
@@ -28,6 +29,22 @@ public class HelloController {
     public String aa(@Param("topicId") int topicId,Model model) {
         model.add("id",topicId);
         return "test";
+
+    }
+
+
+    /**
+     * 所有的基础java类型,都可以直接使用,rose进行自动转换,比如在action中的类型为long id,则id可以转为数字,不再需要从string转为long。 l array/map/bean同样可用,它们的接收参数规则为:
+     ¡ ?id=1,2,3,4 或者 ?id=1&id=2&id=3 对应 @Param("id") int[] idArray
+     ¡ ?map:1=paoding&map:2=rose 对应 @Param("map") Map map
+     * @param user
+     * @param model
+     * @return
+     */
+    @Get("bb") // 自动反射成想要的对象
+    public String bb(User user,Model model) {
+        model.add("user",user);
+        return "testUser";
 
     }
 

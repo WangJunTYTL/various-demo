@@ -40,6 +40,7 @@
             <element id="library" level="project" name="Maven: com.54chen:paoding-rose-portal:1.0" />
             <element id="library" level="project" name="Maven: com.54chen:paoding-rose-jade:1.1" />
             <element id="library" level="project" name="Maven: commons-jexl:commons-jexl:1.1" />
+            <element id="library" level="project" name="Maven: com.peaceful:peaceful-common-utils:1.0-SNAPSHOT" />
             <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.5.10" />
             <element id="library" level="project" name="Maven: org.slf4j:slf4j-log4j12:1.5.10" />
             <element id="library" level="project" name="Maven: log4j:log4j:1.2.16" />
@@ -337,6 +338,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/16.0/guava-16.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.peaceful:peaceful-common-utils:1.0-SNAPSHOT">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/peaceful/peaceful-common-utils/1.0-SNAPSHOT/peaceful-common-utils-1.0-SNAPSHOT.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/peaceful/peaceful-common-utils/1.0-SNAPSHOT/peaceful-common-utils-1.0-SNAPSHOT-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/peaceful/peaceful-common-utils/1.0-SNAPSHOT/peaceful-common-utils-1.0-SNAPSHOT-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: commons-beanutils:commons-beanutils:1.7.0">
