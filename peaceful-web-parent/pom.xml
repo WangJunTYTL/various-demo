@@ -7,15 +7,15 @@
     <parent>
         <groupId>com.peaceful</groupId>
         <artifactId>peaceful-parent</artifactId>
-        <version>2.8</version>
+        <version>1.0-SNAPSHOT</version>
     </parent>
 
     <groupId>com.peaceful</groupId>
     <artifactId>peaceful-web-parent</artifactId>
-    <version>2.8</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>peaceful-web-parent</name>
-    <description>maven project template</description>
+    <description>web project parent pom</description>
 
 
     <properties>
@@ -83,13 +83,48 @@
                     </excludes>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>8.1.8.v20121106</version>
+                <configuration>
+                    <stopKey>foo</stopKey>
+                    <stopPort>9999</stopPort>
+                    <reload>automatic</reload>
+                    <webAppConfig>
+                        <contextPath>/</contextPath>
+                    </webAppConfig>
+                    <connectors>
+                        <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
+                            <port>8888</port>
+                            <maxIdleTime>60000</maxIdleTime>
+                        </connector>
+                    </connectors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>stop-jetty</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>stop</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.peaceful</groupId>
+                <artifactId>peaceful-web-utils</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <dependencies>
-        <dependency>
-            <groupId>com.peaceful</groupId>
-            <artifactId>peaceful-web-utils</artifactId>
-            <version>1.1-SNAPSHOT</version>
-        </dependency>
+
     </dependencies>
 </project>
