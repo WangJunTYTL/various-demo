@@ -27,4 +27,6 @@
         <property name="minEvictableIdleTimeMillis" value="3600000"></property>
     </bean>
 
+    <bean class="com.peaceful.demo.rose.interceptors.AccessTraceInterceptor"></bean>
+
 </beans>
