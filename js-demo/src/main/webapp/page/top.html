@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="/js/jquery-1.9.1.js"></script>
+    <link href="/css/bootstrap/bootstrap.css" rel="stylesheet">
+    <script src="/js/bootstrap/bootstrap.js"></script>
+    <style>
+        .box {
+            height: 200px;
+            width: 100%;
+            background: #ccc;
+            margin: 10px 0;
+        }
+
+        .location {
+            position: fixed;
+            right: 30px;
+            bottom: 10px;
+            width: 20px;
+            background: #FFC;
+            padding: 5px;
+            cursor: pointer;
+            color: #003;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box a">产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍产品介绍</div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box bottom"></div>
+    <div class="location">
+        <p class="scroll_top">返回顶部</p>
+
+        <p class="scroll_a">产品介绍</p>
+
+        <p class="scroll_bottom">滑到底部</p>
+    </div>
+</div>
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $('.scroll_top').click(function () {
+            $('html,body').animate({scrollTop: '0px'}, 800);
+        });
+        $('.scroll_a').click(function () {
+            $('html,body').animate({scrollTop: $('.a').offset().top}, 800);
+        });
+        $('.scroll_bottom').click(function () {
+            $('html,body').animate({scrollTop: $('.bottom').offset().top}, 800);
+        });
+    });
+</script>

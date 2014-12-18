@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="/js/jquery-1.9.1.js"></script>
+    <script src="/js/upload/jquery.ui.widget.js"></script>
+    <script src="/js/upload/jquery.fileupload.js"></script>
+    <script src="/js/upload/jquery.iframe-transport.js"></script>
+</head>
+
+<body>
+<input type="file" id="uploadFileId">
+</body>
+</html>
+<script>
+    $('#uploadFileId').fileupload({
+        autoUpload: true,
+        url: "/upload",
+        dataType: 'json',
+        done: function (e, data) {
+            if (data.result.state == "SUCCESS") {
+                var imagesStr = $("#imageId").val();
+                imagesStr += data.result.id + "@";
+
+                $("#imageId").val(imagesStr);
+
+                var imagesUrl = $("#imageUrlIds").html();
+                if (isNull(imagesUrl)) {
+                    imagesUrl += data.result.original;
+                } else {
+                    imagesUrl += " ;" + data.result.original;
+                }
+                $("#imageUrlIds").html(imagesUrl);
+                alert("上传图片成功!");
+
+            } else {
+                alert("上传文件失败");
+            }
+
+        },
+        progressall: function (e, data) {//设置上传进度事件的回调函数
+            var progress = parseInt(data.loaded / data.total * 5, 10);
+            $('#progress .bar').css(
+                    'width',
+                    progress + '%'
+            );
+        }
+    });
+</script>
