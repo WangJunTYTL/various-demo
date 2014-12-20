@@ -40,15 +40,22 @@ $.fn.validForm = function () {
     return true;
 }
 
-if (undefined != window.mis_data && window.mis_data != null) {
+if (undefined != window.app_data && window.app_data != null) {
+    app_form = null;
+    if (app_data.form != null) {
+        var filter = "form[id='" + app_data.form + "']"
+        app_form = $(filter);
+    } else {
+        app_form = $('form');
+    }
     var MyValidator = function () {
         var handleSubmit = function () {
-            $('form').validate({
+            app_form.validate({
                 errorElement: 'span',
                 errorClass: 'help-block',
                 focusInvalid: false,
-                rules: mis_data.rules,
-                messages: mis_data.messages,
+                rules: app_data.rules,
+                messages: app_data.messages,
                 highlight: function (element) {
                     $(element).closest('.form-group').addClass('has-error');
                 },
@@ -64,20 +71,20 @@ if (undefined != window.mis_data && window.mis_data != null) {
 
                 submitHandler: function () {
                     var flag = true;
-                    if (mis_data.postFront != null || mis_data.postFront != undefined) {
-                        flag = mis_data.postFront();
+                    if (app_data.postFront != null || app_data.postFront != undefined) {
+                        flag = app_data.postFront();
                     }
                     if (flag) {
-                        var data = $("form").serialize();
+                        var data = app_form.serialize();
                         $.ajax({
                             type: "POST",
-                            url: mis_data.url,
+                            url: app_data.url,
                             data: data,
                             dataType: "json",
                             success: function (data) {
                                 if (data.code == 1) {
                                     alert(data.result);
-                                    document.location.href = mis_data.nextUrl;
+                                    document.location.href = app_data.nextUrl;
                                 } else {
                                     alert(data.result);
                                 }
@@ -91,7 +98,7 @@ if (undefined != window.mis_data && window.mis_data != null) {
 
             $('form input').keypress(function (e) {
                 if (e.which == 13) {
-                    if ($('form').validate().form()) {
+                    if (app_form.validate().form()) {
                         return true;
                     }
                     return false;
