@@ -49,6 +49,10 @@ db = {"No.1": "Wo", "No.2": "Shi", "No.3": "Ni", "No.4": "Da", "No.5": "Ye"}
 print db
 print db['No.1']
 
+db2 = {"a": {"suc": 1}}
+
+print db2['a']['suc']
+
 
 
 

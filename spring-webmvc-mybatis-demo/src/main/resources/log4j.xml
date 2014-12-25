@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration>
+    <!-- !!禁止使用stdout这个appender -->
+    <appender name="stdout" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.out"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yy-MM-dd HH:mm:ss,SSS} %-5p %c(%F:%L) ## %m%n"/>
+        </layout>
+    </appender>
+
+
+    <appender name="deliveryFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="/data/logs/hehua-api/delivery.log"/>
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yy-MM-dd HH:mm:ss,SSS} %-5p %c(%F:%L) ## %m%n"/>
+        </layout>
+    </appender>
+
+    <root>
+        <level value="info"/>
+        <appender-ref ref="stdout"/>
+    </root>
+
+</log4j:configuration>

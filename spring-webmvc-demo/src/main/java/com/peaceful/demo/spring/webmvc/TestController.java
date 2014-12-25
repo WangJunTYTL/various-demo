@@ -1,6 +1,6 @@
 package com.peaceful.demo.spring.webmvc;
 
-import com.peaceful.util.Util;
+import com.peaceful.common.util.Util;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;

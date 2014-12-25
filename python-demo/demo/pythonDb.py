@@ -21,11 +21,13 @@ cursor = conn.cursor()
 myList = []
 
 insertSQL = "insert into user (`name`) values('wangjun')"
-deleteSQL = "delete from user where name='wangjun'"
+deleteSQL = "delete from user"
 querySQL = "select * from user where name ='wangjun'"
+
+print cursor.execute(deleteSQL)
 print cursor.execute(insertSQL)
 print cursor.execute(querySQL)
-print cursor.execute(deleteSQL)
+# print cursor.execute(deleteSQL)
 
 # 查询
 n = cursor.execute("select * from user")
@@ -35,6 +37,11 @@ for row in cursor.fetchall():
 
 for ele in myList:
     print ele
+
+
+cursor.close
+conn.commit()
+conn.close
 
 
 
