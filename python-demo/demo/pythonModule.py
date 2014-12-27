@@ -14,6 +14,12 @@ version = '1.0'
 def say():
     print "hello world,this is a python module"
 
+# __name__ = 'hello'
+
+# 默认等于自己的文件名，假如被直接运行默认等于 __main__ ,可以用来执行是否在导入到其他模块时，是否执行自己的主模块
+print __name__
+
+
 # 常用模块：
 # sys
 # argv

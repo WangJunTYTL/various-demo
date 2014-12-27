@@ -78,7 +78,7 @@ print '------------'
 # 一个模块就相当于java的一个类文件,如果要看模块里地所有属性dir(module)
 # 使用前先导入
 import sys  # 使用模块 sys模块包含了与Python解释器和它的环境有关的函数（可以在使用的位置导入，在头部导入不是必须的）
-import pythonModule  as test  # 导入自定义的模块，模块导入类似与java的类导入 ,as 为模块起别名
+import pythonModule as test  # 导入自定义的模块，模块导入类似与java的类导入 ,as 为模块起别名
 
 for i in sys.argv:
     print '调用参数', i
