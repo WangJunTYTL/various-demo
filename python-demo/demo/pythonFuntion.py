@@ -15,8 +15,6 @@ def say(mes, *args):  # 可变参数(与java一样)
     hello world.'''
     print mes, args
 
-
-
 print say.__doc__
 
 if __name__ == '__main__':

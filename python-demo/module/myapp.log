@@ -1,0 +1,23 @@
+Sun, 28 Dec 2014 10:15:17 logging-module.py[line:15] DEBUG This is debug message
+Sun, 28 Dec 2014 10:15:17 logging-module.py[line:16] INFO This is info message
+Sun, 28 Dec 2014 10:15:17 logging-module.py[line:17] WARNING This is warning message
+Sun, 28 Dec 2014 10:15:19 logging-module.py[line:15] DEBUG This is debug message
+Sun, 28 Dec 2014 10:15:19 logging-module.py[line:16] INFO This is info message
+Sun, 28 Dec 2014 10:15:19 logging-module.py[line:17] WARNING This is warning message
+Sun, 28 Dec 2014 10:15:20 logging-module.py[line:15] DEBUG This is debug message
+Sun, 28 Dec 2014 10:15:20 logging-module.py[line:16] INFO This is info message
+Sun, 28 Dec 2014 10:15:20 logging-module.py[line:17] WARNING This is warning message
+Sun, 28 Dec 2014 10:15:20 logging-module.py[line:15] DEBUG This is debug message
+Sun, 28 Dec 2014 10:15:20 logging-module.py[line:16] INFO This is info message
+Sun, 28 Dec 2014 10:15:20 logging-module.py[line:17] WARNING This is warning message
+Sun, 28 Dec 2014 10:15:27 logging-module.py[line:15] DEBUG This is debug message
+Sun, 28 Dec 2014 10:15:27 logging-module.py[line:16] INFO This is info message
+Sun, 28 Dec 2014 10:15:27 logging-module.py[line:17] WARNING This is warning message
+Sun, 28 Dec 2014 10:15:53 logging-module.py[line:15] DEBUG This is debug message
+Sun, 28 Dec 2014 10:15:53 logging-module.py[line:16] INFO This is info message
+Sun, 28 Dec 2014 10:15:53 logging-module.py[line:17] WARNING This is warning message
+Sun, 28 Dec 2014 10:17:33 logging-module.py[line:15] DEBUG This is debug message
+Sun, 28 Dec 2014 10:17:33 logging-module.py[line:16] INFO This is info message
+Sun, 28 Dec 2014 10:17:33 logging-module.py[line:17] WARNING This is warning message
+example02   : INFO     This is info message
+example02   : WARNING  This is warning message
