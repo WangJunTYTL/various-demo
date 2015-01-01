@@ -21,3 +21,8 @@ Sun, 28 Dec 2014 10:17:33 logging-module.py[line:16] INFO This is info message
 Sun, 28 Dec 2014 10:17:33 logging-module.py[line:17] WARNING This is warning message
 example02   : INFO     This is info message
 example02   : WARNING  This is warning message
+Mon, 29 Dec 2014 17:41:53 logging-module.py[line:15] DEBUG This is debug message
+Mon, 29 Dec 2014 17:41:53 logging-module.py[line:16] INFO This is info message
+Mon, 29 Dec 2014 17:41:53 logging-module.py[line:17] WARNING This is warning message
+example02   : INFO     This is info message
+example02   : WARNING  This is warning message

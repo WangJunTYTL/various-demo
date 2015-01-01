@@ -26,10 +26,25 @@
 #
 # =================================
 
+
+def hello():
+    """
+    hello world!
+
+    this is a simple syntax demo.
+    """
+    print("hello")
+
+
+__author__ = 'wangjun'  # __ 开始 __ 结束 Python内部保留标识名
 x = 5  # 定义变量
 y = "hello world"  # 单引号与双引号一样 （‘’‘）换行使用  (\)转义字符
-z = '''welcome  
+z = '''welcome
 everyone'''
+CONSTANT_X = 1  # 常量
+CONSTANT_Y = 2
+_x = 1  # 内部使用变量
+print("x:%s _x:%s" % (x, _x))
 s = y + z
 ss = y, z  # (,)组成元组 元组概念将会在pythonCollection文件介绍
 print s
@@ -89,4 +104,6 @@ test.say()
 
 print 'pythonModule version is ', test.version
 
+print("更多Python语法的规范可以参照：http://zh-google-styleguide.readthedocs.org/en/latest/"
+      "google-python-styleguide/python_style_rules/")
 print '基本语法学习完毕，接下来学习python支持的数据结构->pythonCollection'

@@ -55,6 +55,11 @@ print db2['a']['suc']
 
 
 
+if db2.has_key('b'):
+    print 'none'
+
+
+
 
 
 
