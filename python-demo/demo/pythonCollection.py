@@ -24,6 +24,8 @@ print '遍历'
 for x in myList:
     print x
 
+print ("含有1的次数"+str(myList.count(1)))
+
 ####
 myList.append(0)
 print myList

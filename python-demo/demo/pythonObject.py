@@ -18,16 +18,31 @@ print '-------------------------------------------'
 
 
 class Person():
+    version = 1  # 静态数据
+
     def __init__(self, name):  # 初始方法
         self.name = name
+        print ("__init__ %s" % self.name)
+
+    def __new__(cls, *args, **kwargs):
+        print ("__new__ %s" % cls.name)
+
+    def __del__(self):
+        print("__del__ %s" % "解构器")
 
     def say(self):
         print self.name
 
 
-p = Person("My name is WJ");
+p = Person("My name is WJ")
 print p
 p.say()
+print dir(p)
+print("类的名字：%s" % Person.__name__)
+print("类的属性：%s" % Person.__dict__)
+print("类所在模块：%s" % Person.__module__)
+
+Person.__new__(p)
 
 
 class Student(Person):  # 继承
