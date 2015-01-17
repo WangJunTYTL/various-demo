@@ -57,3 +57,16 @@ class Student(Person):  # 继承
 
 student = Student("WJ", "BJ")
 student.say2()
+
+print "o:", repr(student)
+print "str:", str(student)
+
+
+# Python 提供了 is 和 is not 运算符来测试两个变量是否指向同一个对象。象下面这样执行一个测试
+
+# cmp()与java的equals()类似
+# 内建函数 cmp()用于比较两个对象 obj1 和 obj2, 如果 obj1 小于 obj2, 则返回一个负整 数,
+# 如果 obj1 大于 obj2 则返回一个正整数, 如果 obj1 等于 obj2, 则返回 0。它的行为非常
+# 类似于 C 语言的 strcmp()函数。比较是在对象之间进行的,不管是标准类型对象还是用户自定 义对象。
+# 如果是用户自定义对象, cmp()会调用该类的特殊方法__cmp__()。在第 13 章会详细 介绍类的这些特殊方法。
+# 下面是几个使用 cmp()内建函数的对数值和字符串对象进行比较的例

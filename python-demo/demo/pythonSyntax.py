@@ -35,7 +35,6 @@ def hello():
     """
     print("hello")
 
-
 __author__ = 'wangjun'  # __ 开始 __ 结束 Python内部保留标识名
 x = 5  # 定义变量
 y = "hello world"  # 单引号与双引号一样 （‘’‘）换行使用  (\)转义字符
@@ -44,6 +43,7 @@ everyone'''
 CONSTANT_X = 1  # 常量
 CONSTANT_Y = 2
 _x = 1  # 内部使用变量
+# 布尔运算 not or and
 print("x:%s _x:%s" % (x, _x))
 s = y + z
 ss = y, z  # (,)组成元组 元组概念将会在pythonCollection文件介绍

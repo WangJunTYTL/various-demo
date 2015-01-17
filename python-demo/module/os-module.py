@@ -1,3 +1,5 @@
+# coding=utf-8
+
 __author__ = 'wangjun'
 import os
 
@@ -10,6 +12,9 @@ print(name)
 # os.mkdir()
 # os.path.isdir()
 # os.path.join(dir,file)
+
+test = 'test'
+print(test[:1] in 't')
 
 
 
