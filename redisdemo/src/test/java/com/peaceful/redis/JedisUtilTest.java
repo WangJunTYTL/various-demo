@@ -1,18 +1,14 @@
 package com.peaceful.redis;
 
-import com.peaceful.util.Util;
-import org.junit.*;
+import com.peaceful.common.util.Util;
+import org.junit.Before;
 import org.junit.Test;
 import redis.clients.jedis.*;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.util.List;
 import java.util.Set;
-
-import static org.junit.Assert.*;
 
 public class JedisUtilTest {
 

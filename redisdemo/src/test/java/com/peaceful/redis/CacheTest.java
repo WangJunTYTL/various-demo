@@ -1,12 +1,10 @@
 package com.peaceful.redis;
 
-import com.peaceful.util.StringUtils;
-import com.peaceful.util.Util;
-import org.junit.*;
+import com.peaceful.common.util.StringUtils;
+import com.peaceful.common.util.Util;
+import org.junit.Before;
 import org.junit.Test;
 import redis.clients.jedis.Jedis;
-
-import static org.junit.Assert.*;
 
 public class CacheTest {
 

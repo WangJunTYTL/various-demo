@@ -6,7 +6,7 @@
 
     <parent>
         <groupId>com.peaceful</groupId>
-        <artifactId>peaceful-parent</artifactId>
+        <artifactId>peaceful-web-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
@@ -22,6 +22,21 @@
             <artifactId>akka-actor_2.10</artifactId>
             <version>2.3.8</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-remote_2.10</artifactId>
+            <version>2.3.8</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-slf4j_2.10</artifactId>
+            <version>2.3.8</version>
+        </dependency>
+
+
+
         <dependency>
             <groupId>com.peaceful</groupId>
             <artifactId>peaceful-common-utils</artifactId>

@@ -6,39 +6,40 @@
 
     <parent>
         <groupId>com.peaceful</groupId>
-        <artifactId>peaceful-parent</artifactId>
+        <artifactId>peaceful-web-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
     <groupId>com.peaceful</groupId>
-    <artifactId>redisdemo</artifactId>
-    <version>2.8</version>
+    <artifactId>akka-remote-demo</artifactId>
+    <version>1.0-SNAPSHOP</version>
     <description>maven project template</description>
 
-    <licenses>
-        <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
 
     <dependencies>
         <dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
-            <version>2.6.0</version>
-            <scope>compile</scope>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-actor_2.10</artifactId>
+            <version>2.3.8</version>
         </dependency>
+
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-remote_2.10</artifactId>
+            <version>2.3.8</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-slf4j_2.10</artifactId>
+            <version>2.3.8</version>
+        </dependency>
+
         <dependency>
             <groupId>com.peaceful</groupId>
             <artifactId>peaceful-common-utils</artifactId>
         </dependency>
-    </dependencies>
 
+    </dependencies>
 
 </project>

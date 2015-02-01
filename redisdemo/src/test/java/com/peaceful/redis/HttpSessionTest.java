@@ -1,6 +1,6 @@
 package com.peaceful.redis;
 
-import com.peaceful.util.Util;
+import com.peaceful.common.util.Util;
 import org.junit.*;
 import org.junit.Test;
 

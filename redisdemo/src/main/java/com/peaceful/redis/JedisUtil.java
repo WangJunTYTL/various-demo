@@ -1,7 +1,7 @@
 package com.peaceful.redis;
 
-import com.peaceful.util.AppConfigs;
-import com.peaceful.util.impl.AppConfigsImpl;
+import com.peaceful.common.util.AppConfigs;
+import com.peaceful.common.util.impl.AppConfigsImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import redis.clients.jedis.*;

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Starter Template for Bootstrap</title>
+    <link href="/css/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <script src="/js/jquery-1.9.1.js"></script>
+    <script src="/js/bootstrap/bootstrap.js"></script>
+    <script src="/js/headroom/headroom.js"></script>
+</head>
+
+<body>
+
+<header id="header" class="header header--fixed hide-from-print" role="banner" data-headroom>
+    <nav class="navbar navbar-inverse navbar-fixed-top nav-theme" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Project name</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</header>
+<div class="container" style="height: 900px;position: relative">
+</div>
+<script>
+    // 获取页面元素
+    var myElement = document.querySelector("header");
+    // 创建 Headroom 对象，将页面元素传递进去
+    var headroom  = new Headroom(myElement);
+    // 初始化
+    headroom.init();
+</script>
+</body>
+</html>
+

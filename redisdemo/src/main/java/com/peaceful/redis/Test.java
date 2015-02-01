@@ -1,6 +1,6 @@
 package com.peaceful.redis;
 
-import com.peaceful.util.Util;
+import com.peaceful.common.util.Util;
 import redis.clients.jedis.HostAndPort;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisCluster;
@@ -22,7 +22,7 @@ public class Test {
         Util.report(jedis.get("foo"));
     }
 
-    //redis 集群
+    //redis 集群 【zhuyi是否支持】
     public void cluster() {
         Set<HostAndPort> jedisClusterNodes = new HashSet<HostAndPort>();
         //Jedis Cluster will attempt to discover cluster nodes automatically

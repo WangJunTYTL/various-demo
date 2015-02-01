@@ -8,7 +8,7 @@ import com.peaceful.demo.akka.actor.SmsActor;
 import com.peaceful.demo.akka.domain.Sms;
 
 /**
- * 模拟发送1000条短信，并发执行，一条短信发送成功的时间为2s 机器 macpro m 16g c 4
+ * 模拟发送1000条短信，并发执行，一条短信发送成功的时间为2s 机器 macpro m 16g c 4 2.8GHz i7
  * <p/>
  * Created by wangjun on 15/1/17.
  */
@@ -17,8 +17,10 @@ public class SmsSendDemo {
     public static void main(String[] args) {
         ActorSystem system = ActorSystem.create("MySystem");
         long now = System.currentTimeMillis();
+//        ActorRef smsA = system.actorOf(Props.create(SmsActor.class), "sms_" + "" + "");
+
         for (int i = 0; i < 1000; i++) {
-            ActorRef smsA = system.actorOf(Props.create(SmsActor.class), "sms" + i);
+            ActorRef smsA = system.actorOf(Props.create(SmsActor.class), "sms_" + i+"");
             Sms sms = new Sms();
             sms.content = "hello wj + " + i;
             sms.sender = "wj +" + i;
