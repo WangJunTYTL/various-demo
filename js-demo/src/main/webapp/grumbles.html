@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="/css/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="/css/grumbles/grumble.css" rel="stylesheet">
+    <script src="/js/jquery-1.9.1.js"></script>
+    <script src="/js/bootstrap/bootstrap.js"></script>
+    <style>
+        a {
+            margin-right: 68px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a id="jquery" class="btn btn-info">jquery</a>
+    <a id="python" class="btn btn-info">python</a>
+    <a id="java" class="btn btn-info">java</a>
+    <a id="akka" class="btn btn-info">akka</a>
+
+
+    <div>
+        <button id="aaa"></button>
+    </div>
+</div>
+<script src="/js/grumbles/Bubble.js"></script>
+<script src="/js/grumbles/jquery.grumble.js"></script>
+
+<script>
+    $('#aaa').grumble({
+        text: 'Bubble-tastic!',
+        angle: 90,  //角度
+        distance: 10, //距离
+        showAfter: 500, // 多少毫秒后显示  隐身 hideAfter: 2000,
+        type: 'alt-' //颜色更换
+
+    });
+
+    function paopao(e) {
+        var $me = $(this), interval;
+
+        e.preventDefault();
+
+        $me.grumble(
+                {
+                    angle: 130,
+                    text: 'Look at me!',
+                    type: 'alt-',
+                    distance: 10,
+                    hideOnClick: true,
+                    onShow: function () {
+                        var angle = 130, dir = 1;
+                        interval = setInterval(function () {
+                            (angle > 220 ? (dir = -1, angle--) : ( angle < 130 ? (dir = 1, angle++) : angle += dir));
+                            $me.grumble('adjust', {angle: angle,});
+                        }, 25);
+                    },
+                    onHide: function () {
+                        clearInterval(interval);
+                    }
+                }
+        );
+    }
+
+    $('#jquery').click(function (e) {
+        var $me = $(this), interval;
+
+        e.preventDefault();
+
+        $me.grumble(
+                {
+                    angle: 130,
+                    text: 'Look at me!',
+                    type: 'alt-',
+                    distance: 10,
+                    hideOnClick: true,
+                    onShow: function () {
+                        var angle = 130, dir = 1;
+                        interval = setInterval(function () {
+                            (angle > 220 ? (dir = -1, angle--) : ( angle < 130 ? (dir = 1, angle++) : angle += dir));
+                            $me.grumble('adjust', {angle: angle,});
+                        }, 25);
+                    },
+                    onHide: function () {
+                        clearInterval(interval);
+                    }
+                }
+        );
+    });
+
+    $('#akka').click(function (e) {
+        var $me = $(this), interval;
+
+        e.preventDefault();
+
+        $me.grumble(
+                {
+                    angle: 130,
+                    text: 'Look at me!',
+                    type: 'alt-',
+                    distance: 10,
+                    hideOnClick: true,
+                    onShow: function () {
+                        var angle = 130, dir = 1;
+                        interval = setInterval(function () {
+                            (angle > 220 ? (dir = -1, angle--) : ( angle < 130 ? (dir = 1, angle++) : angle += dir));
+                            $me.grumble('adjust', {angle: angle,});
+                        }, 25);
+                    },
+                    onHide: function () {
+                        clearInterval(interval);
+                    }
+                }
+        );
+    });
+
+    $('#java').click(function (e) {
+        var $me = $(this), interval;
+
+        e.preventDefault();
+
+        $me.grumble(
+                {
+                    angle: 130,
+                    text: 'Look at me!',
+                    type: 'alt-',
+                    distance: 10,
+                    hideOnClick: true,
+                    onShow: function () {
+                        var angle = 130, dir = 1;
+                        interval = setInterval(function () {
+                            (angle > 220 ? (dir = -1, angle--) : ( angle < 130 ? (dir = 1, angle++) : angle += dir));
+                            $me.grumble('adjust', {angle: angle,});
+                        }, 25);
+                    },
+                    onHide: function () {
+                        clearInterval(interval);
+                    }
+                }
+        );
+    });
+
+    $('#python').click(function (e) {
+        var $me = $(this), interval;
+
+        e.preventDefault();
+
+        $me.grumble(
+                {
+                    angle: 130,
+                    text: 'Look at me!',
+//                    type: 'alt-',
+                    distance: 10,
+                    hideOnClick: true,
+                    onShow: function () {
+                        var angle = 130, dir = 1;
+                        interval = setInterval(function () {
+                            (angle > 220 ? (dir = -1, angle--) : ( angle < 130 ? (dir = 1, angle++) : angle += dir));
+                            $me.grumble('adjust', {angle: angle,});
+                        }, 25);
+                    },
+                    onHide: function () {
+                        clearInterval(interval);
+                    }
+                }
+        );
+    });
+
+
+    $("#jquery").trigger("click");
+    $("#akka").trigger("click");
+    $("#java").trigger("click");
+    $("#python").trigger("click");
+</script>
+</body>
+</html>
