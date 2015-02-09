@@ -16,7 +16,7 @@ import java.util.*;
 public class JedisUtil {
 
     private static final Logger logger = LoggerFactory.getLogger(JedisUtil.class);
-    private static final AppConfigs redisConfig = AppConfigsImpl.getMyAppConfigs("app.properties");
+    private static final AppConfigs redisConfig = AppConfigsImpl.getMyAppConfigs("jedispool.properties");
     //最大分配的对象数
     public static final String redis_pool_maxActive = redisConfig.getString("redis.pool.maxActive");
     //最大能够保持idel状态的对象数
