@@ -13,7 +13,7 @@ import java.util.concurrent.FutureTask;
 public class FutureModelTest {
 
     public static void main(String[] args) throws InterruptedException, ExecutionException {
-        Client client = new Client();
+        Client client = new Client(1);
         FutureTask<String> futureTask = new FutureTask<String>(client);
         ExecutorService executorService = Executors.newFixedThreadPool(1);
         executorService.submit(futureTask);

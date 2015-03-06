@@ -1,8 +1,7 @@
 package com.peaceful.demo.config;
 
 import com.peaceful.common.util.Util;
-import com.typesafe.config.Config;
-import com.typesafe.config.ConfigFactory;
+import com.typesafe.config.*;
 
 /**
  * Created by wangjun on 15/2/8.

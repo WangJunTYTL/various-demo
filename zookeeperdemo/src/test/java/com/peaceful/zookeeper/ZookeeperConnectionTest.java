@@ -1,6 +1,6 @@
 package com.peaceful.zookeeper;
 
-import com.peaceful.util.Util;
+import com.peaceful.common.util.Util;
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.ZooDefs;
 import org.apache.zookeeper.ZooKeeper;

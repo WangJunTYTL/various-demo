@@ -6,7 +6,7 @@ import com.peaceful.common.util.Util;
  * Date 14/10/20.
  * Author WangJun
  * Email wangjuntytl@163.com
- *
+ * <p/>
  * 单例
  */
 public class Singleton {
@@ -15,7 +15,7 @@ public class Singleton {
         Util.report("singleton is creating");
     }
 
-    //使用内部静态类可以保证实例只会存在一个单例，且可以保证延迟加载
+    //使用内部静态类可以保证延迟加载
     private static class SingletonHolder {
 
         private static Singleton singleton = new Singleton();

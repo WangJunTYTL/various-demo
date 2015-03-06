@@ -1,6 +1,8 @@
 package com.peaceful.demo.akka.setup;
 
+import akka.actor.ActorRef;
 import akka.actor.Props;
+import akka.actor.UntypedActor;
 import akka.japi.Creator;
 import com.peaceful.demo.akka.actor.GreetActor;
 import com.peaceful.demo.akka.actor.GreetActor2;
@@ -14,25 +16,16 @@ import java.util.Date;
  * <p/>
  * Created by wangjun on 15/1/17.
  */
-public class T3 {
-    static class GreetActor2C implements Creator<GreetActor2> {
+public class DeadLetterActor extends UntypedActor {
 
-        @Override
-        public GreetActor2 create() throws Exception {
-            return new GreetActor2(new Date());
-        }
+    //想deadLetter mailbox发消息
+    ActorRef lastSender = getContext().system().deadLetters();
+
+    @Override
+    public void onReceive(Object o) throws Exception {
+        lastSender.tell("kill", getSelf());
     }
 
-    public static void main(String[] args) {
-
-        //无参构造
-        Props props1 = Props.create(GreetActor.class);
-        //有参构造
-        Props props2 = Props.create(GreetActor2.class, new Date());
-        //通过静态类构造
-        Props props3 = Props.create(new GreetActor2C());
-
-    }
 }
 
 

@@ -1,6 +1,6 @@
 package com.peaceful.zookeeper;
 
-import com.peaceful.util.Util;
+import com.peaceful.common.util.Util;
 import org.apache.zookeeper.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,13 +18,13 @@ public class ZookeeperConnection {
 
     public ZooKeeper getZookeeper() throws Exception {
         ZooKeeper zk = new ZooKeeper(servers, 5000, getWatcher());
-        logger.debug("servers:{}",servers);
+        logger.debug("servers:{}", servers);
         return zk;
     }
 
     //操作节点时触发watcher，在操作时是否触发watcher可以指定
-    public Watcher getWatcher(){
-        return  new Watcher(){
+    public Watcher getWatcher() {
+        return new Watcher() {
 
             @Override
             public void process(WatchedEvent event) {

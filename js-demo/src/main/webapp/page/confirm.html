@@ -14,13 +14,16 @@
     <div>
         <ol>
             <li>
-                <a href="page/top.html">回到顶部</a>
-            </li>
-            <li>
-                <a href="page/confirm.html" target="_blank">窗口关闭时确认</a>
+
             </li>
         </ol>
     </div>
 </div>
+<script>
+    $(window).bind('beforeunload',function(){
+        return '确定离开此页面吗？';
+    });
+</script>
 </body>
+
 </html>

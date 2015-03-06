@@ -12,6 +12,6 @@ public class ExecutorsDemo2 {
 
     public static void main(String[] args) {
         ScheduledExecutorService scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
-        scheduledExecutorService.schedule(new Client(),10, TimeUnit.SECONDS);
+        scheduledExecutorService.schedule(new Client(1),10, TimeUnit.SECONDS);
     }
 }
