@@ -6,5 +6,5 @@ package com.peaceful.cglib.demo;
  * Email wangjuntytl@163.com
  */
 public interface Test {
-    void say();
+    String say();
 }

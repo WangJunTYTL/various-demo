@@ -7,7 +7,7 @@ package com.peaceful.cglib.demo;
  */
 public class TestImpl implements Test {
     @Override
-    public void say() {
-        System.out.println("hello world");
+    public String say() {
+        return ("hello world");
     }
 }
