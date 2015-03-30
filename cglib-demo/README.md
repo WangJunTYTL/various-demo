@@ -1,7 +1,7 @@
 ## asm cglib  动态代理
 
 ### java序列化
-java对象可以被序列化为字节流，这个特点对于rmi是重要的。同时也可以反序列化。
+java对象可以被序列化为字节流，存在磁盘或在网上传输，同时也可以反序列化，利用这个特点可以实现rmi，也是本章要说的asm为什么可以解析class文件
 ### asm
 asm是一个分析和改变class文件的工具，它可以通过字节流读取一个class，分析class文件，可以知道这个class的name ，file，annotation，superClass 等等。
 同时asm也可以修改class文件，在java runtime时被classLoader load.
@@ -18,15 +18,15 @@ cglib是一个基于asm的操作字节码工具包。它透明化了asm的操作
 hibernate spring 都有用到，比如spring自动扫描某包下得bean，就是利用asm读取该包下得文件，分析每个class文件是否是spring容器需要管理的。
 
 对于开发人员来说这是一个高级的应用，但这方面的文档特别少，我也是正在摸索中学习，下面是我自己学习的一些文档
-cglib[https://github.com/cglib/cglib/wiki/Tutorial]
-cglib[http://mydailyjava.blogspot.no/2013/11/cglib-missing-manual.html]
-asm官网[http://asm.ow2.org/]
-http://www.ibm.com/developerworks/cn/java/j-lo-asm/
-http://my.oschina.net/u/1166271/blog/162796
-demo[https://github.com/WangJunTYTL/myapp/tree/master/cglib-demo]
-javassist[http://www.csg.ci.i.u-tokyo.ac.jp/~chiba/javassist/]
-
-http://my.oschina.net/u/1166271/blog/386904
+1. cglib[https://github.com/cglib/cglib/wiki/Tutorial]
+1. cglib[http://mydailyjava.blogspot.no/2013/11/cglib-missing-manual.html]
+1. asm官网[http://asm.ow2.org/]
+1. http://www.ibm.com/developerworks/cn/java/j-lo-asm/
+1. http://my.oschina.net/u/1166271/blog/162796
+1. demo[https://github.com/WangJunTYTL/myapp/tree/master/cglib-demo]
+1. javassist[http://www.csg.ci.i.u-tokyo.ac.jp/~chiba/javassist/]
+1.
+1. http://my.oschina.net/u/1166271/blog/386904
 
 
 
