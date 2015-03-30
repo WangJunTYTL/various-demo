@@ -18,6 +18,7 @@ cglib是一个基于asm的操作字节码工具包。它透明化了asm的操作
 hibernate spring 都有用到，比如spring自动扫描某包下得bean，就是利用asm读取该包下得文件，分析每个class文件是否是spring容器需要管理的。
 
 对于开发人员来说这是一个高级的应用，但这方面的文档特别少，我也是正在摸索中学习，下面是我自己学习的一些文档
+
 1. cglib[https://github.com/cglib/cglib/wiki/Tutorial]
 1. cglib[http://mydailyjava.blogspot.no/2013/11/cglib-missing-manual.html]
 1. asm官网[http://asm.ow2.org/]
