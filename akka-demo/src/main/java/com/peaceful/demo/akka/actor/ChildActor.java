@@ -22,9 +22,7 @@ public class ChildActor extends UntypedActor {
 
     @Override
     public void onReceive(Object o) throws Exception {
-
-
-        log.info("T4Actor receive msg is " + o);
+        log.info(self().path().toSerializationFormat()+" receive msg is " + o);
         if (o.equals("1"))
             child.tell(new Greeting("wj"), ActorRef.noSender());
         else if (o.equals("ok"))

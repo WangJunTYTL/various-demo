@@ -32,6 +32,5 @@ public class CloneTest {
         students1[0].setName("ww");
         Util.report(students[0].getName());//只是把数组每个元素的内存地址复制过去
         Util.report(students1[0].getName());
-
     }
 }

@@ -13,6 +13,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class TestController {
 
+    static {
+        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.print("WARN:service will stop!!!");
+            }
+        }));
+    }
+
     @RequestMapping({"test",""})
     @ResponseBody
     public String test(){

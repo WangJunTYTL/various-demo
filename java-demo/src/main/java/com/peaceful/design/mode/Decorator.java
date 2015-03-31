@@ -7,7 +7,7 @@ import com.peaceful.common.util.Util;
  * Author WangJun
  * Email wangjuntytl@163.com
  * <p/>
- *
+ * <p/>
  * 装饰者模式
  */
 public class Decorator {

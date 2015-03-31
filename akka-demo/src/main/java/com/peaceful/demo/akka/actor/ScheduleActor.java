@@ -5,6 +5,7 @@ import akka.event.Logging;
 import akka.event.LoggingAdapter;
 import scala.concurrent.duration.Duration;
 
+import java.lang.reflect.Member;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -21,13 +22,13 @@ public class ScheduleActor extends UntypedActor {
         if (o.equals(flag)) {
             log.info("game over");
         } else if (o.equals("100")) {
-            getSender().tell("game over", getSender());
+            getSelf().tell("game over", getSelf());
         } else {
             getContext().system().scheduler().scheduleOnce(Duration.create(1000, TimeUnit.MILLISECONDS),
                     new Runnable() {
                         @Override
                         public void run() {
-                            getSelf().tell(String.valueOf(Integer.valueOf((String) o) + 10), getSelf());
+                            getSelf().tell(String.valueOf(Integer.valueOf((String) o) + 10), getSender());
 
                         }
                     }, getContext().system().dispatcher());
