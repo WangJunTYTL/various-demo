@@ -49,7 +49,7 @@ public class DataMonitor implements Watcher, StatCallback {
     /**
      * Other classes use the DataMonitor by implementing this method
      */
-    public interface DataMonitorListener {
+     public interface DataMonitorListener {
         /**
          * The existence status of the node has changed.
          */

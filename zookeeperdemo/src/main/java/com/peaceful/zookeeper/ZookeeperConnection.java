@@ -1,7 +1,7 @@
 package com.peaceful.zookeeper;
 
-import com.peaceful.common.util.Util;
-import org.apache.zookeeper.*;
+import org.apache.zookeeper.Watcher;
+import org.apache.zookeeper.ZooKeeper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,23 +14,25 @@ public class ZookeeperConnection {
 
     Logger logger = LoggerFactory.getLogger(AppServer.class);
 
-    private String servers = "127.0.0.1:12181,127.0.0.1:22181,127.0.0.1:32181";
+    private MyWatcher myWatcher;
+
+    //    private String servers = "127.0.0.1:12181,127.0.0.1:22181,127.0.0.1:32181";
+    private String servers = "127.0.0.1:2181";
 
     public ZooKeeper getZookeeper() throws Exception {
-        ZooKeeper zk = new ZooKeeper(servers, 5000, getWatcher());
+        myWatcher = new MyWatcher();
+        ZooKeeper zk = new ZooKeeper(servers, 5000, myWatcher); // 这里指定的watch可以被覆盖通过zookeeper.register(watcher)
         logger.debug("servers:{}", servers);
         return zk;
     }
 
-    //操作节点时触发watcher，在操作时是否触发watcher可以指定
-    public Watcher getWatcher() {
-        return new Watcher() {
-
-            @Override
-            public void process(WatchedEvent event) {
-                Util.report(event.getPath());
-                Util.report(event.getType().name());
-            }
-        };
+    public void registWatcher(String key, Watcher watcher) {
+        myWatcher.registWatcher(key, watcher);
     }
+
+    public void removeWatcher(String key) {
+        myWatcher.removeWatcher(key);
+    }
+
+
 }

@@ -15,7 +15,7 @@ public class AppServer {
     private String groupNode = "test";
     private String subNode = "sub";
 
-    private  String servers="127.0.0.1:12181,127.0.0.1:22181,127.0.0.1:32181";
+    private String servers = "127.0.0.1:12181,127.0.0.1:22181,127.0.0.1:32181";
 
     /**
      * 连接zookeeper
@@ -33,16 +33,13 @@ public class AppServer {
         // 将server的地址数据关联到新创建的子节点上
         String createdPath = zk.create("/" + groupNode + "/" + subNode, address.getBytes("utf-8"),
                 ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT_SEQUENTIAL);
-        zk.setData(createdPath,"hello world".getBytes(),0);
+        zk.setData(createdPath, "hello world".getBytes(), 0);
         System.out.println("create: " + createdPath);
     }
 
 
-
     public static void main(String[] args) throws Exception {
-
         AppServer as = new AppServer();
         as.connectZookeeper("localhost");
-
     }
 }

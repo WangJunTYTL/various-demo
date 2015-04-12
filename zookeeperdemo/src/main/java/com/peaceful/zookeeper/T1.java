@@ -1,6 +1,6 @@
 package com.peaceful.zookeeper;
 
-import com.peaceful.util.Util;
+import com.peaceful.common.util.Util;
 import org.apache.zookeeper.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,10 +24,11 @@ public class T1 {
         ZooKeeper zk = new ZooKeeper("localhost:2181", 5000, new Watcher() {
             public void process(WatchedEvent event) {
                 // 不做处理
+                Util.report("发现节点改变...");
             }
         });
         byte[] current = zk.getData("/test",null,null);
-        Util.report(new String(current,"utf-8"));
+        Util.report(new String(current, "utf-8"));
         zk.setData("/test",data.getBytes(),-1);
     }
 
