@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<script src="/js/jquery-1.9.1.js"></script>
+<script src="/js/markdown/markdown.js"></script>
+<script src="/js/markdown/index.js"></script>
+<body>
+<textarea id="text-input" oninput="this.editor.update()"
+          rows="6" cols="60">Type **Markdown** here.</textarea>
+<div id="preview"> </div>
+
+<script>
+    function Editor(input, preview) {
+        this.update = function () {
+            preview.innerHTML = markdown.toHTML(input.value);
+        };
+        input.editor = this;
+        this.update();
+    }
+    var $ = function (id) { return document.getElementById(id); };
+    new Editor($("text-input"), $("preview"));
+</script>
+</body>
+</html>
