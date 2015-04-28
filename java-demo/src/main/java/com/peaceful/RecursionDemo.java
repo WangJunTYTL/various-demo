@@ -10,8 +10,10 @@ import com.peaceful.common.util.Util;
  * @since 15/4/11.
  */
 
-public class T2 {
+public class RecursionDemo {
 
+
+    //递归与回溯
     public static void main(String[] args) {
         t1(0);
     }

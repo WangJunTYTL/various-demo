@@ -23,17 +23,31 @@ public class DBUtil {
         return connectionObjectPool.borrowObject();
     }
 
-    public String excSQL() throws Exception {
+    public String excSQL() {
         Connection connection = null;
+        Connection connection1 = null;
+        Connection connection2 = null;
         try {
             connection = getConnection();
+            connection1 = getConnection();
+            connection2 = getConnection();
             return "exc suc";
         } catch (Exception e) {
             e.printStackTrace();
-        }finally {
-            connectionObjectPool.returnObject(connection);
+        } finally {
+            try {
+                connectionObjectPool.returnObject(connection);
+                connectionObjectPool.returnObject(connection1);
+                connectionObjectPool.returnObject(connection2);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         return "exc fail";
+    }
+
+    public int getIdleConnectionNum() {
+        return connectionObjectPool.getNumIdle();
     }
 
 

@@ -11,6 +11,9 @@ classVisitor,FileVisitor，methodVisitor等visitor，classWriter也可以改变�
 asm官网[http://asm.ow2.org/]
 ### cglib
 cglib是一个基于asm的操作字节码工具包。它透明化了asm的操作，开发人员可以在不熟悉class文件结构的情况下就开以使用
+
+cglib 用到最多的类是enhancer,enhancer可以创建没有接口类型的类的代理，它可以动态的创建被代理类的子类，可以与java标准累库的proxy类对比下
+
 ### 动态代理
 动态代理是指：当我们调用一个类的方法时，不是直接调用了这个类的方法，拿cglib来说，cglib会通过Enhancer类生成一个类的代理类，比如你有一个类A,通过Enhance
 你可以得到一个继承A类的类A$enhance,所以你调用的实例变成了A$enhance，利用Enhance你可以打断你调用的真正方法的执行，来达到你需要目的。

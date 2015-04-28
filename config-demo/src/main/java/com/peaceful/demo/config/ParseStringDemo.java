@@ -23,6 +23,7 @@ public class ParseStringDemo {
                 "  }\n" +
                 "}";
         Config config = ConfigFactory.parseString(str);
+        Util.report(config.hasPath("foo.bar"));
         Util.report(config.getString("foo.bar"));
         Util.report(config.getString("foo.bar"));
         Util.report(config.root().render(ConfigRenderOptions.concise())); // 用简明的方式打印
