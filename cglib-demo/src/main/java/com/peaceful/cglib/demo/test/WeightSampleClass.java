@@ -10,11 +10,19 @@ import com.peaceful.common.util.Util;
  * @since 15/3/29.
  */
 
-public class SampleClass {
+public class WeightSampleClass {
 
-    public SampleClass(){
+    public WeightSampleClass(Integer time){
+        try {
+            Util.report("init will use " + time + "s");
+            Thread.sleep(time*1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         Util.report("SampleClass init ...");
     }
+
+
     public String test(String msg){
         return "SampleClass tell :"+msg;
     }
