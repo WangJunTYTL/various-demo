@@ -1,5 +1,5 @@
-maven利用yuicompressor压缩js、css，并结合buildnumber为css,js文件名添加版本号
-=================
+## maven利用yuicompressor压缩js、css，并结合buildnumber为css,js文件名添加版本号
+
 
 
 ### buildnumber-maven-plugin
