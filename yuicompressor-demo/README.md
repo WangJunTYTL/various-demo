@@ -34,7 +34,9 @@ ${timestamp} 获得
                      </items>
                  </configuration>
     </plugin>
-    
+   
+   
+具体插件的使用可以查看官网：http://mojo.codehaus.org/buildnumber-maven-plugin/index.html
 
 ### yuicompressor-maven-plugin
 
@@ -67,4 +69,10 @@ yuicompressor插件可以用来压缩js，css文件，是google公司开发的�
                 </excludes>
             </configuration>
     </plugin>
+    
+关于插件具体使用信息请看:http://davidb.github.io/yuicompressor-maven-plugin/index.html
+
+参照code-demo请看：https://github.com/WangJunTYTL/myapp/tree/master/yuicompressor-demo
+
+### 如果你喜欢请给星哦
     
