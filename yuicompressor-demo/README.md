@@ -37,7 +37,7 @@ ${timestamp} 获得
 
 yuicompressor插件可以用来压缩js，css文件，是google公司开发的一款基于maven的插件，可以通过配置在maven的某个构建周期中压缩某些目录下的js，css文件，
 一般压缩js和css文件后，我们可能还要解决样式文件在浏览器缓存的问题，这时候，上面介绍的buildnum插件就起到它的作用了，我们用${timestamp}作为压缩后文件的后缀
-每次有新的样式文件需要构建时，可以更新这些文件的版本号，下面是部分配置，具体配置可以参考这个项目的pom文件
+每次有新的样式文件需要构建时，可以更新这些文件的版本号，下面是部分配置，具体配置可以参考这个项目的pom文件，执行mvn install，可以看到执行压缩的log
 
     <plugin>
             <groupId>net.alchim31.maven</groupId>
