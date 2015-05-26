@@ -1,4 +1,5 @@
-#/bin/bash
+#!/usr/bin/env bash
+#！/bin/bash
 #==================================
 #	author WangJun
 #	email wangjuntytl@163.com

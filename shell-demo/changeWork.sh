@@ -9,6 +9,5 @@ elif [ -f "/Users/wangjun/.m2/settingsDajie.xml" ]; then
 mv /Users/wangjun/.m2/settings.xml /Users/wangjun/.m2/settingsHehua.xml
 mv /Users/wangjun/.m2/settingsDajie.xml /Users/wangjun/.m2/settings.xml
 sudo -S mv /etc/ssh_configBack /etc/ssh_config
-
 echo "切到D"
 fi

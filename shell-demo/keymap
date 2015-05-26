@@ -1,8 +1,20 @@
+#---------------------------
+# 终端快捷键设置
+# 用下面这些alias作为你的快捷键
+# 设置方式
+# 到系统的全局变量文件夹下：/etc/profile  的末尾追加 source ./keymap 然后执行source /etc/profile 即可生效
+#----------------------------
+
+# maven
+
 alias mvndeploy='mvn -Dmaven.test.skip=true clean deploy'
 
 alias mvninstall='mvn -Dmaven.test.skip=true clean install'
 
 alias mvncompile='mvn -Dmaven.test.skip=true clean compile'
+
+
+# git
 
 alias gitstatus='git status -s'
 
@@ -24,11 +36,18 @@ alias gitcheckout='git checkout '
 
 alias gitbranch='git branch'
 
+# file
+
 alias ll='ls -1ld *'
 
 alias la='ls -1a'
 
+# vim
+
 alias vi='vim'
+
+
+# brew
 
 alias brewinstall='brew install'
 

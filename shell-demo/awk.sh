@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 #bin/bash
 
 LAST=''; 
@@ -28,4 +29,4 @@ lastday()
   LAST=$(echo "$YEAR $MONTH $DAY"|awk '{if (length($2)==1) $2=0$2;if (length($3)==1) $3=0$3;printf "%s%s%s",$1,$2,$3}')  
 }  
 
-lastday()
+lastday 1
