@@ -1,0 +1,9 @@
+export Name=wangjun
+export Email=wangjuntytl@163.com
+export RootDir=${RootDir}
+export CurrentDir=`pwd`
+
+if [ -z "$RootDir" ] ; then
+   echo  -e "\033[41;30;1m 【WARN】not set var RootDit \033[0m"
+fi
+

@@ -35,6 +35,7 @@ def hello():
     """
     print("hello")
 
+
 __author__ = 'wangjun'  # __ 开始 __ 结束 Python内部保留标识名
 x = 5  # 定义变量
 y = "hello world"  # 单引号与双引号一样 （‘’‘）换行使用  (\)转义字符

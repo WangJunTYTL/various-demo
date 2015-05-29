@@ -23,8 +23,8 @@ print '集合list长度：', len(myList)
 print '遍历'
 for x in myList:
     print x
-
-print ("含有1的次数"+str(myList.count(1)))
+# len  Return the number of items of a sequence or mapping.
+print ("含有1的次数" + str(myList.count(1)))
 
 ####
 myList.append(0)
@@ -36,7 +36,7 @@ print myList
 print '返回索引从1到3的集合', myList[1:3]
 print '''list 常用方法 'append', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort' '''
 
-print "测试元组"
+print "测试元组 tuple"
 print '-------------------------------------------'
 zoo = (1, 2, 3)
 print zoo
@@ -44,6 +44,13 @@ print zoo[0]
 # zoo[0]=2 不可以修改
 info = ('wj', '英明神武')
 print 'listen %s %s' % info
+
+print "测试set"
+print '-------------------------------------------'
+aset = {1, 2, 3, 4, 5}
+print aset
+aset.add(6)
+print(aset)
 
 print "测试字典"
 print '-------------------------------------------'
@@ -55,11 +62,30 @@ db2 = {"a": {"suc": 1}}
 
 print db2['a']['suc']
 
-
-
 if db2.has_key('b'):
     print 'none'
+# 'clear',      D.clear() -> None.  Remove all items from D.
+# 'copy',       c = D.copy() 复制一份值给c
+# 'fromkeys',
+# 'get',  == c[index]
+# 'has_key',
+# 'items',
+# 'iteritems',
+# 'iterkeys',
+# 'itervalues',
+# 'keys',
+# 'pop',
+# 'popitem',
+# 'setdefault',
+# 'update',
+# 'values',
+# 'viewitems',
+# 'viewkeys',
+# 'viewvalues
 
+# 其它通用函数
+# len Return the number of items of a sequence or mapping.
+# map Return a list of the results of applying the function to the items of the argument sequence(s).
 
 
 

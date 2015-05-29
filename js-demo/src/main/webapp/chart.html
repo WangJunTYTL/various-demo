@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="/css/bootstrap/bootstrap.css" rel="stylesheet">
+    <script src="/js/jquery-1.9.1.js"></script>
+    <script src="/js/bootstrap/bootstrap.js"></script>
+    <script src="/js/chart/Chart.js"></script>
+</head>
+<body>
+<div class="container">
+    <canvas id="myChart" width="400" height="400"></canvas>
+<!--介绍文档 http://www.bootcss.com/p/chart.js/docs/-->
+</div>
+</body>
+
+<script>
+    //Get the context of the canvas element we want to select
+    var ctx = document.getElementById("myChart").getContext("2d");
+    var data = {
+        labels : ["13:50:00","13:51:30","13:53:00","13:54:30","13:56:00","13:57:30","13:59:00"],
+        datasets : [
+            {
+                label:"aa",
+                fillColor : "rgba(220,220,220,0.5)",
+                strokeColor : "rgba(220,220,220,1)",
+                pointColor : "rgba(220,220,220,1)",
+                pointStrokeColor : "#fff",
+                data : ["65","1259","90","81","56","55","40"]
+            },
+            {
+                label:"bb",
+                fillColor : "rgba(151,187,205,0.5)",
+                strokeColor : "rgba(151,187,205,1)",
+                pointColor : "rgba(151,187,205,1)",
+                pointStrokeColor : "#fff",
+                data : [28,48,40,19,96,27,100]
+            }
+        ]
+    }
+    var myNewChart = new Chart(ctx).Line(data,{scaleShowLabels : true});
+</script>
+</html>
