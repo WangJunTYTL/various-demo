@@ -4,7 +4,10 @@
 # install : pip install pandas
 # http://pandas.pydata.org/pandas-docs/stable/10min.html
 # http://www.open-open.com/lib/view/open1402477162868.html
-# 数据结构 Series DataFrame
+# 数据结构  DataFrame
+# dataFrame 是pandas里面最为常用的数据结构，你会发现有了它，你在操作数据时变的轻松起来
+# 如果说Series是1D（一维空间数据）结构数据，那DataFrame就是2D（二维空间数据）结构
+#
 # ==============================
 
 # 这两个是常用的单独导出
