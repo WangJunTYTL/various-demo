@@ -48,22 +48,23 @@
 
 ##### 启动
 
-web容器中，容器初始化过程中，运行下面code：
+###### web容器中，容器初始化过程中，运行下面code：
 
-QueueServiceStart.setSystem(AkkaSystem.system); 
-QueueServiceStart.run(); 
+        QueueServiceStart.setSystem(AkkaSystem.system); 
+        QueueServiceStart.run(); 
 
-如果启动后看到下面这些配置，说明启动成功 
- INFO ]  {QUEUE.SERVICE:86}-------------queueService load conf------------------------- 
- INFO ]  {QUEUE.SERVICE:87}-projectName:crmWeb 
- INFO ]  {QUEUE.SERVICE:88}-dispatchParallel:2 
- INFO ]  {QUEUE.SERVICE:89}-execParallel:2 
- INFO ]  {QUEUE.SERVICE:90}-maxParallel:12 
- INFO ]  {QUEUE.SERVICE:91}-queueList:[userLevelAnay, userBasicSync, bonusDealQueue, orderDataToEs] 
- INFO ]  {QUEUE.SERVICE:92}-processQueueClass:cn.edaijia.crm.task.ProcessQueue 
- INFO ]  {QUEUE.SERVICE:93}-------------------------------------- 
+> 如果启动后看到下面这些配置，说明启动成功
+ 
+        INFO ]  {QUEUE.SERVICE:86}-------------queueService load conf------------------------- 
+        INFO ]  {QUEUE.SERVICE:87}-projectName:crmWeb 
+        INFO ]  {QUEUE.SERVICE:88}-dispatchParallel:2 
+        INFO ]  {QUEUE.SERVICE:89}-execParallel:2 
+        INFO ]  {QUEUE.SERVICE:90}-maxParallel:12 
+        INFO ]  {QUEUE.SERVICE:91}-queueList:[userLevelAnay, userBasicSync, bonusDealQueue, orderDataToEs] 
+        INFO ]  {QUEUE.SERVICE:92}-processQueueClass:cn.edaijia.crm.task.ProcessQueue 
+        INFO ]  {QUEUE.SERVICE:93}-------------------------------------- 
 
-单独的jar文件：
+###### 单独的jar文件：
 
 程序入口：cn.edaijia.queue.Main 
 
