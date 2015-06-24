@@ -48,7 +48,7 @@
 
 ##### 启动
 
-1. web容器中，容器初始化过程中，运行下面code：
+#####. web容器中，容器初始化过程中，运行下面code：
 
         QueueServiceStart.setSystem(AkkaSystem.system); 
         QueueServiceStart.run(); 
@@ -64,7 +64,7 @@
         INFO ]  {QUEUE.SERVICE:92}-processQueueClass:cn.edaijia.crm.task.ProcessQueue 
         INFO ]  {QUEUE.SERVICE:93}-------------------------------------- 
 
-1. 单独的jar文件：
+######. 单独的jar文件：
 
 程序入口：`cn.edaijia.queue.Main `
 
