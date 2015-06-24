@@ -48,7 +48,7 @@
 
 ##### 启动
 
-##### web容器中，容器初始化过程中，运行下面code：
+一、 web容器中，容器初始化过程中，运行下面code：
 
         QueueServiceStart.setSystem(AkkaSystem.system); 
         QueueServiceStart.run(); 
@@ -66,7 +66,7 @@
 
 ###### 单独的jar文件：
 
-程序入口：`cn.edaijia.queue.Main `
+二、程序入口：`cn.edaijia.queue.Main `
 
 
 ##### 添加任务
@@ -86,9 +86,7 @@
 1. 负载： 
 
 1. 异常处理
-
-> router在这个模型中的扮演角色之一是worker的监控者，如果worker在执行task时发生异常，如果是worker执行时自己本身的异常 
-或本次task本来就存在业务上的异常，task根本不可以执行完毕 
+> router在这个模型中的扮演角色之一是worker的监控者，如果worker在执行task时发生异常，如果是worker执行时自己本身的异常或本次task本来就存在业务上的异常，task根本不可以执行完毕 
 
 1. 扩展
 
