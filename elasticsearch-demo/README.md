@@ -24,27 +24,27 @@
 
 > 在项目的resource目录的根目录下加入配置文件：queueService.conf，配置内容如下 
 
-> QueueService{ 
-> 
->     # 使用版本号，目前版本只支持1.0 
->     version = 1.0 
-> 
->     # 使用服务的项目名，主要用来防止和别的项目在使用redis 队列时有同名冲突 
->     ProjectName:crmWeb 
-> 
->     # 需要用到的队列，实际在redis中创建的队列名是queueName_ProjectName 
->     QueueList:[userLevelAnay,userBasicSync] 
-> 
->     # 从redis队列中消费队列，并将task路由到下面的worker 
->     router:2 
-> 
->     # worker根据task对象的信息执行ProcessQueueClass对象对应的方法 
->     worker:6 
-> 
->     # 具体业务处理类 
->     ProcessQueueClass:"cn.edaijia.crm.task.ProcessQueue" 
-> 
-> } 
+         QueueService{ 
+         
+             # 使用版本号，目前版本只支持1.0 
+             version = 1.0 
+         
+             # 使用服务的项目名，主要用来防止和别的项目在使用redis 队列时有同名冲突 
+             ProjectName:crmWeb 
+         
+             # 需要用到的队列，实际在redis中创建的队列名是queueName_ProjectName 
+             QueueList:[userLevelAnay,userBasicSync] 
+         
+             # 从redis队列中消费队列，并将task路由到下面的worker 
+             router:2 
+         
+             # worker根据task对象的信息执行ProcessQueueClass对象对应的方法 
+             worker:6 
+         
+             # 具体业务处理类 
+             ProcessQueueClass:"cn.edaijia.crm.task.ProcessQueue" 
+         
+         } 
 
 启动
 
