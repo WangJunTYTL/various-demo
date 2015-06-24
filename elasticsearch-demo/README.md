@@ -76,6 +76,27 @@
 >* No.1 业务处理入口：在上文配置文件指定的ProcessQueueClass位置编写你的业务入口方法，若想给该方法传参，只支持Map型参数。 
 >* No.2 提交到任务容器：提交任务只需要一条code，Task task = new Task(queueName,methodName,params);此时task会返回给你一个task.id，你最好把该id用log记录起来，后文会提到 
 
+比如在ProcessQueue有一个名为test的业务入口
+
+        public class ProcessQueue {
+        
+            Logger logger = LoggerFactory.getLogger(getClass());
+        
+            public void test(Map params) {
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                logger.info("hello world ");
+            }
+        }
+        
+提交名为test的业务
+        
+      Task task = new Task(queueName,test,params);
+        
+        
 ##### ok，到目前的介绍，你应该可以把程序启动了，处理你的业务了 
 
  
