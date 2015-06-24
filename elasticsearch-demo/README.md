@@ -81,6 +81,7 @@
  
 ##### 任务调度
 > 任务调度是该框架的另一个功能，主要是为了弥补spring的job不足的地方，利用该框架，你可以根据自己的需要通过程序随意的启动取消一个job
+
            // 新建一个job,名为test 
            EdaijiaJob.newJob("test", new Job() {
     
