@@ -1,9 +1,5 @@
 package com.peaceful.design.mode.observable;
 
-import com.peaceful.design.mode.Teacher;
-
-import java.util.Observable;
-
 /**
  * @author wangjun
  * @version 1.0

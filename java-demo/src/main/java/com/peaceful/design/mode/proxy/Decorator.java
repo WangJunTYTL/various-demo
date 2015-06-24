@@ -1,4 +1,4 @@
-package com.peaceful.design.mode;
+package com.peaceful.design.mode.proxy;
 
 import com.peaceful.common.util.Util;
 

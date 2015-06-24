@@ -50,7 +50,6 @@ s = y + z
 ss = y, z  # (,)组成元组 元组概念将会在pythonCollection文件介绍
 print s
 print ss
-
 print 'if'
 print '----------------'
 if x == 5:

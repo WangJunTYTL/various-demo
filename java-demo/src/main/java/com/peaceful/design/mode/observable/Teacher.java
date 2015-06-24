@@ -1,4 +1,4 @@
-package com.peaceful.design.mode;
+package com.peaceful.design.mode.observable;
 
 import com.peaceful.common.util.Util;
 
