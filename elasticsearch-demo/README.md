@@ -44,6 +44,9 @@
              # 具体业务处理类，业务的入口 
              ProcessQueueClass:"cn.edaijia.crm.task.ProcessQueue" 
          
+             # 监控队列积压情况，报警
+             alertPhone:"15652636152,13426031637,13810759781,18202794850"
+         
          } 
 
 ##### 启动
