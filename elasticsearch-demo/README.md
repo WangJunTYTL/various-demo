@@ -2,7 +2,7 @@
 
 适用于java项目中需要异步处理、批量处理、任务调度等业务处理场景 
 
-## 设计模型
+### 设计模型
 * task-queue【任务中心】：任务管理容器，基于redis list数据结构实现的任务队列，目前队列只支持FIFO消费模式 
 * router【路由器】：任务分发器,负责调度任务容器中task给worker去执行，并协调系统中router和worker的执行，监控worker的状态，异常情况 
 * worker【任务执行者】：实际任务执行者，负责执行router下发的任务，并在任务执行完毕后可以通知router，等待下一次任务的调度 
@@ -10,9 +10,9 @@
 
 
 
-## 使用
+### 使用
 
-### 1. 加入下面依赖
+##### 1. 加入下面依赖
 
         <dependency> 
                 <groupId>cn.edaijia</groupId> 
@@ -20,7 +20,7 @@
                 <version>1.0-SNAPSHOT</version> 
         </dependency>
         
-### 1. 配置
+##### 2. 配置
 
 > 在项目的resource目录的根目录下加入配置文件：queueService.conf，配置内容如下 
 
@@ -46,7 +46,7 @@
          
          } 
 
-启动
+##### 启动
 
 web容器中，容器初始化过程中，运行下面code：
 
