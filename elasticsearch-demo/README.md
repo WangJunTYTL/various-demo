@@ -66,26 +66,28 @@
 
 1. 单独的jar文件：
 
-程序入口：cn.edaijia.queue.Main 
+程序入口：`cn.edaijia.queue.Main `
 
 
 ##### 添加任务
 
-如果你想把自己的业务处理放入到任务容器，你需要的做的事情 
-No.1 业务处理入口：在上文配置文件指定的ProcessQueueClass位置编写你的业务入口方法，若想给该方法传参，只支持Map型参数。 
-No.2 提交到任务容器：提交任务只需要一条code，Task task = new Task(queueName,methodName,params);此时task会返回给你一个task.id，你最好把该id用log记录起来，后文会提到 
+>如果你想把自己的业务处理放入到任务容器，你需要的做的事情
+ 
+* No.1 业务处理入口：在上文配置文件指定的ProcessQueueClass位置编写你的业务入口方法，若想给该方法传参，只支持Map型参数。 
+* No.2 提交到任务容器：提交任务只需要一条code，Task task = new Task(queueName,methodName,params);此时task会返回给你一个task.id，你最好把该id用log记录起来，后文会提到 
 
-ok，到目前的介绍，你应该可以把程序启动了，处理你的业务了 
+> ok，到目前的介绍，你应该可以把程序启动了，处理你的业务了 
 
 ##### 任务调度，负载，与异常处理
 
 1. 调度：
-router会负责监控任务容器中提交的任务，当router发现有新任务时会立马把任务push给worker，worker通过解析Task对象，可以找到对应的ProcessQueueClass中的业务入口方法和需要的参数，然后执行，执行完毕后worker会告知router，任务已完成，等待下次任务的下发 
+> router会负责监控任务容器中提交的任务，当router发现有新任务时会立马把任务push给worker，worker通过解析Task对象，可以找到对应的ProcessQueueClass中的业务入口方法和需要的参数，然后执行，执行完毕后worker会告知router，任务已完成，等待下次任务的下发 
 
 1. 负载： 
 
 1. 异常处理
-router在这个模型中的扮演角色之一是worker的监控者，如果worker在执行task时发生异常，如果是worker执行时自己本身的异常 
+
+> router在这个模型中的扮演角色之一是worker的监控者，如果worker在执行task时发生异常，如果是worker执行时自己本身的异常 
 或本次task本来就存在业务上的异常，task根本不可以执行完毕 
 
 1. 扩展
