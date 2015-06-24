@@ -78,6 +78,31 @@
 
 ##### ok，到目前的介绍，你应该可以把程序启动了，处理你的业务了 
 
+ 
+##### 任务调度
+> 任务调度是该框架的另一个功能，主要是为了弥补spring的job不足的地方，利用该框架，你可以根据自己的需要通过程序随意的启动取消一个job
+           // 新建一个job,名为test 
+           EdaijiaJob.newJob("test", new Job() {
+    
+                       @Override
+                       public void logic() {
+                           Util.report("hello world");
+                       }
+                   }
+           );
+           // 立马执行名为test的job一次
+           EdaijiaJob.scheduleOnce(0,TimeUnit.SECONDS,"test");
+           // 立马执行名为test的job，每隔一秒执行一次
+           EdaijiaJob.schedule(scala.concurrent.duration.Duration.Zero(),1, TimeUnit.SECONDS, "test");
+           try {
+               Thread.sleep(3000);
+           } catch (InterruptedException e) {
+               e.printStackTrace();
+           }
+           //取消名为test的job
+           EdaijiaJob.cancel("test");
+
+
 ##### 任务调度，负载，与异常处理
 
 1. 调度：
@@ -94,5 +119,10 @@
 
 
 ##### 监控
+
+1. currentPressure:当前任务容器处理任务的系统的压力，最大值为1，表示系统已经火力全开，达到最大处理速度
+1. commitTaskCount：监测节点已经往任务容器提及的任务数
+1. maxParallel:当前节点系统批处理能力的最大值，比如下面，代表可以同时处理12个任务
+1. 队列任务：代表当前节点中用到的队列有哪些以及每个队列积压的任务数
 
 
