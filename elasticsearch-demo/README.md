@@ -48,7 +48,7 @@
 
 ##### 启动
 
-###### web容器中，容器初始化过程中，运行下面code：
+1. web容器中，容器初始化过程中，运行下面code：
 
         QueueServiceStart.setSystem(AkkaSystem.system); 
         QueueServiceStart.run(); 
@@ -64,12 +64,12 @@
         INFO ]  {QUEUE.SERVICE:92}-processQueueClass:cn.edaijia.crm.task.ProcessQueue 
         INFO ]  {QUEUE.SERVICE:93}-------------------------------------- 
 
-###### 单独的jar文件：
+1. 单独的jar文件：
 
 程序入口：cn.edaijia.queue.Main 
 
 
-添加任务
+##### 添加任务
 
 如果你想把自己的业务处理放入到任务容器，你需要的做的事情 
 No.1 业务处理入口：在上文配置文件指定的ProcessQueueClass位置编写你的业务入口方法，若想给该方法传参，只支持Map型参数。 
@@ -77,35 +77,24 @@ No.2 提交到任务容器：提交任务只需要一条code，Task task = new T
 
 ok，到目前的介绍，你应该可以把程序启动了，处理你的业务了 
 
-任务调度，负载，与异常处理
+##### 任务调度，负载，与异常处理
 
-调度：
+1. 调度：
 router会负责监控任务容器中提交的任务，当router发现有新任务时会立马把任务push给worker，worker通过解析Task对象，可以找到对应的ProcessQueueClass中的业务入口方法和需要的参数，然后执行，执行完毕后worker会告知router，任务已完成，等待下次任务的下发 
 
-负载： 
+1. 负载： 
 
-
-异常处理
+1. 异常处理
 router在这个模型中的扮演角色之一是worker的监控者，如果worker在执行task时发生异常，如果是worker执行时自己本身的异常 
 或本次task本来就存在业务上的异常，task根本不可以执行完毕 
 
-扩展
+1. 扩展
 
-分布式支持
- //todo 
+1. 特点
 
+1. 监控
 
-特点
-
-
-
-监控
-
-   
-
-
-
-假如你有一个方法需要异步来处理，你可以通过 new Task(queueName,method,params) 来描述你需要让ProcessQueueClass 里的哪个method 
+1. 假如你有一个方法需要异步来处理，你可以通过 new Task(queueName,method,params) 来描述你需要让ProcessQueueClass 里的哪个method 
     # 去异步的执行，同时你在new完task对象，该对象就会被序列化放入到的redis队列中，queueService就会根据当前配置看的worker个数去并发的消费redis 
     # 队列的task对象，并执行指定的方法 
     # 监控地址 localhost/admin 
