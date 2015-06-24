@@ -64,9 +64,9 @@
         INFO ]  {QUEUE.SERVICE:92}-processQueueClass:cn.edaijia.crm.task.ProcessQueue 
         INFO ]  {QUEUE.SERVICE:93}-------------------------------------- 
 
-###### 单独的jar文件：
+二、 单独的jar文件：
 
-二、程序入口：`cn.edaijia.queue.Main `
+程序入口：`cn.edaijia.queue.Main `
 
 
 ##### 添加任务
@@ -76,7 +76,7 @@
 * No.1 业务处理入口：在上文配置文件指定的ProcessQueueClass位置编写你的业务入口方法，若想给该方法传参，只支持Map型参数。 
 * No.2 提交到任务容器：提交任务只需要一条code，Task task = new Task(queueName,methodName,params);此时task会返回给你一个task.id，你最好把该id用log记录起来，后文会提到 
 
-###### ok，到目前的介绍，你应该可以把程序启动了，处理你的业务了 
+##### ok，到目前的介绍，你应该可以把程序启动了，处理你的业务了 
 
 ##### 任务调度，负载，与异常处理
 
@@ -88,13 +88,6 @@
 1. 异常处理
 > router在这个模型中的扮演角色之一是worker的监控者，如果worker在执行task时发生异常，如果是worker执行时自己本身的异常或本次task本来就存在业务上的异常，task根本不可以执行完毕 
 
-1. 扩展
-
-1. 特点
-
 1. 监控
 
-1. 假如你有一个方法需要异步来处理，你可以通过 new Task(queueName,method,params) 来描述你需要让ProcessQueueClass 里的哪个method 
-    # 去异步的执行，同时你在new完task对象，该对象就会被序列化放入到的redis队列中，queueService就会根据当前配置看的worker个数去并发的消费redis 
-    # 队列的task对象，并执行指定的方法 
-    # 监控地址 localhost/admin 
+
