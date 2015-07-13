@@ -120,7 +120,11 @@ public class ElasticSearch {
         SearchHits hits = response.getHits();
         System.out.print(hits.getTotalHits());
         client.close();
+    }
 
+
+    @Test
+    public void testSync(){
 
     }
 }

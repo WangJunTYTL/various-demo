@@ -55,11 +55,15 @@
 #curl -XDELETE 'localhost:9200/customer/external/2?pretty'
 
 # 批量删除数据
-#curl -XDELETE 'localhost:9200/customer/external/_query?pretty' -d '
-#{
-#  "query": { "match": { "name": "John" } }
-#}'
+curl -XDELETE 'localhost:9200/customer/external/_query?pretty' -d '
+{
+  "query": { "match": { "name": "John" } }
+}'
 # 批量删除数据
 # curl -XDELETE 'http://121.199.22.223:9200/db_order/t_order_order_ext/_query?q=phone:18518551024'
 
 
+curl -XDELETE 'esorder.edaijia.cn:9200/db_order/t_order_order_ext/_query?pretty' -d '
+{
+  "query": { "match": { "name": "John" } }
+}'
