@@ -2,6 +2,7 @@ package com.peaceful.lock.demo;
 
 import com.peaceful.common.util.Util;
 
+import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -10,11 +11,11 @@ import java.util.concurrent.locks.ReentrantLock;
  * @since 15/4/16.
  */
 
-public class T1 {
+public class ReentrantLockDemo {
 
     static Integer[] buffer = new Integer[9];
     static int size;
-    static ReentrantLock lock = new ReentrantLock(true);
+    static Lock lock = new ReentrantLock(true);
 
     public static void main(String[] args) {
         Write write = new Write();
@@ -35,8 +36,7 @@ public class T1 {
                         if (size == -1) size++;
                         buffer[size] = size;
                         if (size == 5) {
-                            if (lock.isLocked())
-                                lock.unlock();
+                            lock.unlock();
                             try {
                                 Thread.sleep(100);
                             } catch (InterruptedException e) {
@@ -45,8 +45,7 @@ public class T1 {
                         }
                     }
                 } finally {
-                    if (lock.isLocked())
-                        lock.unlock();
+                    lock.unlock();
                 }
             }
         }
