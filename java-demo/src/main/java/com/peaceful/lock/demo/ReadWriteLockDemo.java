@@ -40,6 +40,7 @@ public class ReadWriteLockDemo {
             writeLock.unlock();
         }
     }
+
     /**
      * 获得信息。当有线程在调用addValue方法时，getInfo得到的信息可能是不正确的。
      * 所以，也必须保证该方法在被调用时，没有方法在调用addValue方法。
@@ -62,5 +63,30 @@ public class ReadWriteLockDemo {
             readLock.unlock();
         }
     }
+
+    public class ThreadA extends Thread {
+        @Override
+        public void run() {
+            while (true)
+                addValue(123);
+        }
+    }
+
+
+    public class ThreadB extends Thread {
+        @Override
+        public void run() {
+            while (true)
+                getInfo();
+        }
+    }
+
+    public static void main(String[] args) {
+        Thread a = new Thread(new ConditionDemo.ThreadA());
+        Thread b = new Thread(new ConditionDemo.ThreadB());
+        a.start();
+        b.start();
+    }
+
 
 }

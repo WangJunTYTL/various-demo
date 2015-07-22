@@ -9,8 +9,9 @@
 <html>
 <head>
     <title></title>
+    <%--<script type="text/javascript" src="<%=request.getContextPath() %>/webjars/jquery/1.9.0/jquery.min.js"></script>--%>
 </head>
 <body>
-<h1>hello world</h1>
+<h1>hello world aa</h1>
 </body>
 </html>

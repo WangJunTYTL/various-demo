@@ -22,19 +22,20 @@ public class TestController {
         }));
     }
 
-    @RequestMapping({"test",""})
+    @RequestMapping({"test", ""})
     @ResponseBody
-    public String test(){
+    public String test() {
         Util.report("hello world");
         return "hello world";
     }
 
     @RequestMapping("jsp")
-    public String testJsp(){
+    public String testJsp() {
         return "test";
     }
+
     @RequestMapping("ftl")
-    public String testFtl(){
+    public String testFtl() {
         return "test.ftl";
     }
 

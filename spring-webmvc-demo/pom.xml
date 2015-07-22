@@ -39,6 +39,20 @@
             <version>${version.spring.webmvc}</version>
         </dependency>
 
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>3.2.5.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>3.2.5.RELEASE</version>
+        </dependency>
+
+
         <!--RESOLVER FREEMARKER-->
         <dependency>
             <groupId>org.freemarker</groupId>
@@ -58,6 +72,12 @@
             <artifactId>peaceful-common-utils</artifactId>
         </dependency>
 
+
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>3.3.5</version>
+        </dependency>
 
     </dependencies>
 
