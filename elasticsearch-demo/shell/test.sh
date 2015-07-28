@@ -49,7 +49,7 @@ curl 'esorder.edaijia.cn/db_order/t_order_order_ext/_count?pretty' -d '
 
 curl -XDELETE '121.199.22.223:9200/db_order/t_order_order_ext/_query?pretty' -d '
 {
-  "query": { "match": { "phone": "13661195637" } }
+  "query": { "match": { "phone": "15311192970" } }
 }'
 
 

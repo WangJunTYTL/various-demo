@@ -1,4 +1,4 @@
-package com.peaceful;
+package com.peaceful.other;
 
 import com.peaceful.common.util.Util;
 

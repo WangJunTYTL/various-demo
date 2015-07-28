@@ -1,4 +1,4 @@
-package com.peaceful;
+package com.peaceful.other;
 
 /**
  * <a mailto:wangjuntytl@163.com>Email:wangjuntytl@163.com</a>
