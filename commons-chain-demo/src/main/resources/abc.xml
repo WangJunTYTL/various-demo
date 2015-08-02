@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<catalog name="abc">
+    <chain name="abc-hand">
+        <command
+                className="com.peaceful.chain.demo.Acommand"/>
+        <command
+                className="com.peaceful.chain.demo.Bcommand"/>
+        <command
+                className="com.peaceful.chain.demo.Ccommand"/>
+    </chain>
+</catalog>

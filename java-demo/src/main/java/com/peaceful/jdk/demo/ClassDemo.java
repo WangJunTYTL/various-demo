@@ -8,7 +8,7 @@ import com.peaceful.common.util.Util;
  * Author WangJun
  * Email wangjuntytl@163.com
  */
-public class ClassTemo {
+public class ClassDemo {
 
     //forName,加载指定路径的类文件，返回Class 对象，该过程会执行静态块的代码，slf4j使用这个绑定
     public void forName() {
@@ -34,5 +34,11 @@ public class ClassTemo {
         } catch (IllegalAccessException e) {
             Util.report(e);
         }
+    }
+
+    public static void main(String[] args) {
+        Util.report("simple name :"+ClassDemo.class.getSimpleName());
+        Util.report("full name :"+ClassDemo.class.getName());
+        Util.report("package name :"+ClassDemo.class.getPackage());
     }
 }

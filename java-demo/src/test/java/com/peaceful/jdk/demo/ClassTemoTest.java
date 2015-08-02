@@ -3,15 +3,13 @@ package com.peaceful.jdk.demo;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class ClassTemoTest {
 
-    ClassTemo aClass;
+    ClassDemo aClass;
 
     @Before
     public void setUp() throws Exception {
-        aClass = new ClassTemo();
+        aClass = new ClassDemo();
     }
 
     @Test
