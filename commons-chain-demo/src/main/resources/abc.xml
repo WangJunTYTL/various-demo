@@ -8,4 +8,5 @@
         <command
                 className="com.peaceful.chain.demo.Ccommand"/>
     </chain>
+
 </catalog>

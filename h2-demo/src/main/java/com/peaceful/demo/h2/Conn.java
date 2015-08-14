@@ -18,8 +18,8 @@ public class Conn {
         Connection conn = DriverManager.
                 getConnection(url, user, pwds);
         Util.report(conn);
-//        PreparedStatement preparedStatement0 = conn.prepareStatement("create TABLE USER (id int ,name VARCHAR(20))");
-//        preparedStatement0.execute();
+        PreparedStatement preparedStatement0 = conn.prepareStatement("create TABLE IF NOT EXISTS  USER (id int ,name VARCHAR(20))");
+        preparedStatement0.execute();
         String name = Math.random()*10+"";
         String sql = "insert into user (id,name) VALUES (1,'"+name+"')";
         PreparedStatement preparedStatement = conn.prepareStatement(sql);

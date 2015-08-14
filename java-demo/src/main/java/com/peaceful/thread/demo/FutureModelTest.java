@@ -21,7 +21,7 @@ public class FutureModelTest {
         //client 请求在后台运行，接着继续other job
         Thread.sleep(2000);
         //其它job完成，调用get将会出现阻塞
-        Util.report("other job complete...");
+        Util.report("other job complete...") ;
         Util.report(futureTask.get());
     }
 }

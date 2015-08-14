@@ -21,11 +21,10 @@ public class ReferenceDemo {
         StringBuffer strbuf2 = new StringBuffer("hello world");
         //软引用
         SoftReference<StringBuffer> softReference = new SoftReference<StringBuffer>(strbuf);
-        //若引用
+        //弱引用
         WeakReference<StringBuffer> weakReference = new WeakReference<StringBuffer>(strbuf1);
-
+        //虚引用
         ReferenceQueue<StringBuffer> stringBufferReferenceQueue = new ReferenceQueue<StringBuffer>();
-//        虚引用
         PhantomReference<StringBuffer> phantomReference = new PhantomReference<StringBuffer>(strbuf2, stringBufferReferenceQueue);
 
         Util.report("强引用存在时");

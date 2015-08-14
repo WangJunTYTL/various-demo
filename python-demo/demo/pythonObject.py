@@ -17,7 +17,7 @@ print "测试对象"
 print '-------------------------------------------'
 
 
-class Person():
+class Person:
     version = 1  # 静态数据
 
     def __init__(self, name):  # 初始方法

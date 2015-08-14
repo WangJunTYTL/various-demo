@@ -22,9 +22,9 @@ public class Client implements Callable<String> {
         StringBuffer stringBuffer = new StringBuffer();
         while (i < 97) {
             stringBuffer.append((char) (i+start));
-            Thread.sleep(500);
+            Thread.sleep(100);
             i++;
-            Util.report(i+start);
+//            Util.report(i+start);
         }
         return stringBuffer.toString();
     }

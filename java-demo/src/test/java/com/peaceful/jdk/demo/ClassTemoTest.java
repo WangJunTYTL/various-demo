@@ -3,6 +3,8 @@ package com.peaceful.jdk.demo;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.beans.Introspector;
+
 public class ClassTemoTest {
 
     ClassDemo aClass;
@@ -18,10 +20,14 @@ public class ClassTemoTest {
     }
 
     @Test
-    public  void testA(){
+    public void testA() {
         for (int i = 0; i < 10; i++) {
             System.out.println((Integer) i);
         }
+    }
+
+    @Test
+    public void aa() {
     }
 
 }
