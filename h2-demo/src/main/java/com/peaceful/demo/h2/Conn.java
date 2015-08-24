@@ -2,7 +2,6 @@ package com.peaceful.demo.h2;
 
 import com.peaceful.common.util.Util;
 
-import javax.sql.RowSet;
 import java.sql.*;
 
 /**

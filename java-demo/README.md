@@ -31,9 +31,6 @@ java 笔记
     过多的线程会消耗尽cpu和内存资源
     大量线程的回收会给GC带来压力
 
-
-
-
 ### Executor 框架
 ExecutorService exe = Executors.newCachedThreadPool()
 任务先进入队列 由几个线程去消费
@@ -50,6 +47,8 @@ jvm内建classloader叫bootstrap class loader ，它没有父classloader，单�
 
 1. 单例模式
 1. 代理模式
+
+
 
 
 

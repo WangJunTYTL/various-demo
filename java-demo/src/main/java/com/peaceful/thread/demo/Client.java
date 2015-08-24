@@ -21,11 +21,12 @@ public class Client implements Callable<String> {
         int i = 0;
         StringBuffer stringBuffer = new StringBuffer();
         while (i < 97) {
-            stringBuffer.append((char) (i+start));
+            stringBuffer.append((char) (i + start));
             Thread.sleep(100);
             i++;
 //            Util.report(i+start);
         }
+        Thread.sleep(10000000);
         return stringBuffer.toString();
     }
 }

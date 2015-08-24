@@ -15,7 +15,7 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 public class ClientSetup {
     public static void main(String[] args) throws Exception {
         if (args.length == 0){
-            args = new String[]{"127.0.0.1","8080"};
+            args = new String[]{"127.0.0.1","8081"};
         }
         String host = args[0];
         int port = Integer.parseInt(args[1]);
