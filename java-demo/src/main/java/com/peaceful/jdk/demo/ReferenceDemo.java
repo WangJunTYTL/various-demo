@@ -15,6 +15,11 @@ import java.lang.ref.WeakReference;
 
 public class ReferenceDemo {
 
+    /**
+     * Java 四种引用类型
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         StringBuffer strbuf = new StringBuffer("hello world");//强引用
         StringBuffer strbuf1 = new StringBuffer("hello world");

@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 public class SemaphoreDemo {
 
-    Semaphore semaphore = new Semaphore(6, true);
+    // 信号量，通常被用来限制某个资源的最大访问线程数
 
     // 信号量，限定对某一个资源的最大访问量
     public static void main(String[] args) throws InterruptedException {
@@ -27,6 +27,8 @@ public class SemaphoreDemo {
             }
         }
     }
+
+    Semaphore semaphore = new Semaphore(6, true);
 
     public void getNext() throws InterruptedException {
 //         Util.report(semaphore.tryAcquire()); 如果等不到，立即返回false

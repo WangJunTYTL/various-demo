@@ -43,6 +43,20 @@ time协议又逐步讲述了几点：
 【ByteBuf】最原始的数据，字节
 
 
+### java 各类型字节占用
+
+	1个字节是8位
+	只有8种基本类型可以算.其他引用类型都是由java虚拟机决定的自己不能操作
+	byte 1字节
+	short 2字节
+	int 4字节
+	long 8字节
+	float 4字节
+	double 8字节
+	char 2字节
+	boolean 1字节
+
+
 
 ### http协议
 

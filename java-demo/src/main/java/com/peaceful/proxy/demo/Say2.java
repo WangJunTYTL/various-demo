@@ -1,4 +1,4 @@
-package com.peaceful.jdk.proxy.demo;
+package com.peaceful.proxy.demo;
 
 /**
  * @author WangJun <wangjuntytl@163.com>

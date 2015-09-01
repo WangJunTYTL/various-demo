@@ -7,12 +7,14 @@ import java.beans.IntrospectionException;
 import java.beans.Introspector;
 
 /**
+ * introspection
+ *
  * @author WangJun <wangjuntytl@163.com>
  * @version 1.0 15/8/6
  * @since 1.6
  */
 
-public class IntrospectorTest {
+public class IntrospectorDemo {
 
 
     public static void main(String[] args) throws IntrospectionException {

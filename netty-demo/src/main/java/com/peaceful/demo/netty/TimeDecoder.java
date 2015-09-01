@@ -1,5 +1,6 @@
 package com.peaceful.demo.netty;
 
+import com.peaceful.common.util.Util;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
@@ -27,7 +28,7 @@ public class TimeDecoder extends ByteToMessageDecoder { // (1)
         if (in.readableBytes() < 4) {
             return;
         }
-
-        out.add(new UnixTime(in.readInt()));
+        // 把字节码数据转为pojo供下一个handler使用，是不是设计的很优雅很简单
+        out.add(new UnixTime(in.readLong()));
     }
 }

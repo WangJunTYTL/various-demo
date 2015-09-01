@@ -13,17 +13,15 @@ import io.netty.channel.ChannelHandlerContext;
 
 import java.util.Date;
 
-public class TimeClientHandler extends ChannelHandlerAdapter {
+public class TimeClientHandler2 extends ChannelHandlerAdapter {
+
+
+    //    经过TimeDecoder后msg对象已经变成UnixTime对象
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
-        ByteBuf m = (ByteBuf) msg; // (1)
-        try {
-            long currentTimeMillis = (m.readUnsignedInt() - 2208988800L) * 1000L;
-            System.out.println(new Date(currentTimeMillis));
-            ctx.close();
-        } finally {
-            m.release();
-        }
+        UnixTime m = (UnixTime) msg;
+        Util.report("服务器时间：" + m);
+        ctx.close();
     }
 
     @Override

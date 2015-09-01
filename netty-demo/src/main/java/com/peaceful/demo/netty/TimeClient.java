@@ -33,7 +33,7 @@ public class TimeClient {
                 @Override
                 public void initChannel(SocketChannel ch) throws Exception {
 //                    ch.pipeline().addLast(new TimeClientHandler());
-                    ch.pipeline().addLast(new TimeDecoder(),new TimeClientHandler());
+                    ch.pipeline().addLast(new TimeDecoder(),new TimeClientHandler2());
                 }
             });
 

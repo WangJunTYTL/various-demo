@@ -1,4 +1,4 @@
-package com.peaceful.thread.demo;
+package com.peaceful.lock.demo;
 
 import com.peaceful.common.util.Util;
 

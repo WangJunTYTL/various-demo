@@ -1,4 +1,4 @@
-package com.peaceful.jdk.proxy.demo;
+package com.peaceful.proxy.demo;
 
 import com.peaceful.common.util.Util;
 
@@ -24,6 +24,7 @@ public class SayInvocationHandler implements InvocationHandler {
 
         // 实际对象
         Say say = new Say() {
+
             @Override
             public String say() {
                 return "hello world";

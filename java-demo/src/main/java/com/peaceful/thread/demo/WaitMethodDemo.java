@@ -36,7 +36,6 @@ public class WaitMethodDemo {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                out.notifyAll();
                 Util.report("input");
             }
 
