@@ -4,7 +4,7 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.locks.Lock;
 
 /**
- * 自旋锁算法
+ * 自旋锁算法,还需要学习
  *
  * @author WangJun <wangjuntytl@163.com>
  * @version 1.0 15/9/1

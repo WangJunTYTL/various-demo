@@ -6,6 +6,7 @@ import java.lang.reflect.Proxy;
 
 /**
  * Java动态代理
+ * Jdk提供的代理，必须需要接口没有CGLIB的方便，丰富
  *
  * @author WangJun <wangjuntytl@163.com>
  * @version 1.0 15/8/15

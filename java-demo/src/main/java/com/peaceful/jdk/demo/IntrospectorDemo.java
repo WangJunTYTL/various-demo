@@ -16,10 +16,11 @@ import java.beans.Introspector;
 
 public class IntrospectorDemo {
 
-
+    //内省(Introspector) 是Java 语言对 JavaBean 类属性、事件的一种缺省处理方法。
     public static void main(String[] args) throws IntrospectionException {
         BeanInfo info = Introspector.getBeanInfo
                 (EleA.class);
+        Util.report(info.getPropertyDescriptors()[0]);
         Util.report(info);
     }
 }
