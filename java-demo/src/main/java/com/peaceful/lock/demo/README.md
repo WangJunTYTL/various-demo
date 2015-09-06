@@ -7,7 +7,7 @@ CAS
 无锁算法 compareAndSet，这些实现unSafe类
 
     public final int incrementAndGet() {
-        for (;;) {
+        for (;;) { //自旋，只至成功
             int current = get();
             int next = current + 1;
             if (compareAndSet(current, next)) // 如果内存里还是current值，就设置为next值，如果不是，重新获取current值
@@ -30,6 +30,13 @@ CAS
 CLH
 ----
 自旋锁
+CLH锁也是一种基于链表的可扩展、高性能、公平的自旋锁，申请线程只在本地变量上自旋，它不断轮询前驱的状态，如果发现前驱释放了锁就结束自旋。
+[http://blog.csdn.net/bingjing12345/article/details/17789613](http://blog.csdn.net/bingjing12345/article/details/17789613)
+
+独占锁
+共享锁
+
+乐观锁
 
 
 
