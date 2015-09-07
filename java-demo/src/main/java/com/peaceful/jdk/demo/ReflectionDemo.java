@@ -1,32 +1,58 @@
 package com.peaceful.jdk.demo;
 
+import com.alibaba.fastjson.JSON;
 import com.peaceful.common.util.Util;
 
+import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
 
 /**
- * JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；
- * 对于任意一个对象，都能够调用它的任意一个方法和属性；
- * 这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。
- * <p/>
- * 另外可以看下 Java 内省机制 {@link java.beans.Introspector}
- * <p/>
- * Created by wangjun on 15/2/28.
+ * @author WangJun <wangjuntytl@163.com>
+ * @version 1.0 15/8/16
+ * @since 1.6
  */
+
 public class ReflectionDemo {
 
-    public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException, InvocationTargetException {
+    interface HelloWorld {
 
-        Class clazz = Class.forName("com.peaceful.jdk.demo.impl.UserImpl");
-
-        Method[] methods = clazz.getDeclaredMethods();
-        for (Method method : methods) {
-            Util.report(method.getName());
-            if (method.getName().equals("getCurrentUser")) {
-                Object result = method.invoke(clazz.newInstance(), null);
-                Util.report(result);
-            }
-        }
+        String say(String str);
     }
+
+    public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+
+
+
+        HelloWorld helloWorld = (HelloWorld) Proxy.newProxyInstance(HelloWorld.class.getClassLoader(), new Class[]{HelloWorld.class}, new InvocationHandler() {
+            @Override
+            public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+                String methodName = method.getName();
+                Class[] parameterTypes = method.getParameterTypes();
+                ReflectionDesc serviceUnit = new ReflectionDesc();
+                serviceUnit.setArgs(args);
+                serviceUnit.setMethodName(methodName);
+                serviceUnit.setParameterTypes(parameterTypes);
+                return JSON.toJSONString(serviceUnit);
+            }
+        });
+
+        String result = helloWorld.say("hello world");
+        Util.report(result);
+        ReflectionDesc serviceUnit = JSON.parseObject(result, ReflectionDesc.class);
+        Class[] parameterTypes = serviceUnit.getParameterTypes();
+        Object[] argses = serviceUnit.getArgs();
+        String methodName = serviceUnit.getMethodName();
+        Util.report(methodName + "\t" + parameterTypes + "\t" + argses);
+        Method method = HelloWorld.class.getMethod(methodName, parameterTypes);
+        Util.report(method.invoke(new HelloWorld() {
+            @Override
+            public String say(String str) {
+                return str;
+            }
+        }, argses));
+
+    }
+
 }

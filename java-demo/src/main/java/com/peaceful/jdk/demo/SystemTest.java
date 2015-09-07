@@ -2,6 +2,7 @@ package com.peaceful.jdk.demo;
 
 import com.peaceful.common.util.Util;
 
+import java.io.Console;
 import java.util.Map;
 import java.util.Properties;
 
@@ -15,5 +16,11 @@ public class SystemTest {
         Util.report(env);
         Properties properties = System.getProperties();
         Util.report(properties);
+        Util.report("os.name:"+properties.get("os.name"));
+
+//        Console console = System.console();
+
+//        System.gc();
+
     }
 }

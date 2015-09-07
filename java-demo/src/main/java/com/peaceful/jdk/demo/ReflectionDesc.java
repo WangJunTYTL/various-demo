@@ -8,7 +8,7 @@ import java.io.Serializable;
  * @since 1.6
  */
 
-public class ServiceUnit implements Serializable{
+public class ReflectionDesc implements Serializable{
 
 
     public String methodName;

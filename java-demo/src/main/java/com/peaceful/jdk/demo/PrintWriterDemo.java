@@ -12,7 +12,7 @@ import java.io.PrintWriter;
  * Author WangJun
  * Email wangjuntytl@163.com
  */
-public class PrintWriterTest {
+public class PrintWriterDemo {
 
     public static void main(String[] args) throws FileNotFoundException {
         String targrtDir = System.getProperty("user.dir", "<NA>") + "/temp.txt";

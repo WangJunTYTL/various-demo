@@ -9,11 +9,11 @@ import java.util.StringTokenizer;
  * <p/>
  * Created by wangjun on 15/3/28.
  */
-public class StringTokenizerTest {
+public class StringTokenizerDemo {
 
     public static void main(String[] args) {
         String str = "hello,;world,:Zh:中国";
-        StringTokenizer stringTokenizer = new StringTokenizer(str, ",;:");// 任何一个字符都是粉刺符
+        StringTokenizer stringTokenizer = new StringTokenizer(str, ",;:");// 任何一个字符都是分割符
         while (stringTokenizer.hasMoreTokens()) {
             Util.report(stringTokenizer.nextToken());
         }

@@ -37,8 +37,59 @@ public class ClassDemo {
     }
 
     public static void main(String[] args) {
-        Util.report("simple name :"+ClassDemo.class.getSimpleName());
-        Util.report("full name :"+ClassDemo.class.getName());
-        Util.report("package name :"+ClassDemo.class.getPackage());
+        Util.report("simple name :" + ClassDemo.class.getSimpleName());
+        Util.report("full name :" + ClassDemo.class.getName());
+        Util.report("package name :" + ClassDemo.class.getPackage());
+
+
+        class HelloImpl implements Hello {
+
+            @Override
+            public void say() {
+
+            }
+        }
+
+
+
+
+        new Hello() {
+
+            @Override
+            public void say() {
+                Util.report("匿名类：" + getClass().isAnonymousClass());
+            }
+        }.say();
+
+
+
+        Util.report("局部类：" + HelloImpl.class.isLocalClass());
+        Util.report("成员类：" + MemberClass.class.isMemberClass());
+        Util.report("接口类：" + Hello.class.isInterface());
+
+
     }
+
+    // 成员类
+    class MemberClass {
+
+    }
+
+    // 接口
+    interface Hello {
+
+        void say();
+
+    }
+
+    enum  Color{
+        GREEN,RED;
+    }
+
+
+
+
+
 }
+
+

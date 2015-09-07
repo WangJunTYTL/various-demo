@@ -5,7 +5,7 @@ import com.peaceful.common.util.Util;
 /**
  * Created by wangjun on 14/11/30.
  */
-public class RunTimeTest {
+public class RunTimeDemo {
 
     public static void main(String[] args) throws InterruptedException {
         Util.report("exe...");

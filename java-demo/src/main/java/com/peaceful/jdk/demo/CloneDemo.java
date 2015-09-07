@@ -6,7 +6,7 @@ import com.peaceful.jdk.demo.impl.Student;
 /**
  * Created by wangjun on 14/11/29.
  */
-public class CloneTest {
+public class CloneDemo {
 
     public static void main(String[] args) throws CloneNotSupportedException {
         Student student = new Student();

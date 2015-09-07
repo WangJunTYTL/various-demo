@@ -51,4 +51,8 @@ public class EnumTest {
        Util.report(EventType.fromInt(2).getIntValue());
        Util.report(EventType.fromInt(2));
     }
+
+    enum Color{
+        GREEN,RED,BLUE;
+    }
 }
