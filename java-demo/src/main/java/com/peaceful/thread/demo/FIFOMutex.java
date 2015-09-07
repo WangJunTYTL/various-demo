@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.locks.LockSupport;
 
 /**
- * 这个是LockSupport官网给的列子，还没看懂
+ * 这个是LockSupport官网给的列子，先进先出独占锁
  *
  * @author WangJun <wangjuntytl@163.com>
  * @version 1.0 15/8/20
@@ -25,7 +25,7 @@ public class FIFOMutex {
         // Block while not first in queue or cannot acquire lock
         while (waiters.peek() != current ||
                 !locked.compareAndSet(false, true)) {
-            LockSupport.park(this);
+            LockSupport.park(this);//阻塞当前线程
             if (Thread.interrupted()) // ignore interrupts while waiting
                 wasInterrupted = true;
         }
