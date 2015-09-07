@@ -14,10 +14,10 @@ public class WaitDemo {
     public static void main(String[] args) throws InterruptedException {
 
         Object lock = new Object();
-        Worker worker = new Worker(5000,lock);
+        Worker worker = new Worker(5000, lock);
         worker.start();
         worker.join(500);
-        Util.report("main exec , get lock ");
+        Util.report("main notify worker");
         synchronized (lock) {
             // 必须获得锁才可以调用
             lock.notify();
@@ -30,7 +30,7 @@ public class WaitDemo {
         private long wait;
         private Object lock;
 
-        public Worker(long wait,Object lock) {
+        public Worker(long wait, Object lock) {
             this.wait = wait;
             this.lock = lock;
         }
@@ -40,6 +40,7 @@ public class WaitDemo {
         public void run() {
             synchronized (lock) {
                 try {
+                    // 必须获得锁才可以调用
                     lock.wait(wait);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
