@@ -14,6 +14,9 @@ public class ThreadDemo {
 
         Util.report("currentThread:" + Thread.currentThread().getName() + "\n"
                 + "name:" + Thread.currentThread().getName()+"\n"
-                + "priority:"+Thread.currentThread().getPriority());
+                + "priority:"+Thread.currentThread().getPriority()+"\n"
+                + "state:"+Thread.currentThread().getState()+"\n"
+                + "threadGroup:"+Thread.currentThread().getThreadGroup()+"\n"
+        );
     }
 }
