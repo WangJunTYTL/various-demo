@@ -1,4 +1,4 @@
-package com.peaceful.thread.demo;
+package com.peaceful.concurrent.demo;
 
 import java.util.Random;
 import java.util.concurrent.ForkJoinPool;
@@ -9,10 +9,6 @@ import java.util.concurrent.RecursiveTask;
  * @version 1.0 15/9/6
  * @since 1.6
  */
-
-
-
-
 public class MaximumFinder extends RecursiveTask<Integer> {
 
     private static final int SEQUENTIAL_THRESHOLD = 5;

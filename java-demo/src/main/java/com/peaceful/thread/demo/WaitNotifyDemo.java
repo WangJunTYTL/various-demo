@@ -8,7 +8,7 @@ import com.peaceful.common.util.Util;
  * @since 1.6
  */
 
-public class WaitDemo {
+public class WaitNotifyDemo {
 
 
     public static void main(String[] args) throws InterruptedException {

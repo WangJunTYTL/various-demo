@@ -1,4 +1,4 @@
-package com.peaceful.thread.demo;
+package com.peaceful.concurrent.demo;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;

@@ -1,4 +1,4 @@
-package com.peaceful.thread.demo;
+package com.peaceful.concurrent.demo;
 
 import com.peaceful.common.util.Util;
 
@@ -12,7 +12,8 @@ import java.util.concurrent.Callable;
 public class Client implements Callable<String> {
 
     int start;
-    public Client(int start){
+
+    public Client(int start) {
         this.start = start;
     }
 
