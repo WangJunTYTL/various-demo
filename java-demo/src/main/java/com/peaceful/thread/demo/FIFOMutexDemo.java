@@ -1,7 +1,6 @@
-package com.peaceful.lock.demo;
+package com.peaceful.thread.demo;
 
 import com.peaceful.common.util.Util;
-import com.peaceful.thread.demo.FIFOMutex;
 
 /**
  * @author WangJun <wangjuntytl@163.com>
@@ -12,13 +11,11 @@ import com.peaceful.thread.demo.FIFOMutex;
 public class FIFOMutexDemo {
 
     public static void main(String[] args) {
-
-        // 通过LockSupport实现先进先出独占锁
         FIFOMutex fifoMutex = new FIFOMutex();
         Worker workerA = new Worker(fifoMutex);
         Worker workerB = new Worker(fifoMutex);
         Worker workerC = new Worker(fifoMutex);
-        Manage manage = new Manage(fifoMutex);
+        Manage manage =  new Manage(fifoMutex);
         workerA.setName("worker-a");
         workerB.setName("worker-b");
         workerC.setName("worker-c");
@@ -40,7 +37,7 @@ public class FIFOMutexDemo {
         @Override
         public void run() {
             fifoMutex.lock();
-            Util.report(currentThread().getName() + " worker complete");
+            Util.report(currentThread().getName()+" worker complete");
         }
 
     }
@@ -55,7 +52,7 @@ public class FIFOMutexDemo {
 
         @Override
         public void run() {
-            for (; ; ) {
+            for (;;){
                 try {
                     sleep(6000);
                 } catch (InterruptedException e) {
