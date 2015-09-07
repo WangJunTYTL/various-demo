@@ -23,7 +23,7 @@
         sleep
         interrupt
         join
-        yield
+        yield 
         currentThread
     
     LockSupport
@@ -52,6 +52,15 @@ wait 让出cpu资源也会让出lock，而当调用wait()方法的时候，线�
 对象调用wait方法前`必须获得该对象的锁`,可以让当前线程让出锁和cpu资源，进入线程阻塞状态
 当其它线程获取到该对象的锁，可以调用notify或notifyAll唤醒wait的线程
 
+### join
+
+join是当前线程`等待(在一定时间)指定线程完成`，如果被等待线程完成了，则当前现在才会继续运行，否则阻塞。
+
+### yield
+也许该方法永远也不会被调用，没啥作用
+使用yield()的目的是让相同优先级的线程之间能适当的轮转执行。但是，实际中无法保证yield()达到让步目的，因为让步的线程还有可能被线程调度程序再次选中
+
+
 ### LockSupport
 
 用于替代:Thread.suspend() Thread.resume()
@@ -66,6 +75,8 @@ wait 让出cpu资源也会让出lock，而当调用wait()方法的时候，线�
     unpark(Thread): void
     
 ### ThreadLocal    
+    
+用来存取Thread运行上下文信息的地方，每个Thread实例都会携带一个map集合，该集合没有被暴漏出来，需要借助ThreadLocal来操作该集合,
     
 ### 使用多线程注意【粒度问题】
 

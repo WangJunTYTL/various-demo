@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.locks.LockSupport;
 
 /**
- * 这个是LockSupport官网给的列子，先进先出独占锁
+ * 这个是LockSupport官网给的列子，先进先出独占锁{@link LockSupport}
  *
  * @author WangJun <wangjuntytl@163.com>
  * @version 1.0 15/8/20
