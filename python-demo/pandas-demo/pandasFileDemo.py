@@ -16,7 +16,7 @@ import MySQLdb
 from utils import util
 
 conn = MySQLdb.Connect(
-    host='db.edaijia.cn',
+    host='db.***.cn',
     port=3306,
     user='write',
     passwd='write',
@@ -44,7 +44,7 @@ util.report_tag("保存数据到数据库")
 # 保存数据到表里，aa是表名 ，需要安装 sqlalchemy 模块
 from sqlalchemy import create_engine
 
-engine = create_engine('mysql+mysqldb://write:write@db.edaijia.cn/db_crm')
+engine = create_engine('mysql+mysqldb://write:write@db.***.cn/db_crm')
 sql = df.to_sql("aa", engine, if_exists='append')
 df = pd.read_sql_table("aa", engine)
 print df

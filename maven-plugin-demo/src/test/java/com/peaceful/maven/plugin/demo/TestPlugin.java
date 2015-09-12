@@ -1,9 +1,6 @@
 package com.peaceful.maven.plugin.demo;
 
-import cn.edaijia.plugin.GreetingMojo;
 import org.apache.maven.plugin.testing.AbstractMojoTestCase;
-
-import java.io.File;
 
 /**
  * @author WangJun <wangjuntytl@163.com>
