@@ -37,7 +37,7 @@ public class ParseStringDemo {
         config = ConfigFactory.parseFile(new File("/Users/wangjun/ideaWorkSpace/github/myapp/config-demo/src/main/resources/application.json"));
         Util.report(config.root().render(ConfigRenderOptions.concise()));
 
-        config = ConfigFactory.parseURL(new URL("http", "open.d.api.edaijia.cn", 80, "running"));
+        config = ConfigFactory.parseURL(new URL("http", "xx.xx.xx.com", 80, "running"));
 
         Util.report(config.root().render(ConfigRenderOptions.defaults()));
 
