@@ -19,8 +19,6 @@ import static org.elasticsearch.index.query.QueryBuilders.termQuery;
 public class SetUp {
 
     public static void main(String[] args) {
-//        String host01 = "search.edaijia.cn";
-//        String host01 = "search.edaijia.cn";
         String host01 = "127.0.0.1";
         String host02 = "127.0.0.1";
         Settings settings = ImmutableSettings.settingsBuilder()
