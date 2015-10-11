@@ -1,6 +1,5 @@
-demo
+Everything from hello world
 =====
 
   学习每个技术知识点的demo，在这个项目中会有很多module，从每个module名
-  中你可以看出它的用途，如果你正在学习的或想要学习的和这里的有关，不妨clone下来，作为
-  一个demo
+  中你可以看出它的用途
