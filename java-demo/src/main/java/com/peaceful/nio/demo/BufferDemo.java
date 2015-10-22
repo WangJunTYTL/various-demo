@@ -14,9 +14,10 @@ public class BufferDemo {
 
     public static void main(String[] args) {
         ByteBuffer byteBuffer = ByteBuffer.allocate(6);
+//        byteBuffer.limit(2); // 限制buffer可以使用的长度
         byte b = 12;
         byteBuffer.put(b);
-        Util.report("字节b:"+b);
-        Util.report("字节b:"+byteBuffer.getInt());
+        Util.report("字节b:" + b);
+        Util.report("字节b:" + byteBuffer.getInt());
     }
 }

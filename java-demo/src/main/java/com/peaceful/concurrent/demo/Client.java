@@ -1,7 +1,5 @@
 package com.peaceful.concurrent.demo;
 
-import com.peaceful.common.util.Util;
-
 import java.util.concurrent.Callable;
 
 /**
