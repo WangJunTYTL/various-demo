@@ -7,8 +7,8 @@
 # =============================
 # desc python 异常处理
 # =================================
-f = file("test.txt")
 try:
+    f = file("test.txt")
     print f.readline
 except Exception, e:
     print "读取文件出现错误:", e

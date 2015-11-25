@@ -5,6 +5,7 @@ import kafka.javaapi.producer.Producer;
 import kafka.producer.KeyedMessage;
 import kafka.producer.ProducerConfig;
 
+import java.util.Date;
 import java.util.Properties;
 
 /**
@@ -18,12 +19,13 @@ public class ProducerDemo {
     public static void main(String[] args) throws InterruptedException {
         Properties props = new Properties();
         props.put("zk.connect", "127.0.0.1:2181");
-        props.put("metadata.broker.list", "127.0.0.1:9092");
+        props.put("metadata.broker.list", "127.0.0.1:9092,127.0.0.1:9093");
         props.put("serializer.class", "kafka.serializer.StringEncoder");
         ProducerConfig config = new ProducerConfig(props);
         Producer<String, String> producer = new Producer<String, String>(config);
-        KeyedMessage<String, String> data = new KeyedMessage<String, String>("test-topic", "test-message2");
+
         for (; ; ) {
+            KeyedMessage<String, String> data = new KeyedMessage<String, String>("test-topic", "test-message2".concat(new Date().toString()));
             producer.send(data);
             Thread.sleep(100);
         }

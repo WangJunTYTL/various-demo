@@ -1,8 +1,12 @@
 package com.peaceful.thread.demo;
 
-import util.Util;
+import com.peaceful.common.util.Util;
 
 /**
+ * daemon 线程
+ * <p/>
+ * daemon称之为后台线程,当JVM发现没有前台线程活动时会立马终止后台线程的运行
+ *
  * @author WangJun <wangjuntytl@163.com>
  * @version 1.0 15/10/22
  * @since 1.6

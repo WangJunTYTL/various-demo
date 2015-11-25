@@ -2,6 +2,8 @@ package com.peaceful.thread.demo;
 
 import com.peaceful.common.util.Util;
 
+import java.util.Map;
+
 /**
  * @author WangJun <wangjuntytl@163.com>
  * @version 1.0 15/9/6
@@ -18,5 +20,12 @@ public class ThreadDemo {
                 + "state:"+Thread.currentThread().getState()+"\n"
                 + "threadGroup:"+Thread.currentThread().getThreadGroup()+"\n"
         );
+
+        Util.report(Thread.activeCount());
+
+        Map<Thread, StackTraceElement[]> threadMap =  Thread.getAllStackTraces();
+        for (Thread key:threadMap.keySet()){
+            Util.report(key.getName());
+        }
     }
 }

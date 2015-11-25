@@ -28,17 +28,25 @@ public class ConsumerDemo {
         // specify some consumer properties
         Properties props = new Properties();
         props.put("zookeeper.connect", "localhost:2181");
-        props.put("zk.connectiontimeout.ms", "1000");
+
+        // 自动提交offset信息,默认是1分钟
         props.put("auto.commit.enable", "true");
+
+        // 设置提交offset的时间间隔
+        props.put("auto.commit.interval.ms", "5000");
+
         props.put("group.id", "test_group");
+
+        // consumer的数据可以存在zookeeper 或者 kakfa集群,默认zookeeper
+        props.put("offsets.storage", "zookeeper");
 
         // Create the connection to the cluster
         ConsumerConfig consumerConfig = new ConsumerConfig(props);
         ConsumerConnector consumerConnector = Consumer.createJavaConsumerConnector(consumerConfig);
 
-        // create 4 partitions of the stream for topic “test-topic”, to allow 4 threads to consume
+        // create 1 partitions of the stream for topic “test-topic”, to allow 4 threads to consume
         HashMap<String, Integer> map = new HashMap<String, Integer>();
-        map.put("test-topic", 4);
+        map.put("test-topic", 1);
         Map<String, List<KafkaStream<byte[], byte[]>>> topicMessageStreams =
                 consumerConnector.createMessageStreams(map);
         List<KafkaStream<byte[], byte[]>> streams = topicMessageStreams.get("test-topic");

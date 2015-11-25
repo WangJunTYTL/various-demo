@@ -2,10 +2,7 @@ package com.peaceful.jdk.demo;
 
 import com.peaceful.common.util.Util;
 
-import java.lang.ref.PhantomReference;
-import java.lang.ref.ReferenceQueue;
-import java.lang.ref.SoftReference;
-import java.lang.ref.WeakReference;
+import java.lang.ref.*;
 
 /**
  * @author wangjun
@@ -20,43 +17,57 @@ public class ReferenceDemo {
      *
      * @param args
      */
-    public static void main(String[] args) {
-        StringBuffer strbuf = new StringBuffer("hello world");//强引用
-        StringBuffer strbuf1 = new StringBuffer("hello world");
-        StringBuffer strbuf2 = new StringBuffer("hello world");
+    public static void main(String[] args) throws InterruptedException {
+        StringBuffer b1 = new StringBuffer("hello world");//强引用
+
         //软引用
-        SoftReference<StringBuffer> softReference = new SoftReference<StringBuffer>(strbuf);
-        //弱引用
-        WeakReference<StringBuffer> weakReference = new WeakReference<StringBuffer>(strbuf1);
-        //虚引用
-        ReferenceQueue<StringBuffer> stringBufferReferenceQueue = new ReferenceQueue<StringBuffer>();
-        PhantomReference<StringBuffer> phantomReference = new PhantomReference<StringBuffer>(strbuf2, stringBufferReferenceQueue);
-
-        Util.report("强引用存在时");
-        Util.dashed();
-        Util.report(softReference.get());
-        Util.report(weakReference.get());
-        Util.report(phantomReference.get());
-        Util.enter();
-
-//        清除强引用
-        strbuf = null;
-        strbuf1 = null;
-        strbuf2 = null;
-
-        Util.report("强引用不存在时");
-        Util.dashed();
-        Util.report(softReference.get());
-        Util.report(weakReference.get());
-        Util.report(phantomReference.get());
-        Util.enter();
-
-        Util.report("第一次gc后，弱引用会被回收");
+        SoftReference<StringBuffer> softReference = new SoftReference<StringBuffer>(new StringBuffer("hello world"));
+        Util.report("软引用会在内存吃紧时，被回收");
         Util.dashed();
         System.gc();
-        Util.report(softReference.get()); // 软引用会在内容紧张时立马回收
-        Util.report(weakReference.get());// 弱引用会在gc时立马回收
-        Util.report(phantomReference.get());//任何时候都不可以通过get()获得
+        Util.report(softReference.get());
+        Util.enter();
+
+
+        //弱引用
+        ReferenceQueue<StringBuffer> referenceQueue = new ReferenceQueue<StringBuffer>();
+        ReferenceQueue<StringBuffer> referenceQueue2 = new ReferenceQueue<StringBuffer>();
+        WeakReference<StringBuffer> weakReference = new WeakReference<StringBuffer>(new StringBuffer("hello world"), referenceQueue);
+        WeakReference<StringBuffer> weakReference2 = new WeakReference<StringBuffer>(new StringBuffer("hello world"), referenceQueue2);
+        StringBuffer buffer = weakReference.get();
+        System.gc();
+        Util.report("弱引用会在gc时被回收，");
+        Util.dashed();
+        Util.report(weakReference.get()); // 存在引用就不会被删除
+        try {
+            Util.report(weakReference2.get());//弱引用会在gc时立马回收
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+
+        // 为了避免内存泄露，把保存软引用对象的Reference也给清除掉，这个不是必须的，可以被gc自动清除
+        Reference ref;
+        while ((ref = referenceQueue.poll()) != null) {
+            // 清除
+        }
+
+        Reference ref2;
+        while ((ref2 = referenceQueue2.poll()) != null) {
+            //
+        }
+
+        Util.enter();
+
+        //虚引用
+        ReferenceQueue<StringBuffer> stringBufferReferenceQueue = new ReferenceQueue<StringBuffer>();
+        PhantomReference<StringBuffer> phantomReference = new PhantomReference<StringBuffer>(new StringBuffer("hello world"), stringBufferReferenceQueue);
+        try {
+            Util.report(phantomReference.get());//任何时候都不可以通过get()获得
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         Util.enter();
     }
 }
