@@ -29,6 +29,13 @@ public class ConsumerDemo {
         Properties props = new Properties();
         props.put("zookeeper.connect", "localhost:2181");
 
+        //consumer rebalancing fails (you will see ConsumerRebalanceFailedException): This is due to conflicts when two consumers are trying to own the same topic partition. The log will show you what caused the conflict (search for "conflict in ").
+        //If your consumer subscribes to many topics and your ZK server is busy, this could be caused by consumers not having enough time to see a consistent view of all consumers in the same group. If this is the case, try Increasing rebalance.max.retries and rebalance.backoff.ms.
+        //        Another reason could be that one of the consumers is hard killed. Other consumers during rebalancing won't realize that consumer is gone after zookeeper.session.timeout.ms time. In the case, make sure that rebalance.max.retries * rebalance.backoff.ms > zookeeper.session.timeout.ms.
+
+        props.put("rebalance.max.retries", "5");
+        props.put("rebalance.backoff.ms", "1200");
+
         // 自动提交offset信息,默认是1分钟
         props.put("auto.commit.enable", "true");
 

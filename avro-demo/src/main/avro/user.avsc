@@ -1,0 +1,10 @@
+{"namespace": "example.avro",
+  "type": "record",
+  "name": "User",
+  "doc":"描述这个对象,在Java中相当于JavaDoc注释",
+  "fields": [
+    {"name": "name", "type": "string"},
+    {"name": "favorite_number",  "type": ["int", "null"]},
+    {"name": "favorite_color", "type": ["string", "null"]}
+  ]
+}

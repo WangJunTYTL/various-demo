@@ -11,7 +11,7 @@
 
 ### broker
 
- broker代表kafka集群中的一个实例
+ broker代表kafka集群中的一个实例,kafka的集群就是所有的broker实例.在集群中,会选取其中一个broker作为leader
 
 
 ### producer
@@ -28,6 +28,13 @@
 ### topic
 
 ### partitions
+
+partition存在的意义是:
+
+*. 分区存储:可以把消息进行分区存储,在分布式存取文件中,可以把消息分发到不同的机器和文件中
+*. 负载均衡:producer可以把topic的消息按照指定的策略在多个partition上分发
+*. 客户端快速读取:由于partition按照分区存储,consumer可以
+每个topic可以指定有多个partition
 
 
 ###
