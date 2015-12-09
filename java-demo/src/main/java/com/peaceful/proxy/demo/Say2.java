@@ -6,7 +6,7 @@ package com.peaceful.proxy.demo;
  * @since 1.6
  */
 
-public class Say2 {
+public class Say2 implements Say{
 
     public String say(){
         return "hello world";

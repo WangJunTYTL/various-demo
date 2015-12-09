@@ -3,6 +3,7 @@ package com.peaceful.avro.demo;
 import com.acme.Greeting;
 import com.acme.HelloWorld;
 import org.apache.avro.ipc.NettyTransceiver;
+import org.apache.avro.ipc.reflect.ReflectRequestor;
 import org.apache.avro.ipc.specific.SpecificRequestor;
 
 import java.io.IOException;
