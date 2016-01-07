@@ -3,6 +3,7 @@ package com.peaceful.demo.akka.setup;
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
+import com.peaceful.common.util.Util;
 import com.peaceful.demo.akka.actor.GreetActor;
 import com.peaceful.demo.akka.domain.Greeting;
 
@@ -16,7 +17,7 @@ public class SimpleActorDemo {
     // ActorSystem is a heavy object: create only one per application
     final static ActorSystem system = ActorSystem.create("MySystem");
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         //Using the ActorSystem will create top-level actors,supervised by the actor system’s provided guardian actor,
         // while using an actor’s context will create a child actor.
 
@@ -33,12 +34,12 @@ public class SimpleActorDemo {
         greeter.tell("child Whether can continue to run ...", greeter);  // test SupervisorStrategy
 
         //actor path
-        system.actorSelection("/user/greet").tell(new Greeting("give me a word"),ActorRef.noSender());
+        system.actorSelection("/user/greet").tell(new Greeting("give me a word-01"),ActorRef.noSender());
         // 找不到actor，消息将会被发送到deadLetter
-        system.actorSelection("/user/greet2").tell(new Greeting("give me a word"),ActorRef.noSender());
-        system.actorSelection("/user/greet2").tell(new Greeting("give me a word"),ActorRef.noSender());
-        system.actorSelection("/user/greet2").tell(new Greeting("give me a word"),ActorRef.noSender());
-        system.actorSelection(greeter.path()).tell(new Greeting("give me a word"),ActorRef.noSender());
+        system.actorSelection("/user/greet2").tell(new Greeting("give me a word-02"),ActorRef.noSender());
+        system.actorSelection("/user/greet2").tell(new Greeting("give me a word-03"),ActorRef.noSender());
+        system.actorSelection("/user/greet2").tell(new Greeting("give me a word-04"),ActorRef.noSender());
+        system.actorSelection(greeter.path()).tell(new Greeting("give me a word-05"),ActorRef.noSender());
     }
 }
 
