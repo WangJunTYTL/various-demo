@@ -1,8 +1,8 @@
 package com.peaceful.demo.spring.webmvc;
 
+import com.peaceful.common.util.Http;
 import com.peaceful.demo.spring.domain.User;
 import com.peaceful.demo.spring.service.UserService;
-import com.peaceful.web.util.Http;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

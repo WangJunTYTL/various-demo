@@ -48,7 +48,7 @@ wait 让出cpu资源也会让出lock，而当调用wait()方法的时候，线�
 
 ### wait & notify & notifyAll
 
-首先应该注意到wait时Object的方法不是Thread的方法
+首先应该注意到wait是Object的方法不是Thread的方法
 对象调用wait方法前`必须获得该对象的锁`,可以让当前线程让出锁和cpu资源，进入线程阻塞状态
 当其它线程获取到该对象的锁，可以调用notify或notifyAll唤醒wait的线程
 

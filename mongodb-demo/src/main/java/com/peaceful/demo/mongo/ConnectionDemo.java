@@ -19,7 +19,7 @@ public class ConnectionDemo {
 
     public static MongoDatabase getConn(){
         MongoClient mongoClient = new MongoClient();
-        MongoDatabase db = mongoClient.getDatabase("test");
+        MongoDatabase db = mongoClient.getDatabase("mydb");
         return db;
     }
 }

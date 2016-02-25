@@ -74,6 +74,10 @@ Java语言优势之一是支持多线程.然而利用多线程编写正确的并
 数量的线程,在jdk中提供了Executor并发调度框架或者ForkJoin框架.里面都有用到线程池.
 
 
+### JMX
+
+管理网络，设备，应用程序等资源
+http://docs.huihoo.com/java/jmx/jmx.html
 
 
 

@@ -32,7 +32,6 @@ public class SimpleActorDemo {
 //        greeter.tell("500", greeter);  // test SupervisorStrategy
         greeter.tell("302", greeter);  // test SupervisorStrategy
         greeter.tell("child Whether can continue to run ...", greeter);  // test SupervisorStrategy
-
         //actor path
         system.actorSelection("/user/greet").tell(new Greeting("give me a word-01"),ActorRef.noSender());
         // 找不到actor，消息将会被发送到deadLetter

@@ -21,7 +21,7 @@ public class InsertDemo {
         MongoDatabase db = ConnectionDemo.getConn();
         DateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.ENGLISH);
 
-        db.getCollection("restaurants").insertOne(
+        db.getCollection("user").insertOne(
                 new Document("address",
                         new Document()
                                 .append("street", "2 Avenue")

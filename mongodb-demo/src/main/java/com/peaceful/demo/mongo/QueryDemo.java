@@ -17,7 +17,7 @@ public class QueryDemo {
 
     public static void main(String[] args) throws ParseException {
         MongoDatabase db = ConnectionDemo.getConn();
-        FindIterable<Document> iterable = db.getCollection("restaurants").find();
+        FindIterable<Document> iterable = db.getCollection("user").find();
         iterable.forEach(new Block<Document>() {
             @Override
             public void apply(final Document document) {

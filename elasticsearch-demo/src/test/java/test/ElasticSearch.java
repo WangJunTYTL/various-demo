@@ -4,7 +4,6 @@ import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.action.search.SearchType;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.client.transport.TransportClient;
-import org.elasticsearch.common.settings.ImmutableSettings;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.transport.InetSocketTransportAddress;
 import org.elasticsearch.index.query.BoolQueryBuilder;
@@ -24,7 +23,7 @@ import java.util.Random;
 
 public class ElasticSearch {
 
-    @Test
+    /*@Test
     public void testElasticSearch1() {
         Settings settings = ImmutableSettings.settingsBuilder().put("cluster.name", "promotion ").put("client.transport.sniff", true).build();
         Client client = new TransportClient(settings).addTransportAddress(new InetSocketTransportAddress("192.168.172.95", 9300));
@@ -122,7 +121,7 @@ public class ElasticSearch {
         client.close();
     }
 
-
+*/
     @Test
     public void testSync(){
 

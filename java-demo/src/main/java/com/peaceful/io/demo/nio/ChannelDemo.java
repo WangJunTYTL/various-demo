@@ -1,4 +1,4 @@
-package com.peaceful.nio.demo;
+package com.peaceful.io.demo.nio;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
