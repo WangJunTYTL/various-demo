@@ -11,7 +11,7 @@ import java.util.concurrent.Future;
 /**
  * Created by wangjun on 16/2/24.
  */
-public class Demo {
+public class AioDemo {
 
     public static void main(String[] args) throws IOException, ExecutionException, InterruptedException {
         String userDir= System.getProperty("user.dir");
