@@ -1,4 +1,4 @@
-package com.peaceful.collection.demo;
+package com.peaceful.collection.demo.tree;
 
 import com.peaceful.common.util.Util;
 

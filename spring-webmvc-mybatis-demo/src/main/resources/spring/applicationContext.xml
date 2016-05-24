@@ -20,8 +20,8 @@
         <property name="jdbcUrl" value="${auth.db.url}"></property>
         <property name="user" value="${auth.db.user}"></property>
         <property name="password" value="${auth.db.password}"></property>
-        <property name="minPoolSize" value="2"></property>
-        <property name="maxPoolSize" value="50"></property>
+        <property name="minPoolSize" value="500"></property>
+        <property name="maxPoolSize" value="500"></property>
         <property name="acquireIncrement" value="2"></property>
         <property name="maxIdleTime" value="20"></property>
     </bean>

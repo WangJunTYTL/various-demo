@@ -27,7 +27,7 @@ public class Search {
         searchRequest = client.prepareSearch("test").setPostFilter(termsQuery("name", "wj", "wj01"));
         Util.report(searchRequest.toString());
         // range filter ( sql between and )
-        searchRequest = client.prepareSearch("test").setPostFilter(rangeQuery("updateTime").gt(1455009486597l).lt(System.currentTimeMillis()));
+        searchRequest = client.prepareSearch("test").setPostFilter(rangeQuery("updateTime").gte(1455009486597l).lt(System.currentTimeMillis()));
         Util.report(searchRequest.toString());
         // exist filter ( sql != null )
         searchRequest = client.prepareSearch("test").setPostFilter(existsQuery("age"));
@@ -52,7 +52,7 @@ public class Search {
         Util.report(searchRequest.toString());
 
         // highlight
-        searchRequest = client.prepareSearch("test").setQuery(new TermQueryBuilder("name", "wj")).addSort("updateTime", SortOrder.ASC).addHighlightedField("name");
+        searchRequest = client.prepareSearch("test").setQuery(new TermQueryBuilder("name", "wj")).addSort("updateTime", SortOrder.ASC).addHighlightedField("name").setFetchSource("phone",null);
         Util.report(searchRequest.toString());
 
     }

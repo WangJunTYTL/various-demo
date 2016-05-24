@@ -14,7 +14,7 @@
 ### 主要线程操作原语
 
     Object
-        wait
+        wait 
         notify
         notifyAll
 
@@ -42,15 +42,27 @@ sleep()方法，我们首先要知道该方法是属于Thread类中的。`而wai
 sleep 让出cpu资源不会让出lock，监控状态依然保持者
 wait 让出cpu资源也会让出lock，而当调用wait()方法的时候，线程会放弃对象锁，进入等待此对象的等待锁定池，只有针对此对象调用notify()方法后本线程才进入对象锁定池准备
 
+### 线程状态
+
+在java.lang.Thread.State对象中描述了5种状态：
+    
+    NEW：创建还没有调用start方法启动
+    Block：两个线程同时进入一个sync块，必定有一个线程处于block状态，注意和wait状态的区别
+    waiting:调用wait、join、LockSupport.park方法线程处于等待状态
+    timed_waiting:调用sleep、wait(long)、join(）...、LockSupport。parkNanos(...)、或LockSupport.parkUntil
+    terminated:终止
+
+
 ### interrupt
 
 线程处于sleep转态，可以打断它，让它继续执行
 
 ### wait & notify & notifyAll
 
-首先应该注意到wait是Object的方法不是Thread的方法
+首先应该注意到wait是Object的方法不是Thread的方法，这些方法都需要获得锁才可以调用，否则包无效的监控对象异常，同一个线程可以多次获得对象的锁
 对象调用wait方法前`必须获得该对象的锁`,可以让当前线程让出锁和cpu资源，进入线程阻塞状态
 当其它线程获取到该对象的锁，可以调用notify或notifyAll唤醒wait的线程
+
 
 ### join
 
@@ -59,6 +71,8 @@ join是当前线程`等待(在一定时间)指定线程完成`，如果被等待
 ### yield
 也许该方法永远也不会被调用，没啥作用
 使用yield()的目的是让相同优先级的线程之间能适当的轮转执行。但是，实际中无法保证yield()达到让步目的，因为让步的线程还有可能被线程调度程序再次选中
+
+
 
 
 ### LockSupport
@@ -74,9 +88,11 @@ join是当前线程`等待(在一定时间)指定线程完成`，如果被等待
     setBlocker(Thread, Object): void
     unpark(Thread): void
     
+    
+    
 ### ThreadLocal    
     
-用来存取Thread运行上下文信息的地方，每个Thread实例都会携带一个map集合，该集合没有被暴漏出来，需要借助ThreadLocal来操作该集合
+用来存取Thread运行上下文信息的地方，每个Thread实例都会携带一个map集合，该集合没有被暴漏出来，需要借助ThreadLocal来操作该集合，这是一种利用空间换时间的做法
     
 ### 使用多线程注意【粒度问题】
 
@@ -84,4 +100,8 @@ join是当前线程`等待(在一定时间)指定线程完成`，如果被等待
     过多的线程会消耗尽cpu和内存资源
     大量线程的回收会给GC带来压力
     
-    
+
+
+### 同步
+
+Java并发也是通过锁控制共享的资源.在Java中每个对象都会有有个内部监控锁,这也是wait\notify\notifyall这些方法是object对象所拥有的方法的原因

@@ -15,6 +15,8 @@ import java.nio.ByteBuffer;
 public class BufferDemo {
 
     public static void main(String[] args) {
+
+        // 开辟6个字节的内存空间
         ByteBuffer byteBuffer = ByteBuffer.allocate(6);
         byteBuffer.put((byte)1);
         byteBuffer.put((byte)1);
@@ -27,7 +29,5 @@ public class BufferDemo {
         Util.report("position :" + byteBuffer.position() + "\tlimit: " + byteBuffer.limit() + "\t capacity: " + byteBuffer.capacity());
         Util.report("字节b:" + byteBuffer.get());
         Util.report("position :" + byteBuffer.position() + "\tlimit: " + byteBuffer.limit() + "\t capacity: " + byteBuffer.capacity());
-
-
     }
 }
