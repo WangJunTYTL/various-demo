@@ -37,17 +37,41 @@ public class UserServiceTest {
     public void testGetFactoryBeanDemo() {
         DBConn dbConn = (DBConn) applicationContext.getBean("factoryBeanDemo");
         dbConn.getConn();
-         dbConn = (DBConn) applicationContext.getBean("factoryBeanDemo");
+        dbConn = (DBConn) applicationContext.getBean("factoryBeanDemo");
     }
 
     @Test
-    public void testDefaultBean(){
+    public void testInsertUser() {
+        User user = new User();
+        user.setName("wjj");
+        userService.insert(user);
+    }
+
+    @Test
+    public void testInsert2User() {
+        User user = new User();
+        user.setName("wjj");
+        userService.insert2(user);
+    }
+
+    @Test
+    public void testDefaultBean() {
 //        ApplicationContext applicationContext_ = applicationContext.getBean(ApplicationContext.class);
 //        BeanFactory beanFactory = applicationContext.getBean(BeanFactory.class);
 //        Util.report(applicationContext_);
 //        Util.report(beanFactory);
         String[] names = applicationContext.getBeanNamesForType(UserService.class);
         Util.report(names);
+    }
+
+    @Test
+    public void testQueryByName() {
+        Util.report("result size ->" + userService.queryByName("w").size());
+    }
+
+    @Test
+    public void queryUserById(){
+        userService.queryUserById(1);
     }
 
 }

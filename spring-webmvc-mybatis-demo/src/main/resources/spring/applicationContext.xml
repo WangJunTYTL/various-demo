@@ -13,6 +13,7 @@
 	">
     <!--<context:component-scan base-package="com.peaceful.demo.spring.dao"/>-->
     <context:component-scan base-package="com.peaceful.demo.spring.service"/>
+
     <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
           destroy-method="close">
@@ -20,11 +21,19 @@
         <property name="jdbcUrl" value="${auth.db.url}"></property>
         <property name="user" value="${auth.db.user}"></property>
         <property name="password" value="${auth.db.password}"></property>
-        <property name="minPoolSize" value="500"></property>
+        <property name="minPoolSize" value="2"></property>
         <property name="maxPoolSize" value="500"></property>
         <property name="acquireIncrement" value="2"></property>
         <property name="maxIdleTime" value="20"></property>
     </bean>
+
+    <!--事务配置-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!-- enables scanning for @Transactional annotations -->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
 
     <!-- mybatis组件自动扫描，参考：https://mybatis.github.io/spring/zh/mappers.html#MapperScannerConfigurer-->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
@@ -39,8 +48,8 @@
     </bean>
 
     <!--<bean id="userDao" class="org.mybatis.spring.mapper.MapperFactoryBean">-->
-        <!--<property name="mapperInterface" value="com.peaceful.demo.spring.dao.UserDao" />-->
-        <!--<property name="sqlSessionFactory" ref="sqlSessionFactory" />-->
+    <!--<property name="mapperInterface" value="com.peaceful.demo.spring.dao.UserDao" />-->
+    <!--<property name="sqlSessionFactory" ref="sqlSessionFactory" />-->
     <!--</bean>-->
 
     <!-- <bean id="transactionManger"
