@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 
 import javax.sql.DataSource;
 import java.sql.SQLException;
@@ -18,21 +19,23 @@ import java.util.concurrent.TimeUnit;
  * @author WangJun
  * @version 1.0 16/6/4
  */
-@Configuration
+@Configuration // 该注解声明该类为一个配置类，他也会被spring container 作为一个bean管理
 @MapperScan("com.peaceful.demo.spring.boot.dao")
 public class AppDataSourceConfig {
 
 
     @Bean(name = "dataSource")
     @ConfigurationProperties(prefix = "spring.datasource")
+    @Lazy
     public DataSource dataSource() {
         DataSource dataSource = new ComboPooledDataSource();
-        new Monitor((ComboPooledDataSource) dataSource).start();
+//        new Monitor((ComboPooledDataSource) dataSource).start();
         return dataSource;
 
     }
 
     @Bean
+    @Lazy
     public SqlSessionFactory sqlSessionFactory() throws Exception {
         SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());

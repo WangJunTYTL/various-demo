@@ -12,11 +12,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class PageController {
 
-    @RequestMapping("/greeting")
-    public String say(@RequestParam(defaultValue = "WJ") String name, Model model) {
+
+    @RequestMapping("jsp01")
+    public String jsp(@RequestParam(defaultValue = "WJ") String name, Model model) {
         model.addAttribute("name", name);
         System.out.println("page->" + name);
-        return "greeting";
+        return "index";
+    }
+
+    @RequestMapping("jsp02")
+    public String jsp02(@RequestParam(defaultValue = "WJ") String name, Model model) {
+        model.addAttribute("name", name);
+        System.out.println("page->" + name);
+        return "template02";
     }
 
 }

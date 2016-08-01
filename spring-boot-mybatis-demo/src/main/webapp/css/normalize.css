@@ -67,7 +67,7 @@ audio:not([controls]) {
 
 /**
  * Address `[hidden]` styling not present in IE 8/9.
- * Hide the `template` element in IE, Safari, and Firefox < 22.
+ * Hide the `weixin.template` element in IE, Safari, and Firefox < 22.
  */
 
 [hidden],

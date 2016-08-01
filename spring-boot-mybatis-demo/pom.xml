@@ -7,24 +7,104 @@
     <groupId>com.peaceful</groupId>
     <artifactId>spring-boot-mybatis-demo</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <!--这里可以直接打包成jar包,如果你不想使用嵌入的tomcat,可以打包成war包进行部署-->
+    <packaging>war</packaging>
     <description>maven project template</description>
 
-    <!--也可以不引入这个parent，这里只是为了方便升级，统一控制依赖包的版本-->
-    <parent>
+    <!--也可以不引入这个parent，这里只是为了方便升级，统一控制依赖包的版本，实际使用最好不要依赖它，因为他除了指定一些版本号外，还指定了构建配置，不太灵活-->
+    <!--<parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.3.5.RELEASE</version>
-    </parent>
+        <version>1.3.6.RELEASE</version>
+    </parent>-->
 
-    <!-- Package as an executable jar -->
-    <!--这个也不是必要的-->
+    <properties>
+        <spring.boot.version>1.3.6.RELEASE</spring.boot.version>
+        <spring.tomcat.version>8.0.36</spring.tomcat.version>
+        <!--如果打成war包部署到外部容器设置为provided否则为compile-->
+        <spring.tomcat.scope>provided</spring.tomcat.scope>
+    </properties>
+
     <build>
         <plugins>
+            <!-- Package as an executable jar -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring.boot.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
+            <plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>8.1.8.v20121106</version>
+                <configuration>
+                    <stopKey>foo</stopKey>
+                    <stopPort>10000</stopPort>
+                    <reload>automatic</reload>
+                    <webAppConfig>
+                        <contextPath>/</contextPath>
+                    </webAppConfig>
+                    <connectors>
+                        <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
+                            <port>8888</port>
+                            <maxIdleTime>60000</maxIdleTime>
+                        </connector>
+                    </connectors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>stop-jetty</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>stop</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.7</version>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+            <!-- <plugin>
+                 <groupId>org.apache.maven.plugins</groupId>
+                 <artifactId>maven-idea-plugin</artifactId>
+                 <version>2.0</version>
+                 <configuration>
+                     <downloadSources>true</downloadSources>
+                     <downloadJavadocs>true</downloadJavadocs>
+                 </configuration>
+             </plugin>-->
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+            <resource>
+                <directory>${basedir}/src/main/webapp</directory>
+                <targetPath>view</targetPath>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
     </build>
 
     <dependencies>
@@ -32,13 +112,45 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>1.3.5.RELEASE</version>
+            <!--这里不用指定version 在parent都已经指定-->
+            <version>${spring.boot.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <version>${spring.boot.version}</version>
+            <!--如果打包成可以直接执行的jar或war,移除,这里是为了可以部署到tomcat中-->
+            <scope>${spring.tomcat.scope}</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+
+        <!--&lt;!&ndash;一种直接支持html格式的模板引擎&ndash;&gt;
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+-->
+        <!--使用 jsp + jstl 作为模板渲染-->
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+            <version>${spring.tomcat.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+
 
         <!--spring boot 自带的jackson，习惯了使用fastJson-->
         <dependency>
@@ -53,7 +165,6 @@
             <version>1.1.1</version>
         </dependency>
 
-        <!--C3P0 DATASOURCEPOOL-->
         <dependency>
             <groupId>c3p0</groupId>
             <artifactId>c3p0</artifactId>
@@ -63,12 +174,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.elasticsearch</groupId>
-            <artifactId>elasticsearch</artifactId>
-            <version>1.6.0</version>
+            <version>5.1.38</version>
         </dependency>
 
     </dependencies>
