@@ -20,7 +20,7 @@ public class VolatileDemo {
         isExist = !isExist;
     }
 
-    public static void main(String[] args) throws InterruptedException {
+    public static  void main(String[] args) throws InterruptedException {
         final VolatileDemo test = new VolatileDemo();
         Thread a = new Thread() {
             @Override

@@ -31,13 +31,19 @@ object BasicDemo {
   Hello.say("hello world!")
 
 
-  // 定义函数
+  // def表示定义函数 add 是函数名，
+  // 接着这是参数和参数类型，
+  // 紧接着是返回值Unit，有时可以不写返回类型，靠编译器推断，返回类型也可以不必谢return
+  // 在接着=号后面是方法块，如果方法只有一行 也可以不写大括号
   def add(x: Int, y: Int): Unit = {
     print(x + y)
   }
 
+  def add02(x: Int,y: Int) = print(x+y)
 
-  // 控制结构
+  add02(1,1);
+
+  // 控制结构 main方法也是scala类的主方法
   def main(args: Array[String]): Unit = {
     add(x, y)
   }

@@ -10,13 +10,13 @@ import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 
 public class AQSDemo {
 
-    private class Sync extends AbstractQueuedSynchronizer{
+    private class Sync extends AbstractQueuedSynchronizer {
 
-        //
+        // 用于表明是否可以获取共享锁
         @Override
         protected int tryAcquireShared(int arg) {
-
-            return (getState() == 1) ? 1: -1;
+            // 返回 < 0值, 说明需要获取共享锁
+            return (getState() == 1) ? 1 : -1;
         }
 
         @Override
@@ -28,7 +28,7 @@ public class AQSDemo {
 
     private final Sync sync = new Sync();
 
-    public void signal()  {
+    public void signal() {
         sync.releaseShared(0);
     }
 

@@ -8,6 +8,7 @@ import com.google.common.util.concurrent.ServiceManager;
  */
 public class ServiceManageDemo {
 
+    // 所有的service被集中管理,可以一起start、一起stop、查看state
     public static void main(String[] args) {
         ScheduledServiceDemo scheduledServiceDemo =  new ScheduledServiceDemo();
         ServiceManager manager = new ServiceManager(Lists.newArrayList(scheduledServiceDemo));
