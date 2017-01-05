@@ -1,11 +1,11 @@
-package com.peaceful.sync.demo;
+package com.peaceful.sync.demo.test;
 
 import java.util.concurrent.Semaphore;
 
 /**
  * Created by JunWang on 2016/11/19.
  */
-public class MutilThreadPrintNum {
+public class Print123_2 {
 
     private static Semaphore semaphoreA = new Semaphore(1);
     private static Semaphore semaphoreB = new Semaphore(0);

@@ -1,4 +1,4 @@
-package com.peaceful.collection.demo.pv;
+package com.peaceful.collection.demo.test.pv;
 
 import com.google.common.collect.Lists;
 

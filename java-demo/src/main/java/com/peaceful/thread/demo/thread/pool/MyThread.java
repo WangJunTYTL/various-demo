@@ -25,6 +25,7 @@ public class MyThread extends Thread {
     public synchronized void doTask(Runnable task) {
         this.task = task;
         isIdea = false;
+        // 幻想在这个object monitor lock处于等待的线程
         notifyAll();
     }
 
@@ -44,6 +45,7 @@ public class MyThread extends Thread {
                 }
                 try {
                     Util.report("thread " + id + " wait...");
+                    // wait 方法会释放掉 object monitor lock，使线程处于wait状态
                     wait();
                 } catch (InterruptedException e) {
                     e.printStackTrace();

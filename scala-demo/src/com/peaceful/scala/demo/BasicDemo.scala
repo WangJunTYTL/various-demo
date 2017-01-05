@@ -36,16 +36,27 @@ object BasicDemo {
   // 紧接着是返回值Unit，有时可以不写返回类型，靠编译器推断，返回类型也可以不必谢return
   // 在接着=号后面是方法块，如果方法只有一行 也可以不写大括号
   def add(x: Int, y: Int): Unit = {
-    print(x + y)
+    println(x + y)
   }
 
-  def add02(x: Int,y: Int) = print(x+y)
+  def add02(x: Int, y: Int) = println(x + y)
 
-  add02(1,1);
+  add02(1, 1);
 
   // 控制结构 main方法也是scala类的主方法
   def main(args: Array[String]): Unit = {
     add(x, y)
   }
+
+
+  def add03(x: Int, y: Int) = {
+    def add04(x: Int, y: Int, z: Int) = {
+      x + y + z
+    }
+
+    println(add04(x, y, 1))
+  }
+
+  add03(1, 1)
 
 }

@@ -1,4 +1,4 @@
-package com.peaceful.collection.demo.pv;
+package com.peaceful.collection.demo.test.pv;
 
 /**
  * Created by JunWang on 2016/11/21.

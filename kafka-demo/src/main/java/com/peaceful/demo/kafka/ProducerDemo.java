@@ -24,6 +24,7 @@ public class ProducerDemo {
         ProducerConfig config = new ProducerConfig(props);
         Producer<String, String> producer = new Producer<String, String>(config);
 
+
         for (; ; ) {
             KeyedMessage<String, String> data = new KeyedMessage<String, String>("test-topic", "test-message2".concat(new Date().toString()));
             producer.send(data);
