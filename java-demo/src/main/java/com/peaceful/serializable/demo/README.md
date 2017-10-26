@@ -2,6 +2,15 @@ Serializable
 -----------------
 
 Java序列化与反序列化：指可以把一个对象的状态保存起来，比如可以存储到磁盘或在网络上进行传输，也可以通过保存的数据恢复该对象的状态
+通过ObjectInputStream与ObjectOutputStream完成
+
+Read an object from the ObjectInputStream.  The class of the object, the
+     * signature of the class, and the values of the non-transient and
+     * non-static fields of the class and all of its supertypes are read.
+     * Default deserializing for a class can be overriden using the writeObject
+     * and readObject methods.  Objects referenced by this object are read
+     * transitively so that a complete equivalent graph of objects is
+     * reconstructed by readObject.
 
 ## 序列化的方式常见的有两种：
 

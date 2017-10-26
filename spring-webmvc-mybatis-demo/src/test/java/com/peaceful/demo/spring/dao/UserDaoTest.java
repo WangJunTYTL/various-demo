@@ -11,18 +11,27 @@ import static org.junit.Assert.*;
 
 public class UserDaoTest {
 
+    ClassPathXmlApplicationContext applicationContext;
+    UserDao userdao;
+
     @Before
     public void setUp() throws Exception {
-
+         applicationContext = new ClassPathXmlApplicationContext(
+                "classpath*:/spring/applicationContext*.xml");
+         userdao = applicationContext.getBean(UserDao.class);
     }
 
     @Test
     public void testGetUser() throws Exception {
-        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext(
-                "classpath*:/spring/applicationContext*.xml");
-        UserDao userDao = applicationContext.getBean(UserDao.class);
-        User user = userDao.getUser(165);
+        User user = userdao.getUser(165);
         if (user != null)
             Util.report(user.name);
+    }
+
+    @Test
+    public void insertUser() throws Exception {
+        User user = new User();
+        user.setName("WJ");
+        userdao.insertUser(user);
     }
 }

@@ -15,7 +15,6 @@ public interface UserDao {
     @Select("SELECT * FROM user WHERE id = #{userId}")
     User getUser(@Param("userId") long userId);
 
-    @Insert("Insert into user (`name`,`isdel`) values (#{name},0)")
     int insertUser(User user);
 
     @Select("select * from user where name like concat('%',#{nameLike},'%') ")

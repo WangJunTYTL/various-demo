@@ -1,6 +1,8 @@
 package com.peaceful.demo.metrics;
 
 import com.codahale.metrics.ConsoleReporter;
+import com.codahale.metrics.JmxAttributeGauge;
+import com.codahale.metrics.JvmAttributeGaugeSet;
 import com.codahale.metrics.Meter;
 import com.codahale.metrics.MetricRegistry;
 
@@ -12,12 +14,16 @@ import java.util.concurrent.TimeUnit;
  */
 public class GetStarted {
     static final MetricRegistry metrics = new MetricRegistry();
-
-    public static void main(String args[]) {
+    static boolean flag = true;
+    public static void main(String args[]) throws InterruptedException {
         startReport();
-        Meter requests = metrics.meter("requests");
-        requests.mark();
-        wait5Seconds();
+        while (flag) {
+            Meter requests = metrics.meter("requests");
+            requests.mark();
+            System.out.println("count:"+requests.getCount());
+            System.out.println("MeanRate:"+requests.getMeanRate());
+            wait5Seconds();
+        }
     }
 
     static void startReport() {
@@ -25,13 +31,10 @@ public class GetStarted {
                 .convertRatesTo(TimeUnit.SECONDS)
                 .convertDurationsTo(TimeUnit.MILLISECONDS)
                 .build();
-        reporter.start(1, TimeUnit.SECONDS);
+        reporter.start(1, TimeUnit.MINUTES);
     }
 
-    static void wait5Seconds() {
-        try {
-            Thread.sleep(5 * 1000);
-        } catch (InterruptedException e) {
-        }
+    static void wait5Seconds() throws InterruptedException {
+            Thread.sleep(1000);
     }
 }

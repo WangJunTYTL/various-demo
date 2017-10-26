@@ -24,6 +24,8 @@ public class UserService {
 
     @Autowired
     private PlatformTransactionManager txManager;
+    @Autowired
+    private UserService3 userService3;
 
 
     public User getUserById(long id) {
@@ -57,6 +59,7 @@ public class UserService {
         // 注意，如果使用主注解，这时在这个方法配置注解并不会生效，在同一类中，g该方法不会被代理
 //        http://stackoverflow.com/questions/18590170/transactional-does-not-work-on-method-level
         queryUserById(1);
+        userService3.queryUserById(1);
     }
 
     @Transactional(propagation = Propagation.REQUIRES_NEW)

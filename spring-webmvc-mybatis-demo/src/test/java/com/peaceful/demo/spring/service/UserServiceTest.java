@@ -29,7 +29,6 @@ public class UserServiceTest {
         User user = userService.getUserById(165);
         if (user != null)
             Util.report(user.name);
-        Thread.sleep(10000000);
     }
 
     // test for FactoryBean
@@ -52,6 +51,12 @@ public class UserServiceTest {
         User user = new User();
         user.setName("wjj");
         userService.insert2(user);
+    }
+
+    @Test
+    public void testQueryUser() {
+        userService.queryUserById(1);
+        userService.queryUserById(1);
     }
 
     @Test
