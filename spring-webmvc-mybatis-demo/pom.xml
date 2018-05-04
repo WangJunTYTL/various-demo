@@ -52,7 +52,7 @@
                     <stopKey>foo</stopKey>
                     <stopPort>${jetty.stop.port}</stopPort>
                     <reload>automatic</reload>
-                    <webAppConfig>
+                    <webAppConfig|>
                         <contextPath>/</contextPath>
                     </webAppConfig>
                     <connectors>
