@@ -1,11 +1,11 @@
 package com.peaceful.spring.simple.demo;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 /**
- * Created by wangjun38 on 2018/5/4.
+ * Created by Jun on 2018/5/4.
  */
-@Service
+@Component
 public class HelloService {
 
     public String say() {

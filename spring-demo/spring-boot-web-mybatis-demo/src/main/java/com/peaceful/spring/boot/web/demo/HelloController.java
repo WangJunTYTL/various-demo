@@ -1,7 +1,7 @@
 package com.peaceful.spring.boot.web.demo;
 
 /**
- * Created by wangjun38 on 2018/5/4.
+ * Created by Jun on 2018/5/4.
  */
 
 import com.peaceful.spring.boot.web.demo.mapper.DemoMapper;
