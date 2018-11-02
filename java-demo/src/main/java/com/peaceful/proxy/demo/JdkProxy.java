@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
- * Created by wangjun38 on 2017/7/16.
+ * Created by Jun on 2017/7/16.
  */
 public class JdkProxy {
 

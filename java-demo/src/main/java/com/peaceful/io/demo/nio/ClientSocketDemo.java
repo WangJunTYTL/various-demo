@@ -43,8 +43,8 @@ public class ClientSocketDemo {
                 MyRequestObject myRequestObject = new MyRequestObject("request_" + idx, "request_" + idx);
                 Util.report(myRequestObject.toString());
                 sendData(socketChannel, myRequestObject);
-                MyResponseObject myResponseObject = receiveData(socketChannel);
-                Util.report( myResponseObject.toString());
+//                MyResponseObject myResponseObject = receiveData(socketChannel);
+//                Util.report( myResponseObject.toString());
             } catch (Exception ex) {
                 ex.printStackTrace();
             } finally {
