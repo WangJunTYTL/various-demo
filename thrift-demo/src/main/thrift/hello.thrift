@@ -15,16 +15,41 @@
  *
  * Did you also notice that Thrift supports C style comments?
  */
-
 namespace java service.demo
- service Hello{
-  string helloString(1:string para)
-  i32 helloInt(1:i32 para)
-  bool helloBoolean(1:bool para)
-  void helloVoid()
-  string helloNull()
- }
 
- service World{
-    string say(1:string about)
- }
+enum EnumObj{
+    FOO=1
+    BAR
+}
+
+struct FirstRequest{
+    1: optional i32 number;
+    2: required string msg;
+    3: optional map<string,string> mapObj;
+    4: optional list<i32> listObj;
+    5: optional binary binaryObj;
+    6: optional double doubleObj;
+    7: optional EnumObj enumObj;
+}
+
+struct FirstResponse{
+    1: optional i32 number;
+    2: optional string msg;
+}
+
+service HelloServer{
+
+  string helloString(1:string msg)
+
+  i32 helloInt(1:i32 num)
+
+  bool helloBoolean(1:bool flag)
+
+  void helloVoid()
+
+  string helloNull()
+
+  FirstResponse request(1:required FirstRequest request)
+}
+
+
