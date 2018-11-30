@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+          destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://127.0.0.1:3306/test"/>
+        <property name="username" value="root"/>
+        <property name="password" value="110"/>
+        <property name="initialSize" value="10"/>
+        <property name="maxActive" value="15"/>
+        <property name="maxIdle" value="10"/>
+        <property name="minIdle" value="2"/>
+        <property name="maxWait" value="1000"/>
+        <property name="testOnBorrow" value="true"/>
+        <property name="timeBetweenEvictionRunsMillis" value="600000"/>
+        <property name="testWhileIdle" value="true"/>
+        <property name="validationQuery" value="SELECT 1 FROM dual"/>
+    </bean>
+
+    <!-- mybatis组件自动扫描，参考：https://mybatis.github.io/spring/zh/mappers.html#MapperScannerConfigurer-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="mapperLocations" value="classpath*:/com/peaceful/demo/mybatis/*.xml"/>
+        <property name="configLocation" value="classpath:mybatis-config2.xml"></property>
+    </bean>
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <property name="basePackage" value="com.peaceful.demo.mybatis"/>
+    </bean>
+
+    <bean id="transactionManager"
+           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+         <property name="dataSource" ref="dataSource"></property>
+     </bean>
+
+</beans>

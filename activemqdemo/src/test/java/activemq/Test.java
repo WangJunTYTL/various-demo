@@ -2,11 +2,17 @@ package activemq;
 
 import com.peaceful.activemq.TestQueueListener;
 import com.peaceful.activemq.TestQueueReceive;
-import com.peaceful.util.Util;
+
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.junit.Before;
 
-import javax.jms.*;
+import javax.jms.Connection;
+import javax.jms.Destination;
+import javax.jms.JMSException;
+import javax.jms.Message;
+import javax.jms.MessageConsumer;
+import javax.jms.MessageProducer;
+import javax.jms.Session;
 
 /**
  * Date 14-10-16.

@@ -8,13 +8,12 @@ import javax.jms.MessageConsumer;
 import javax.jms.MessageListener;
 
 /**
- * Date 14/10/18.
- * Author WangJun
- * Email wangjuntytl@163.com
+ * Date 14/10/18. Author WangJun Email wangjuntytl@163.com
  */
 public class TestQueueReceive {
 
     Logger logger = LoggerFactory.getLogger(TestQueueReceive.class);
+
     private MessageConsumer messageConsumer;
     private MessageListener messageListener;
 
@@ -26,9 +25,9 @@ public class TestQueueReceive {
     public void receive() {
         try {
             messageConsumer.setMessageListener(messageListener);
-            do{
+            do {
 
-            }while (true);
+            } while (true);
         } catch (JMSException e) {
             e.printStackTrace();
         }

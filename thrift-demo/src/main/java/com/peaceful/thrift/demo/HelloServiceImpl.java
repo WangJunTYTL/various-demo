@@ -1,7 +1,7 @@
 package com.peaceful.thrift.demo;
 
 /**
- * Created by wangjun on 15/12/5.
+ * Created by Jun on 15/12/5.
  */
 import org.apache.thrift.TException;
 

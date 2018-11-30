@@ -1,7 +1,7 @@
 package com.peaceful.thrift.demo;
 
 /**
- * Created by wangjun on 15/12/5.
+ * Created by Jun on 15/12/5.
  */
 
 import org.apache.thrift.TException;
@@ -26,7 +26,10 @@ public class HelloServiceClient {
 
             // 设置数据序列化与反序列化方式 TBinaryProtocol
             // 数据序列化方式,采用binary，用哪种协议，取决于thrift工具生成的代码，在生成的代码里面已经写好了序列化和反序列化的方式
-            TProtocol protocol = new TBinaryProtocol(transport);
+//            TProtocol protocol = new TBinaryProtocol(transport);
+
+            // 定义自己的传输协议
+            TCustomerProtocol protocol = new TCustomerProtocol(transport);
 
 
             //TMultiplexedProtocol mp1 = new TMultiplexedProtocol(protocol, "HelloService"); // 指定远程服务名

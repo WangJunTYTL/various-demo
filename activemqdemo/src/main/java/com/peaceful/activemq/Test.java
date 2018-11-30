@@ -1,12 +1,15 @@
 package com.peaceful.activemq;
 
-import com.peaceful.util.Util;
 import org.apache.activemq.ActiveMQConnectionFactory;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.slf4j.impl.StaticLoggerBinder;
 
-import javax.jms.*;
+import javax.jms.Connection;
+import javax.jms.Destination;
+import javax.jms.JMSException;
+import javax.jms.Message;
+import javax.jms.MessageConsumer;
+import javax.jms.MessageProducer;
+import javax.jms.Session;
+import javax.jms.TextMessage;
 
 /**
  * Date 14-10-16.
@@ -55,7 +58,7 @@ public class Test {
             MessageConsumer messageConsumer = session.createConsumer(destination);
             connection.start();
             Message message = messageConsumer.receive();
-            Util.report(((TextMessage) message).getText());
+            System.out.println(((TextMessage) message).getText());
             messageConsumer.close();
             session.close();
             connection.close();

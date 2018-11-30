@@ -24,5 +24,8 @@ public class T1 {
         StringWriter writer = new StringWriter();
         Velocity.mergeTemplate("index.vm", "UTF-8", context, writer);
         System.out.print(writer.toString());
+
+        Velocity.mergeTemplate("index.html", "UTF-8", context, writer);
+        System.out.print(writer.toString());
     }
 }

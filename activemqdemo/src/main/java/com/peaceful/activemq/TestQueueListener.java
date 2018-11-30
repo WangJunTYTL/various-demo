@@ -1,7 +1,5 @@
 package com.peaceful.activemq;
 
-import com.peaceful.util.Util;
-import org.apache.activemq.network.jms.OutboundQueueBridge;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,7 +25,7 @@ public class TestQueueListener implements MessageListener {
         TextMessage textMessage = (TextMessage) message;
         try {
             String msg = textMessage.getText();
-            Util.report(msg);
+            System.out.println(msg);
         } catch (JMSException e) {
             logger.error("onMessage:{}", e);
         }
