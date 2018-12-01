@@ -31,6 +31,7 @@ public class HelloServiceClient3 {
             TProtocol protocol = new TBinaryProtocol(transport);
             HelloServer.Client client = new HelloServer.Client(protocol);
             System.out.println(client.helloString("123"));
+            System.out.println(client.helloString("123"));
         }catch (Exception e){
             logger.error("",e);
 
