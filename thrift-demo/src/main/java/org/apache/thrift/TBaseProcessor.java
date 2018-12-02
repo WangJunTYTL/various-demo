@@ -19,6 +19,7 @@ public abstract class TBaseProcessor<I> implements TProcessor {
 
   @Override
   public boolean process(TProtocol in, TProtocol out) throws TException {
+    // 开始读message信息
     TMessage msg = in.readMessageBegin();
     ProcessFunction fn = processMap.get(msg.name);
     if (fn == null) {

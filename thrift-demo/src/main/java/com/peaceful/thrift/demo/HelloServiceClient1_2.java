@@ -7,21 +7,16 @@ package com.peaceful.thrift.demo;
 import org.apache.thrift.TException;
 import org.apache.thrift.protocol.TBinaryProtocol;
 import org.apache.thrift.protocol.TProtocol;
-import org.apache.thrift.transport.TNonblockingSocket;
 import org.apache.thrift.transport.TSocket;
 import org.apache.thrift.transport.TTransport;
 import org.apache.thrift.transport.TTransportException;
-import org.perf4j.StopWatch;
-import org.perf4j.log4j.Log4JStopWatch;
-
-import java.io.IOException;
 
 import service.demo.HelloServer;
 
 
-public class PerfNIOTest {
+public class HelloServiceClient1_2 {
     /**
-     * 测试Thrift的性能
+     * 调用 Hello 服务
      */
     public static void main(String[] args) {
         try {
@@ -32,13 +27,13 @@ public class PerfNIOTest {
 
             //TMultiplexedProtocol mp1 = new TMultiplexedProtocol(protocol, "HelloService"); // 指定远程服务名
             HelloServer.Iface client = new HelloServer.Client(protocol);
-            StopWatch watch = new Log4JStopWatch("Thrift");
-            for (int i=0;i<Long.MAX_VALUE;i++) {
-                watch.start();
-                client.helloString("23");
-                watch.stop();
+
+            // 单线程，串行处理
+            for (int i = 0; i < 100; i++) {
+                System.out.println(client.helloString("23"));
+
             }
-            transport.close();
+
         } catch (TTransportException e) {
             e.printStackTrace();
         } catch (TException e) {

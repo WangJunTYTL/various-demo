@@ -49,19 +49,59 @@ public class HelloServiceClient3_1 {
             HelloServer.AsyncClient.Factory factory = new HelloServer.AsyncClient.Factory(manager, new TBinaryProtocol.Factory());
 
             // 测试可以建立的最大连接数
-            int i = 0;
-            for (;;){
-                i++;
-                try {
-                    factory.getAsyncClient(new TNonblockingSocket("localhost", 9090)).helloString("223", callback);
-                }catch (Exception e){
-                    System.out.println(i);
-                    System.exit(0);
-                }
-            }
+//            int i = 0;
+//            for (;;){
+//                i++;
+//                try {
+//                    factory.getAsyncClient(new TNonblockingSocket("localhost", 9090)).helloString("223", callback);
+//                }catch (Exception e){
+//                    System.out.println(i);
+//                    System.exit(0);
+//                }
+//            }
+            TimeUnit.SECONDS.sleep(5);
+            // 下面只会执行最后一个方法
+            factory.getAsyncClient(nonblockingSocket).helloString("323",callback);
+            factory.getAsyncClient(nonblockingSocket).helloString("423",callback);
+            factory.getAsyncClient(nonblockingSocket).helloString("523",callback);
+            factory.getAsyncClient(nonblockingSocket).helloString("523",callback);
 
-//            factory.getAsyncClient(new TNonblockingSocket("localhost", 9090)).helloString("323",callback);
-//            factory.getAsyncClient(new TNonblockingSocket("localhost", 9090)).helloString("423",callback);
+            // 控制socket的关闭
+            TNonblockingSocket v1 = new TNonblockingSocket("localhost", 9090);
+            factory.getAsyncClient(v1).helloString("623", new AsyncMethodCallback<HelloServer.AsyncClient.helloString_call>() {
+                @Override
+                public void onComplete(HelloServer.AsyncClient.helloString_call response) {
+                    try {
+                        System.out.println(response.getResult());
+                    } catch (TException e) {
+                        e.printStackTrace();
+                    }
+                    v1.close();
+                }
+
+                @Override
+                public void onError(Exception exception) {
+                    v1.close();
+
+                }
+            });
+            TNonblockingSocket v2 = new TNonblockingSocket("localhost", 9090);
+            factory.getAsyncClient(v2).helloString("723", new AsyncMethodCallback<HelloServer.AsyncClient.helloString_call>() {
+                @Override
+                public void onComplete(HelloServer.AsyncClient.helloString_call response) {
+                    try {
+                        System.out.println(response.getResult());
+                    } catch (TException e) {
+                        e.printStackTrace();
+                    }
+                    v2.close();
+                }
+
+                @Override
+                public void onError(Exception exception) {
+                    v2.close();
+                }
+            });
         } catch (TTransportException e) {
             e.printStackTrace();
         } catch (TException e) {

@@ -205,6 +205,7 @@ public abstract class AbstractNonblockingServer extends TServer {
       }
 
       // if the buffer's frame read is complete, invoke the method.
+      // 开始执行processor
       if (buffer.isFrameFullyRead()) {
         if (!requestInvoke(buffer)) {
           cleanupSelectionKey(key);
@@ -473,6 +474,7 @@ public abstract class AbstractNonblockingServer extends TServer {
       TProtocol inProt = inputProtocolFactory_.getProtocol(inTrans);
       TProtocol outProt = outputProtocolFactory_.getProtocol(getOutputTransport());
 
+      // 如果processor抛出任何异常都会被捕获，并且会关闭client的连接
       try {
         processorFactory_.getProcessor(inTrans).process(inProt, outProt);
         responseReady();
@@ -483,6 +485,7 @@ public abstract class AbstractNonblockingServer extends TServer {
         LOGGER.error("Unexpected throwable while invoking!", t);
       }
       // This will only be reached when there is a throwable.
+      // 如果在调用processor出现异常，将会走到这里，下面会关闭连接
       state_ = FrameBufferState.AWAITING_CLOSE;
       requestSelectInterestChange();
     }

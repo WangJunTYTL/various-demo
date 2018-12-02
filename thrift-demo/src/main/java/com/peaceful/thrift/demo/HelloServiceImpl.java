@@ -25,7 +25,8 @@ public class HelloServiceImpl implements HelloServer.Iface {
         }
 //        throw new RuntimeException("err");
         System.out.println("int->"+para);
-        return para;
+        throw new RuntimeException();
+//        return para;
     }
     @Override
     public String helloNull() throws TException {
@@ -39,6 +40,11 @@ public class HelloServiceImpl implements HelloServer.Iface {
 
     @Override
     public String helloString(String para) throws TException {
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return para;
     }
     @Override

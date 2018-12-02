@@ -8,11 +8,30 @@
 include_once $GLOBALS['THRIFT_ROOT'].'/Thrift.php';
 
 
+$GLOBALS['E_EnumObj'] = array(
+  'FOO' => 1,
+  'BAR' => 2,
+);
+
+final class EnumObj {
+  const FOO = 1;
+  const BAR = 2;
+  static public $__names = array(
+    1 => 'FOO',
+    2 => 'BAR',
+  );
+}
+
 class FirstRequest {
   static $_TSPEC;
 
   public $number = null;
   public $msg = null;
+  public $mapObj = null;
+  public $listObj = null;
+  public $binaryObj = null;
+  public $doubleObj = null;
+  public $enumObj = null;
 
   public function __construct($vals=null) {
     if (!isset(self::$_TSPEC)) {
@@ -25,6 +44,38 @@ class FirstRequest {
           'var' => 'msg',
           'type' => TType::STRING,
           ),
+        3 => array(
+          'var' => 'mapObj',
+          'type' => TType::MAP,
+          'ktype' => TType::STRING,
+          'vtype' => TType::STRING,
+          'key' => array(
+            'type' => TType::STRING,
+          ),
+          'val' => array(
+            'type' => TType::STRING,
+            ),
+          ),
+        4 => array(
+          'var' => 'listObj',
+          'type' => TType::LST,
+          'etype' => TType::I32,
+          'elem' => array(
+            'type' => TType::I32,
+            ),
+          ),
+        5 => array(
+          'var' => 'binaryObj',
+          'type' => TType::STRING,
+          ),
+        6 => array(
+          'var' => 'doubleObj',
+          'type' => TType::DOUBLE,
+          ),
+        7 => array(
+          'var' => 'enumObj',
+          'type' => TType::I32,
+          ),
         );
     }
     if (is_array($vals)) {
@@ -33,6 +84,21 @@ class FirstRequest {
       }
       if (isset($vals['msg'])) {
         $this->msg = $vals['msg'];
+      }
+      if (isset($vals['mapObj'])) {
+        $this->mapObj = $vals['mapObj'];
+      }
+      if (isset($vals['listObj'])) {
+        $this->listObj = $vals['listObj'];
+      }
+      if (isset($vals['binaryObj'])) {
+        $this->binaryObj = $vals['binaryObj'];
+      }
+      if (isset($vals['doubleObj'])) {
+        $this->doubleObj = $vals['doubleObj'];
+      }
+      if (isset($vals['enumObj'])) {
+        $this->enumObj = $vals['enumObj'];
       }
     }
   }
@@ -70,6 +136,64 @@ class FirstRequest {
             $xfer += $input->skip($ftype);
           }
           break;
+        case 3:
+          if ($ftype == TType::MAP) {
+            $this->mapObj = array();
+            $_size0 = 0;
+            $_ktype1 = 0;
+            $_vtype2 = 0;
+            $xfer += $input->readMapBegin($_ktype1, $_vtype2, $_size0);
+            for ($_i4 = 0; $_i4 < $_size0; ++$_i4)
+            {
+              $key5 = '';
+              $val6 = '';
+              $xfer += $input->readString($key5);
+              $xfer += $input->readString($val6);
+              $this->mapObj[$key5] = $val6;
+            }
+            $xfer += $input->readMapEnd();
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 4:
+          if ($ftype == TType::LST) {
+            $this->listObj = array();
+            $_size7 = 0;
+            $_etype10 = 0;
+            $xfer += $input->readListBegin($_etype10, $_size7);
+            for ($_i11 = 0; $_i11 < $_size7; ++$_i11)
+            {
+              $elem12 = null;
+              $xfer += $input->readI32($elem12);
+              $this->listObj []= $elem12;
+            }
+            $xfer += $input->readListEnd();
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 5:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->binaryObj);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 6:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->doubleObj);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 7:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->enumObj);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
         default:
           $xfer += $input->skip($ftype);
           break;
@@ -91,6 +215,56 @@ class FirstRequest {
     if ($this->msg !== null) {
       $xfer += $output->writeFieldBegin('msg', TType::STRING, 2);
       $xfer += $output->writeString($this->msg);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->mapObj !== null) {
+      if (!is_array($this->mapObj)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('mapObj', TType::MAP, 3);
+      {
+        $output->writeMapBegin(TType::STRING, TType::STRING, count($this->mapObj));
+        {
+          foreach ($this->mapObj as $kiter13 => $viter14)
+          {
+            $xfer += $output->writeString($kiter13);
+            $xfer += $output->writeString($viter14);
+          }
+        }
+        $output->writeMapEnd();
+      }
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->listObj !== null) {
+      if (!is_array($this->listObj)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('listObj', TType::LST, 4);
+      {
+        $output->writeListBegin(TType::I32, count($this->listObj));
+        {
+          foreach ($this->listObj as $iter15)
+          {
+            $xfer += $output->writeI32($iter15);
+          }
+        }
+        $output->writeListEnd();
+      }
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->binaryObj !== null) {
+      $xfer += $output->writeFieldBegin('binaryObj', TType::STRING, 5);
+      $xfer += $output->writeString($this->binaryObj);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->doubleObj !== null) {
+      $xfer += $output->writeFieldBegin('doubleObj', TType::DOUBLE, 6);
+      $xfer += $output->writeDouble($this->doubleObj);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->enumObj !== null) {
+      $xfer += $output->writeFieldBegin('enumObj', TType::I32, 7);
+      $xfer += $output->writeI32($this->enumObj);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

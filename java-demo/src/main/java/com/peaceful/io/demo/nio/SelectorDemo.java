@@ -29,7 +29,7 @@ public class SelectorDemo {
 
         // 连接到远程服务器
         SocketChannel socketChannel = SocketChannel.open();
-        socketChannel.connect(new InetSocketAddress("127.0.0.1", 80));
+        socketChannel.connect(new InetSocketAddress("127.0.0.1", 8080));
         socketChannel.configureBlocking(false);
 
         SocketChannel socketChannel02 = SocketChannel.open();

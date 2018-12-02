@@ -24,14 +24,15 @@ public class HelloServiceClient3 {
 
     private static Logger logger = LoggerFactory.getLogger(HelloServiceClient3.class);
 
-    public static void main(String[] args) throws TException, InterruptedException, IOException {
+    public static void main(String[] args) throws TException{
         TTransport transport = new TFramedTransport(new TSocket("localhost", 9090));  //非阻塞
         transport.open();
         try {
             TProtocol protocol = new TBinaryProtocol(transport);
-            HelloServer.Client client = new HelloServer.Client(protocol);
+            HelloServer.Iface client = new HelloServer.Client(protocol);
             System.out.println(client.helloString("123"));
             System.out.println(client.helloString("123"));
+            System.out.println(client.helloInt(1));
         }catch (Exception e){
             logger.error("",e);
 

@@ -34,6 +34,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
+ * 利用队列+（Nio方式）+异步线程的(单线程)
  * Contains selector thread which transitions method call objects
  */
 public class TAsyncClientManager {
@@ -72,12 +73,17 @@ public class TAsyncClientManager {
   }
 
   private class SelectThread extends Thread {
+    // 网络通道处理
     private final Selector selector;
+    // Selector线程运行状态
     private volatile boolean running;
+    // 设置超时的请求会放入到该集合，按照超时时间进行排序
     private final TreeSet<TAsyncMethodCall> timeoutWatchSet = new TreeSet<TAsyncMethodCall>(new TAsyncMethodCallTimeoutComparator());
 
     public SelectThread() throws IOException {
+      // 创建selector实例
       this.selector = SelectorProvider.provider().openSelector();
+      // 标记SeletorThread处在运行状态
       this.running = true;
       this.setName("TAsyncClientManager#SelectorThread " + this.getId());
 
@@ -100,7 +106,7 @@ public class TAsyncClientManager {
           try {
             if (timeoutWatchSet.size() == 0) {
               // No timeouts, so select indefinitely
-              // 该方法会被阻塞
+              // 等待可以I/O处理的channel
               selector.select();
             } else {
               // We have a timeout pending, so calculate the time until then and select appropriately
@@ -108,7 +114,7 @@ public class TAsyncClientManager {
               long selectTime = nextTimeout - System.currentTimeMillis();
               if (selectTime > 0) {
                 // Next timeout is in the future, select and wake up then
-                // 最多阻塞时间selectTime
+                // 最多阻塞时间selectTime，保证超时时间精确
                 selector.select(selectTime);
               } else {
                 // Next timeout is now or in past, select immediately so we can time out
@@ -134,6 +140,7 @@ public class TAsyncClientManager {
     // Transition methods for ready keys
     private void transitionMethods() {
       try {
+        // 得到可用的channel
         Iterator<SelectionKey> keys = selector.selectedKeys().iterator();
         while (keys.hasNext()) {
           SelectionKey key = keys.next();
@@ -145,7 +152,9 @@ public class TAsyncClientManager {
             // just skip
             continue;
           }
+          // 在调用时会设置key关联请求对象
           TAsyncMethodCall methodCall = (TAsyncMethodCall)key.attachment();
+          // 方法调用状态转换：连接
           methodCall.transition(key);
 
           // If done or error occurred, remove from timeout watch set
