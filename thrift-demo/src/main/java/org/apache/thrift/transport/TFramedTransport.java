@@ -22,6 +22,11 @@ package org.apache.thrift.transport;
 import org.apache.thrift.TByteArrayOutputStream;
 
 /**
+ * 会在发送消息时，先写入消息的长度
+ * 在读取消息时，会先判断读取消息的长度
+ *
+ * 这样根据消息长度，可以一次性将消息读取完毕，另外这也是"粘包"问题的常见处理方式。
+ *
  * TFramedTransport is a buffered TTransport that ensures a fully read message
  * every time by preceding messages with a 4-byte frame size.
  */
