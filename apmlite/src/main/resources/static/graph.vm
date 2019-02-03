@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="/chart.js"></script>
+<script>
+    window.onload = function () {
+        var countChart = document.getElementById("countChart").getContext('2d');
+        var timeChart = document.getElementById("timeChart").getContext('2d');
+
+        var myLineChart = new Chart(countChart, {
+            type: 'line',
+            // The data for our dataset
+            data: {
+                labels: $!{labels},
+                datasets: $!{countDataSets}
+            },
+            options: {}
+        });
+
+        var myLineChart = new Chart(timeChart, {
+            type: 'line',
+            // The data for our dataset
+            data: {
+                labels: $!{labels},
+                datasets: $!{timeDataSets}
+            },
+            options: {}
+        });
+    };
+
+</script>
+<body>
+<h1>H</h1>
+<canvas id="countChart" height="100px"></canvas>
+<canvas id="timeChart" height="100px"></canvas>
+</body>
+</html>

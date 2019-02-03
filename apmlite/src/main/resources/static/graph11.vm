@@ -1,0 +1,169 @@
+#parse("/static/header.vm")
+#parse("/static/search.vm")
+<div class="container-fluid">
+    <div class="row">
+        <div id="container1" class="col-lg-4" style="height:300px;"></div>
+        <div id="container2" class="col-lg-4" style="height:300px;"></div>
+        <div id="container5" class="col-lg-4" style="height:300px;"></div>
+        <div id="container3" class="col-lg-6" style="height:300px;"></div>
+        <div id="container4" class="col-lg-6" style="height:300px;"></div>
+    </div>
+
+
+    <script type="text/javascript">
+        var dom1 = document.getElementById("container1");
+        var myChart1 = echarts.init(dom1);
+        var option1 = {
+            title: {
+                text: 'HeapMemory'
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            xAxis: {
+                type: 'category',
+                data: $!{timeSeriesData}
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    name: "HeapMemory",
+                    data: $!{heapMemoryAxisData},
+                    type: 'line'
+                },
+                {
+                    name: "NonHeapMemory",
+                    data: $!{nonHeapMemoryAxisData},
+                    type: 'line'
+                }
+            ]
+        };
+        ;
+        if (option1 && typeof option1 === "object") {
+            myChart1.setOption(option1, true);
+        }
+
+        var dom2 = document.getElementById("container2");
+        var myChart2 = echarts.init(dom2);
+        option = null;
+        option = {
+            title: {
+                text: 'NonHeapMemory'
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            xAxis: {
+                type: 'category',
+                data: $!{timeSeriesData}
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    name: "NonHeapMemory",
+                    data: $!{nonHeapMemoryAxisData},
+                    type: 'line'
+                }
+            ]
+        };
+        ;
+        if (option && typeof option === "object") {
+            myChart2.setOption(option, true);
+        }
+
+        var dom3 = document.getElementById("container3");
+        var myChart3 = echarts.init(dom3);
+        var option3 = {
+            title: {
+                text: 'GCTotalCount'
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: $!{timeSeriesData}
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    name: 'GCTotalCount',
+                    type: 'line',
+                    data: $!{gcCountAxisData}
+                }
+            ]
+        };
+
+        if (option3 && typeof option3 === "object") {
+            myChart3.setOption(option3, true);
+        }
+
+        var dom4 = document.getElementById("container4");
+        var myChart4 = echarts.init(dom4);
+        var option4 = {
+            title: {
+                text: 'GCTotalTime'
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: $!{timeSeriesData}
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    name: 'GCTotalCount',
+                    type: 'line',
+                    data: $!{gcTimeAxisData}
+                }
+            ]
+        };
+
+        if (option4 && typeof option4 === "object") {
+            myChart4.setOption(option4, true);
+        }
+
+        var dom5 = document.getElementById("container5");
+        var myChart5 = echarts.init(dom5);
+        var option5 = {
+            title: {
+                text: 'ThreadCount'
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: $!{timeSeriesData}
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    name: 'GCTotalCount',
+                    type: 'line',
+                    data: $!{threadCountAxisData}
+                }
+            ]
+        };
+
+        if (option5 && typeof option5 === "object") {
+            myChart5.setOption(option5, true);
+        }
+
+    </script>
+#parse("/static/fooder.vm")

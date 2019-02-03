@@ -1,0 +1,63 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.peaceful.apmlite.MyMapper">
+
+    <select id="selectAllTags" resultType="string">
+        select tag from apm_tag_index
+    </select>
+
+    <insert id="insertTag">
+        insert into apm_tag_index (tag,hashcode,metric_num,create_time,update_time)
+        values (#{tag},#{hashcode},#{metric_num},#{createTime},#{updateTime})
+    </insert>
+
+    <select id="selectTag" resultType="com.peaceful.apmlite.TagIndex">
+        select * from apm_tag_index where hashcode = #{hashcode} and tag = #{tag} and metric_num = #{metric_num}
+    </select>
+
+    <delete id="deleteTag">
+        delete from apm_tag_index where id = #{id} order by id asc
+    </delete>
+
+    <update id="updateTagTime">
+        update  apm_tag_index set update_time = now() where id = #{id}
+    </update>
+
+    <select id="selectTagListByMetric" resultType="string">
+        select tag from apm_tag_index where metric_num = #{metric_num}
+    </select>
+
+    <select id="selectAllMetrics" resultType="com.peaceful.apmlite.MetricNum">
+        select distinct(metric_num) from apm_tag_index
+    </select>
+
+    <select id="selectMetricByTag" resultType="map">
+        <if test="metric_num == 1">
+            select * from apm_metric_01
+        </if>
+        <if test="metric_num == 11">
+            select * from apm_metric_11
+        </if>
+        where hashcode = #{hashcode} and tag = #{tag}
+        and create_time &gt;= #{startTime} and create_time &lt;= #{endTime}
+    </select>
+
+    <insert id="insertMetric">
+        <if test="metric_num == 1">
+            insert into apm_metric_01
+            (`tag`,`hashcode`,`count`,`avg`,`max`,`min`)
+            values (#{tag},#{hashcode},#{count},#{avg},#{max},#{min})
+        </if>
+        <if test="metric_num == 11">
+            insert into apm_metric_11
+            (`tag`,`hashcode`,`heap_memory`,`non_heap_memory`,`gc_time`,`gc_count`,`thread_count`)
+            values
+            (#{tag},#{hashcode},#{heap_memory},#{non_heap_memory},#{gc_time},#{gc_count},#{thread_count})
+        </if>
+
+    </insert>
+
+
+</mapper>

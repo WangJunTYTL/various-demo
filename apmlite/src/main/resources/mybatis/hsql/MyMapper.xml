@@ -1,0 +1,23 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.peaceful.apmlite.MyMapper">
+
+    <select id="selectAllTags" resultType="string">
+        select tag from apm_tag_index
+    </select>
+
+    <insert id="insertTag">
+        insert into apm_tag_index (tag,hashcode,create_time,update_time)
+        values (#{tag},#{hashcode},#{createTime},#{updateTime})
+    </insert>
+
+    <select id="selectByTag" resultType="com.peaceful.apmlite.Metric01">
+        select * from `apm_metric01`
+        where hashcode = #{hashcode} and tag = #{tag}
+        and startTime = #{startTime} and endTime = #{endTime}
+    </select>
+
+
+</mapper>
