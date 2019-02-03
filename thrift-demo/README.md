@@ -32,19 +32,6 @@ rpc服务本质上是一种c/s架构服务.所以在编写一个rpc组件时,需
 1. 跨语言调用,如果公司是php和Java混合存在,可以考虑
 
 
-## dubbo与thrift
-
-dubbo是一种具体的rpc框架实现,由阿里开源.thrift只是rpc框架的底层部件,上文已说主要实现底层的数据序列化,网络传输,客户端和服务端大部分的编码.
-
-dubbo是在thrift的上层.dubbo支持多种协议的实现,比如rmi\thrift.
-
-## avro
-
-avro是一个与thrift类似的组件,是hadoof的一个子工程,有兴趣的话也可以研究下两者之间额差异
-
-
-
-
 ## 参照
 
 http://my.oschina.net/penngo/blog/489311
