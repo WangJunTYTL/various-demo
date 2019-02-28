@@ -29,7 +29,7 @@ public class MyWebServer {
         // 通过classpath寻找数据
         context.setBaseResource(Resource.newClassPathResource("/static"));
         server.setHandler(context);
-        context.addFilter(MyRequestFilter.class,"/*", EnumSet.of(DispatcherType.REQUEST));
+        context.addFilter(MyServletFilter.class,"/*", EnumSet.of(DispatcherType.REQUEST));
         // Add myself servlet  127.0.0.1:8787/dump
         ServletHolder servletHolder = new ServletHolder(new MyServlet(myRDB));
         context.addServlet(servletHolder, "/dump");

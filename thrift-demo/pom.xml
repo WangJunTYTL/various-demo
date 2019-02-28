@@ -13,7 +13,7 @@
 
     <modules>
         <module>service-def</module>
-        <module>server-demo</module>
+        <module>service-demo</module>
     </modules>
 
 

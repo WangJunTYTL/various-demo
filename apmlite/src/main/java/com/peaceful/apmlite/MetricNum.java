@@ -6,7 +6,15 @@ package com.peaceful.apmlite;
 public enum MetricNum {
     Metric_01(01), // basic
     Metric_02(02), // tp99、tp999、tp9999
-    Metric_11(11); // jvm
+    Metric_03(03), // http
+    Metric_04(04), // http_slow_log
+    Metric_05(05), //
+    Metric_06(06), // db
+    Metric_07(07), // cache
+    Metric_08(8), //
+    Metric_09(9), //
+    Metric_11(11), // jvm
+    Metric_21(21); // slow_log
 
     public int num;
 

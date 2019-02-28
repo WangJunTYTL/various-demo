@@ -37,6 +37,9 @@
         <if test="metric_num == 1">
             select * from apm_metric_01
         </if>
+        <if test="metric_num == 3">
+            select * from apm_metric_03
+        </if>
         <if test="metric_num == 11">
             select * from apm_metric_11
         </if>
@@ -49,6 +52,16 @@
             insert into apm_metric_01
             (`tag`,`hashcode`,`count`,`avg`,`max`,`min`)
             values (#{tag},#{hashcode},#{count},#{avg},#{max},#{min})
+        </if>
+        <if test="metric_num == 3">
+            insert into apm_metric_03
+            (`tag`,`hashcode`,`count`,`avg`,`max`,`min`)
+            values (#{tag},#{hashcode},#{count},#{avg},#{max},#{min})
+        </if>
+        <if test="metric_num == 5">
+            insert into apm_metric_05
+            (`slow_sql`,`cost_time`)
+            values (#{slowSql},#{costTime})
         </if>
         <if test="metric_num == 11">
             insert into apm_metric_11

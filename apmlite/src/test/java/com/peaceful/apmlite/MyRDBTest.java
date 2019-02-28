@@ -1,5 +1,7 @@
 package com.peaceful.apmlite;
 
+import org.junit.Test;
+
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.concurrent.TimeUnit;
@@ -30,8 +32,14 @@ public class MyRDBTest {
 
         System.out.println(myRDB.getMetric01ByTag("tag", MetricNum.Metric_01, System.currentTimeMillis() - TimeUnit.MINUTES.toMillis(1), System.currentTimeMillis()));
 
-        TimeUnit.MINUTES.sleep(5);
+        TimeUnit.MINUTES.sleep(60);
 
+
+    }
+
+    @Test
+    public void Start(){
+        String name = MyStopWatch.DEFAULT_LOGGER_NAME;
 
     }
 }

@@ -39,6 +39,13 @@ http://my.oschina.net/penngo/blog/489311
 http://thrift.apache.org
 
 
+## 关键点
+1. 理解RPC
+2. thrift设计原理、跨语言原理
+3. thrift协议结构，与http协议的不同点
+4. thrift序列化和反序列化
+5. io处理、客户端、服务端的线程模型
+
 
 
 

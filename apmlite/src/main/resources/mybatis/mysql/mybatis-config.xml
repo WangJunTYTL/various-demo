@@ -28,6 +28,11 @@
         <typeHandler handler="com.peaceful.apmlite.MetricNumHandler"></typeHandler>
     </typeHandlers>
 
+    <plugins>
+        <plugin interceptor="com.peaceful.apmlite.MybatisInterceptor"></plugin>
+    </plugins>
+
+
     <environments default="test">
         <environment id="test">
             <transactionManager type="JDBC"></transactionManager>
@@ -40,7 +45,6 @@
             </dataSource>
         </environment>
     </environments>
-
 
 
     <mappers>

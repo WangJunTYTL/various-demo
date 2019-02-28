@@ -18,7 +18,7 @@ public class MyGraph {
         List<Long> minAxisData = new ArrayList<>();
         List<Long> avgAxisData = new ArrayList<>();
         for (Metric01 metric01 : metric01List) {
-            timeSeriesData.add(DateHelper.formatDate(new Date(metric01.getCreateTime().getTime())));
+            timeSeriesData.add(DateHelper.formatDateTime(new Date(metric01.getCreateTime().getTime())));
             countAxisData.add(metric01.getCount());
             avgAxisData.add(metric01.getAvg());
             maxAxisData.add(metric01.getMax());
@@ -44,7 +44,7 @@ public class MyGraph {
         List<Long> threadCountAxisData = new ArrayList<>();
 
         for (Metric11 metric : metric11List) {
-            timeSeriesData.add(DateHelper.formatDate(new Date(metric.getCreateTime().getTime())));
+            timeSeriesData.add(DateHelper.formatDateTime(new Date(metric.getCreateTime().getTime())));
             heapMemoryAxisData.add(metric.getHeapMemory());
             nonHeapMemoryAxisData.add(metric.getNonHeapMemory());
             gcTimeAxisData.add(metric.getGcTime());

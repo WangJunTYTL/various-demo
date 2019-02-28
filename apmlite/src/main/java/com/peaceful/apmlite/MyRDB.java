@@ -85,7 +85,7 @@ public class MyRDB {
     public <T> List<T> getMetric01ByTag(String tag, MetricNum metricNum, long startTime, long endTime) {
         List<Map<String, Object>> tList = mapper.selectMetricByTag(tag, tag.hashCode(), metricNum.num, new Timestamp(startTime), new Timestamp(endTime));
 
-        if (metricNum == MetricNum.Metric_01) {
+        if (metricNum == MetricNum.Metric_01 || metricNum == MetricNum.Metric_03) {
             List<T> metric01List = new ArrayList<>();
             for (Map map : tList) {
                 Metric01 metric01 = new Metric01();

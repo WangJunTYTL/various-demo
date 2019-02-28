@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <div class="row text-center">
+        <ul class="nav nav-pills">
+            #foreach($metric in $!{metrics})
+                #if($metric == $!currentMetric)
+                    <li role="presentation" class="active"><a
+                            href="/dump?metric=$!{MyUtil.getMetricNumStr($metric)}">$!{MyUtil.getMetricDesc($metric)}</a>
+                    </li>
+                #else
+                    <li role="presentation"><a
+                            href="/dump?metric=$!{MyUtil.getMetricNumStr($metric)}">$!{MyUtil.getMetricDesc($metric)}</a>
+                    </li>
+                #end
+            #end
+        </ul>
+    </div>
+</div>

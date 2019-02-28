@@ -1,0 +1,161 @@
+#parse("/static/header.vm")
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs">
+                <li role="presentation" class="active"><a href="#">所有接口</a></li>
+                <li role="presentation"><a href="#">流量分布</a></li>
+                <li role="presentation"><a href="#">耗时>200ms</a></li>
+                <li role="presentation"><a href="#">TraceLog</a></li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    #parse("/static/search.vm")
+    <br>
+    <div class="row animated fadeInUp">
+        <div id="container" class="col-lg-6" style="height:300px;"></div>
+        <div id="container2" class="col-lg-6" style="height:300px;"></div>
+        <div id="container3" class="col-lg-12" style="height:300px;"></div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    var dom = document.getElementById("container");
+    var myChart = echarts.init(dom);
+    var app = {};
+    option = null;
+    option = {
+        title: {
+            text: 'Count'
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        xAxis: {
+            type: 'category',
+            data: $!{timeSeriesData}
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [{
+            name: "Count",
+            data: $!{countAxisData},
+            type: 'line'
+        }]
+    };
+    ;
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+
+    var dom2 = document.getElementById("container2");
+    var myChart2 = echarts.init(dom2);
+    var option2 = {
+        title: {
+            text: 'Mean'
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: $!{timeSeriesData}
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [
+            {
+                name: 'Avg',
+                type: 'line',
+                data: $!{avgAxisData}
+            },
+            {
+                name: 'Max',
+                type: 'line',
+                data: $!{maxAxisData}
+            },
+            {
+                name: 'Min',
+                type: 'line',
+                data: $!{minAxisData}
+            }
+        ]
+    };
+
+    if (option2 && typeof option2 === "object") {
+        myChart2.setOption(option2, true);
+    }
+
+    var dom3 = document.getElementById("container3");
+    var myChart3 = echarts.init(dom3);
+    var option3 = {
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data: ['邮件营销', '联盟广告', '视频广告', '直接访问', '搜索引擎']
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        toolbox: {
+            feature: {
+                saveAsImage: {}
+            }
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [
+            {
+                name: '邮件营销',
+                type: 'line',
+                stack: '总量',
+                data: [120, 132, 101, 134, 90, 230, 210]
+            },
+            {
+                name: '联盟广告',
+                type: 'line',
+                stack: '总量',
+                data: [220, 182, 191, 234, 290, 330, 310]
+            },
+            {
+                name: '视频广告',
+                type: 'line',
+                stack: '总量',
+                data: [150, 232, 201, 154, 190, 330, 410]
+            },
+            {
+                name: '直接访问',
+                type: 'line',
+                stack: '总量',
+                data: [320, 332, 301, 334, 390, 330, 320]
+            },
+            {
+                name: '搜索引擎',
+                type: 'line',
+                stack: '总量',
+                data: [820, 932, 901, 934, 1290, 1330, 1320]
+            }
+        ]
+    };
+
+    if (option3 && typeof option3 === "object") {
+        myChart3.setOption(option3, true);
+    }
+
+</script>
+#parse("/static/fooder.vm")

@@ -1,678 +1,659 @@
-2019-02-03 14:22:46,285 - Velocimacro : Default library not found.
-2019-02-03 14:22:46,285 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2019-02-03 14:22:46,285 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2019-02-03 14:22:46,285 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2019-02-03 14:22:46,285 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2019-02-03 14:22:46,297 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:22:46,300 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:22:46,305 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:22:46,348 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:23:13,389 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:23:13,390 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:23:13,393 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:23:13,393 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:23:15,817 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:23:15,818 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:23:15,819 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:23:15,820 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:23:39,376 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:23:39,377 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:23:39,379 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:23:39,380 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:23:41,994 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:23:41,995 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:23:41,997 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:23:41,997 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:23:43,622 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:23:43,622 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:23:43,623 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:23:43,624 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:23:44,913 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:23:44,914 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:23:44,915 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:23:44,915 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:24:37,378 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:24:37,378 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:24:37,380 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:24:37,381 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:24:47,285 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:24:47,286 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:24:47,287 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:24:47,287 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:27:31,702 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:27:31,703 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:27:31,704 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:27:31,705 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:27:32,367 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:27:32,368 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:27:32,369 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:27:32,369 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:27:32,873 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:27:32,873 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:27:32,874 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:27:32,875 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:27:33,153 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:27:33,153 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:27:33,154 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:27:33,155 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:27:43,090 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:27:43,091 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:27:43,092 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:27:43,093 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:28:11,159 - Log4JLogChute initialized using file 'velocity.log'
-2019-02-03 14:28:11,160 - Initializing Velocity, Calling init()...
-2019-02-03 14:28:11,160 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2019-02-03 14:28:11,160 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2019-02-03 14:28:11,160 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2019-02-03 14:28:11,160 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2019-02-03 14:28:11,160 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-02-03 14:28:11,160 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-02-03 14:28:11,162 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:28:11,168 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2019-02-03 14:28:11,169 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2019-02-03 14:28:11,170 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2019-02-03 14:28:11,170 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2019-02-03 14:28:11,171 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2019-02-03 14:28:11,171 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2019-02-03 14:28:11,172 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2019-02-03 14:28:11,173 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2019-02-03 14:28:11,173 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2019-02-03 14:28:11,174 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2019-02-03 14:28:11,197 - Created '20' parsers.
-2019-02-03 14:28:11,201 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2019-02-03 14:28:11,201 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2019-02-03 14:28:11,201 - Velocimacro : Default library not found.
-2019-02-03 14:28:11,201 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2019-02-03 14:28:11,201 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2019-02-03 14:28:11,201 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2019-02-03 14:28:11,201 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2019-02-03 14:28:11,213 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:28:11,215 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:28:11,220 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:28:11,221 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:29:27,214 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:29:27,216 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:29:27,220 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:29:27,220 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:30:15,785 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:30:15,787 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:30:15,789 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:30:15,790 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:30:30,335 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:30:30,336 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:30:30,338 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:30:30,338 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:30:44,508 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:30:44,510 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:30:44,512 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:30:44,513 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:31:01,539 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:31:01,540 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:31:01,542 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:31:01,542 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:31:27,395 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:31:27,396 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:31:27,397 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:31:27,398 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:31:31,434 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:31:31,435 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:31:31,436 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:31:31,437 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:31:37,799 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:31:37,799 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:31:37,800 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:31:37,801 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:31:55,141 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:31:55,142 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:31:55,143 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:31:55,144 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:31:59,092 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:31:59,092 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:31:59,093 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:31:59,094 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:00,701 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:00,701 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:00,702 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:00,703 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:01,937 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:01,938 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:01,938 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:01,939 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:03,192 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:03,192 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:03,193 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:03,193 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:04,813 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:04,814 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:04,814 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:04,815 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:08,294 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:08,295 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:08,295 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:08,296 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:22,834 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:22,835 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:22,836 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:22,836 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:44,813 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:44,814 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:44,815 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:32:44,816 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:34:18,782 - Log4JLogChute initialized using file 'velocity.log'
-2019-02-03 14:34:18,783 - Initializing Velocity, Calling init()...
-2019-02-03 14:34:18,783 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2019-02-03 14:34:18,783 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2019-02-03 14:34:18,783 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2019-02-03 14:34:18,783 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2019-02-03 14:34:18,783 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-02-03 14:34:18,783 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-02-03 14:34:18,785 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:34:18,791 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2019-02-03 14:34:18,792 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2019-02-03 14:34:18,793 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2019-02-03 14:34:18,794 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2019-02-03 14:34:18,794 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2019-02-03 14:34:18,795 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2019-02-03 14:34:18,796 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2019-02-03 14:34:18,797 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2019-02-03 14:34:18,797 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2019-02-03 14:34:18,798 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2019-02-03 14:34:18,821 - Created '20' parsers.
-2019-02-03 14:34:18,828 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2019-02-03 14:34:18,828 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2019-02-03 14:34:18,828 - Velocimacro : Default library not found.
-2019-02-03 14:34:18,828 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2019-02-03 14:34:18,828 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2019-02-03 14:34:18,828 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2019-02-03 14:34:18,828 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2019-02-03 14:34:18,840 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:34:18,842 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:34:18,847 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:34:18,849 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:34:55,429 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:34:55,431 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:34:55,498 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:34:55,499 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:35:17,746 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:35:17,747 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:35:17,750 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:35:17,751 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:35:26,345 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:35:26,346 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:35:26,347 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:35:26,348 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:35:28,020 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:35:28,021 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:35:28,022 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:35:28,023 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:38:10,101 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:38:10,102 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:38:10,104 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:38:10,105 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:38:13,250 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:38:13,251 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:38:13,252 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:38:13,252 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:38:26,982 - Log4JLogChute initialized using file 'velocity.log'
-2019-02-03 14:38:26,982 - Initializing Velocity, Calling init()...
-2019-02-03 14:38:26,982 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2019-02-03 14:38:26,982 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2019-02-03 14:38:26,982 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2019-02-03 14:38:26,983 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2019-02-03 14:38:26,983 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-02-03 14:38:26,983 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-02-03 14:38:26,985 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:38:26,993 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2019-02-03 14:38:26,995 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2019-02-03 14:38:26,996 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2019-02-03 14:38:26,997 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2019-02-03 14:38:26,998 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2019-02-03 14:38:26,998 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2019-02-03 14:38:27,000 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2019-02-03 14:38:27,001 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2019-02-03 14:38:27,002 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2019-02-03 14:38:27,003 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2019-02-03 14:38:27,026 - Created '20' parsers.
-2019-02-03 14:38:27,030 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2019-02-03 14:38:27,030 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2019-02-03 14:38:27,030 - Velocimacro : Default library not found.
-2019-02-03 14:38:27,031 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2019-02-03 14:38:27,031 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2019-02-03 14:38:27,031 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2019-02-03 14:38:27,031 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2019-02-03 14:38:27,047 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:38:27,053 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:38:27,064 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:38:27,067 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:38:31,761 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:38:31,762 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:38:31,764 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:38:31,765 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:38:57,672 - Log4JLogChute initialized using file 'velocity.log'
-2019-02-03 14:38:57,672 - Initializing Velocity, Calling init()...
-2019-02-03 14:38:57,673 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2019-02-03 14:38:57,673 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2019-02-03 14:38:57,673 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2019-02-03 14:38:57,673 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2019-02-03 14:38:57,673 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-02-03 14:38:57,673 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-02-03 14:38:57,675 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:38:57,685 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2019-02-03 14:38:57,686 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2019-02-03 14:38:57,687 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2019-02-03 14:38:57,687 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2019-02-03 14:38:57,688 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2019-02-03 14:38:57,689 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2019-02-03 14:38:57,690 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2019-02-03 14:38:57,691 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2019-02-03 14:38:57,692 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2019-02-03 14:38:57,692 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2019-02-03 14:38:57,718 - Created '20' parsers.
-2019-02-03 14:38:57,722 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2019-02-03 14:38:57,722 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2019-02-03 14:38:57,723 - Velocimacro : Default library not found.
-2019-02-03 14:38:57,723 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2019-02-03 14:38:57,723 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2019-02-03 14:38:57,723 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2019-02-03 14:38:57,723 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2019-02-03 14:38:57,735 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:38:57,738 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:38:57,743 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:38:57,745 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:38:59,509 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:38:59,511 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:38:59,514 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:38:59,514 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:39:22,969 - Log4JLogChute initialized using file 'velocity.log'
-2019-02-03 14:39:22,969 - Initializing Velocity, Calling init()...
-2019-02-03 14:39:22,969 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2019-02-03 14:39:22,969 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2019-02-03 14:39:22,969 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2019-02-03 14:39:22,969 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2019-02-03 14:39:22,969 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-02-03 14:39:22,969 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-02-03 14:39:22,972 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:39:22,980 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2019-02-03 14:39:22,983 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2019-02-03 14:39:22,984 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2019-02-03 14:39:22,985 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2019-02-03 14:39:22,986 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2019-02-03 14:39:22,987 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2019-02-03 14:39:22,988 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2019-02-03 14:39:22,989 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2019-02-03 14:39:22,991 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2019-02-03 14:39:22,993 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2019-02-03 14:39:23,029 - Created '20' parsers.
-2019-02-03 14:39:23,036 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2019-02-03 14:39:23,037 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2019-02-03 14:39:23,037 - Velocimacro : Default library not found.
-2019-02-03 14:39:23,037 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2019-02-03 14:39:23,037 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2019-02-03 14:39:23,037 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2019-02-03 14:39:23,037 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2019-02-03 14:39:23,055 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:39:23,058 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:39:23,065 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:39:23,069 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:39:30,630 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:39:30,633 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:39:30,635 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:39:30,636 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:39:53,758 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:39:53,760 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:39:53,764 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:39:53,765 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:41:32,910 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:41:32,911 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:41:32,913 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:41:32,913 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:41:40,312 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:41:40,313 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:41:40,314 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:41:40,315 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:41:42,912 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:41:42,913 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:41:42,914 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:41:42,914 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:41:49,224 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:41:49,225 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:41:49,226 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:41:49,226 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:42:57,498 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:42:57,498 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:42:57,500 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:42:57,501 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:42:59,670 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:42:59,671 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:42:59,672 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:42:59,672 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:43:01,507 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:43:01,508 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:43:01,509 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:43:01,509 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:43:03,613 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:43:03,614 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:43:03,615 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:43:03,616 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:43:09,471 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:43:09,472 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:43:09,473 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:43:09,474 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:43:11,777 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:43:11,778 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:43:11,779 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:43:11,779 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:43:13,747 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:43:13,748 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:43:13,749 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:43:13,749 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:43:27,021 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:43:27,022 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:43:27,024 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:43:27,024 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:46:54,439 - Log4JLogChute initialized using file 'velocity.log'
-2019-02-03 14:46:54,439 - Initializing Velocity, Calling init()...
-2019-02-03 14:46:54,439 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2019-02-03 14:46:54,439 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2019-02-03 14:46:54,440 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2019-02-03 14:46:54,440 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2019-02-03 14:46:54,440 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-02-03 14:46:54,440 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-02-03 14:46:54,443 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:46:54,450 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2019-02-03 14:46:54,451 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2019-02-03 14:46:54,452 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2019-02-03 14:46:54,453 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2019-02-03 14:46:54,454 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2019-02-03 14:46:54,455 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2019-02-03 14:46:54,456 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2019-02-03 14:46:54,457 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2019-02-03 14:46:54,458 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2019-02-03 14:46:54,459 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2019-02-03 14:46:54,484 - Created '20' parsers.
-2019-02-03 14:46:54,490 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2019-02-03 14:46:54,490 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2019-02-03 14:46:54,491 - Velocimacro : Default library not found.
-2019-02-03 14:46:54,491 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2019-02-03 14:46:54,491 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2019-02-03 14:46:54,491 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2019-02-03 14:46:54,491 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2019-02-03 14:46:54,507 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:46:54,510 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:46:54,515 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:46:54,518 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:46:57,640 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:46:57,641 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:46:57,644 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:46:57,645 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:02,577 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:02,578 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:02,580 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:02,581 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:17,828 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:17,829 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:17,832 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:17,833 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:27,107 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:27,109 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:27,113 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:27,115 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:29,201 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:29,202 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:29,205 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:29,206 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:35,128 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:35,129 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:35,130 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:35,131 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:39,398 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:39,399 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:39,400 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:39,401 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:52,352 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:52,353 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:52,354 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:47:52,354 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:48:10,246 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:48:10,248 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:48:10,250 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:48:10,251 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:48:12,828 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:48:12,828 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:48:12,829 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:48:12,830 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:48:14,565 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:48:14,566 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:48:14,569 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 14:48:14,569 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:04:35,490 - Log4JLogChute initialized using file 'velocity.log'
-2019-02-03 15:04:35,491 - Initializing Velocity, Calling init()...
-2019-02-03 15:04:35,491 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2019-02-03 15:04:35,491 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2019-02-03 15:04:35,491 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2019-02-03 15:04:35,491 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2019-02-03 15:04:35,491 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-02-03 15:04:35,491 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-02-03 15:04:35,494 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:04:35,502 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2019-02-03 15:04:35,504 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2019-02-03 15:04:35,507 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2019-02-03 15:04:35,508 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2019-02-03 15:04:35,509 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2019-02-03 15:04:35,510 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2019-02-03 15:04:35,511 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2019-02-03 15:04:35,513 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2019-02-03 15:04:35,514 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2019-02-03 15:04:35,515 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2019-02-03 15:04:35,550 - Created '20' parsers.
-2019-02-03 15:04:35,557 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2019-02-03 15:04:35,557 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2019-02-03 15:04:35,558 - Velocimacro : Default library not found.
-2019-02-03 15:04:35,558 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2019-02-03 15:04:35,558 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2019-02-03 15:04:35,558 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2019-02-03 15:04:35,558 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2019-02-03 15:04:35,575 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:04:35,579 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:04:35,585 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:04:35,589 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:09:11,417 - Log4JLogChute initialized using file 'velocity.log'
-2019-02-03 15:09:11,418 - Initializing Velocity, Calling init()...
-2019-02-03 15:09:11,418 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2019-02-03 15:09:11,418 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2019-02-03 15:09:11,418 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2019-02-03 15:09:11,418 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2019-02-03 15:09:11,419 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-02-03 15:09:11,419 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-02-03 15:09:11,422 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:09:11,431 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2019-02-03 15:09:11,433 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2019-02-03 15:09:11,433 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2019-02-03 15:09:11,434 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2019-02-03 15:09:11,435 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2019-02-03 15:09:11,435 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2019-02-03 15:09:11,436 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2019-02-03 15:09:11,438 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2019-02-03 15:09:11,439 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2019-02-03 15:09:11,440 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2019-02-03 15:09:11,467 - Created '20' parsers.
-2019-02-03 15:09:11,473 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2019-02-03 15:09:11,474 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2019-02-03 15:09:11,474 - Velocimacro : Default library not found.
-2019-02-03 15:09:11,474 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2019-02-03 15:09:11,474 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2019-02-03 15:09:11,474 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2019-02-03 15:09:11,474 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2019-02-03 15:09:11,494 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:09:11,499 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:09:11,508 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:09:11,512 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:09:28,740 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:09:28,745 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:09:28,749 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:09:28,751 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:09:37,722 - Log4JLogChute initialized using file 'velocity.log'
-2019-02-03 15:09:37,723 - Initializing Velocity, Calling init()...
-2019-02-03 15:09:37,723 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2019-02-03 15:09:37,723 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2019-02-03 15:09:37,723 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2019-02-03 15:09:37,723 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2019-02-03 15:09:37,723 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-02-03 15:09:37,723 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-02-03 15:09:37,727 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:09:37,735 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2019-02-03 15:09:37,736 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2019-02-03 15:09:37,737 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2019-02-03 15:09:37,737 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2019-02-03 15:09:37,738 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2019-02-03 15:09:37,738 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2019-02-03 15:09:37,739 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2019-02-03 15:09:37,740 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2019-02-03 15:09:37,741 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2019-02-03 15:09:37,742 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2019-02-03 15:09:37,772 - Created '20' parsers.
-2019-02-03 15:09:37,781 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2019-02-03 15:09:37,782 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2019-02-03 15:09:37,783 - Velocimacro : Default library not found.
-2019-02-03 15:09:37,783 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2019-02-03 15:09:37,783 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2019-02-03 15:09:37,783 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2019-02-03 15:09:37,783 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2019-02-03 15:09:37,804 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:09:37,811 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:09:37,818 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:09:37,821 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:09:44,570 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:09:44,571 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:09:44,574 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:09:44,575 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:10:08,647 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:10:08,648 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:10:08,649 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:10:08,650 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:12:13,637 - Log4JLogChute initialized using file 'velocity.log'
-2019-02-03 15:12:13,637 - Initializing Velocity, Calling init()...
-2019-02-03 15:12:13,637 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2019-02-03 15:12:13,637 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2019-02-03 15:12:13,637 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2019-02-03 15:12:13,637 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2019-02-03 15:12:13,637 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-02-03 15:12:13,637 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-02-03 15:12:13,639 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:12:13,646 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2019-02-03 15:12:13,648 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2019-02-03 15:12:13,649 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2019-02-03 15:12:13,650 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2019-02-03 15:12:13,651 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2019-02-03 15:12:13,651 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2019-02-03 15:12:13,652 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2019-02-03 15:12:13,653 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2019-02-03 15:12:13,654 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2019-02-03 15:12:13,655 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2019-02-03 15:12:13,682 - Created '20' parsers.
-2019-02-03 15:12:13,686 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2019-02-03 15:12:13,687 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2019-02-03 15:12:13,687 - Velocimacro : Default library not found.
-2019-02-03 15:12:13,687 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2019-02-03 15:12:13,687 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2019-02-03 15:12:13,687 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2019-02-03 15:12:13,687 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2019-02-03 15:12:13,703 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:12:13,705 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:12:13,711 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:12:13,714 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:12:32,875 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:12:32,877 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:12:32,880 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:12:32,882 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:12:45,036 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:12:45,040 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:12:45,042 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:12:45,043 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:13:15,185 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:13:15,186 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:13:15,189 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:13:15,190 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:13:52,889 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:13:52,891 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:13:52,894 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:13:52,896 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:14:52,928 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:14:52,930 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:14:52,932 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:14:52,933 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:15:03,283 - Log4JLogChute initialized using file 'velocity.log'
-2019-02-03 15:15:03,284 - Initializing Velocity, Calling init()...
-2019-02-03 15:15:03,284 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2019-02-03 15:15:03,284 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2019-02-03 15:15:03,284 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2019-02-03 15:15:03,284 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2019-02-03 15:15:03,284 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-02-03 15:15:03,284 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-02-03 15:15:03,287 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:15:03,295 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2019-02-03 15:15:03,296 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2019-02-03 15:15:03,297 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2019-02-03 15:15:03,298 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2019-02-03 15:15:03,298 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2019-02-03 15:15:03,299 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2019-02-03 15:15:03,300 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2019-02-03 15:15:03,301 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2019-02-03 15:15:03,301 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2019-02-03 15:15:03,303 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2019-02-03 15:15:03,329 - Created '20' parsers.
-2019-02-03 15:15:03,334 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2019-02-03 15:15:03,334 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
-2019-02-03 15:15:03,334 - Velocimacro : Default library not found.
-2019-02-03 15:15:03,334 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2019-02-03 15:15:03,334 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2019-02-03 15:15:03,334 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2019-02-03 15:15:03,334 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2019-02-03 15:15:03,348 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:15:03,351 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:15:03,358 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:15:03,361 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:15:18,457 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:15:18,461 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:15:18,472 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:15:18,474 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:15:44,490 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:15:44,492 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:15:44,496 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:15:44,497 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:15:53,070 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:15:53,071 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:15:53,074 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:15:53,074 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:15:54,268 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:15:54,269 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:15:54,271 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:15:54,271 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:15:55,874 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:15:55,875 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:15:55,877 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:15:55,878 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:16:58,764 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:16:58,765 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:16:58,767 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:16:58,769 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:18:09,619 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:18:09,620 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:18:09,622 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:18:09,623 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:18:12,016 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:18:12,016 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:18:12,017 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:18:12,018 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:18:13,692 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:18:13,693 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:18:13,694 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:18:13,695 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:18:15,949 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:18:15,949 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:18:15,950 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:18:15,951 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:18:17,183 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:18:17,184 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:18:17,184 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
-2019-02-03 15:18:17,185 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:18,694 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:18,695 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:18,695 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:18,695 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:19,738 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:19,739 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:19,739 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:19,740 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:20,782 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:20,783 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:20,783 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:20,784 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:21,823 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:21,824 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:21,824 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:21,824 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:22,867 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:22,868 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:22,869 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:22,869 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:23,909 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:23,909 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:23,910 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:23,910 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:24,952 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:24,960 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:24,960 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:24,960 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:26,005 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:26,005 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:26,005 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:26,005 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:27,048 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:27,049 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:27,049 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:27,049 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:28,089 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:28,090 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:28,090 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:28,090 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:29,131 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:29,132 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:29,132 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:29,133 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:30,177 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:30,178 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:30,178 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:30,178 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:31,214 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:31,215 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:31,215 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:31,215 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:32,258 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:32,258 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:32,259 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:32,259 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:33,295 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:33,295 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:33,295 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:33,296 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:34,338 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:34,338 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:34,339 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:34,339 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:35,381 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:35,382 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:35,382 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:35,382 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:36,426 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:36,426 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:36,427 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:36,427 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:37,469 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:37,469 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:37,470 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:37,470 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:38,515 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:38,516 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:38,516 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:38,516 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:39,579 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:39,580 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:39,580 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:39,580 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:40,632 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:40,633 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:40,634 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:40,634 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:41,680 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:41,680 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:41,681 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:41,681 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:42,724 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:42,725 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:42,725 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:42,725 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:43,762 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:43,763 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:43,763 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:43,763 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:44,808 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:44,809 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:44,809 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:44,809 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:45,850 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:45,851 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:45,851 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:45,851 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:46,892 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:46,893 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:46,893 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:46,893 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:47,937 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:47,938 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:47,938 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:47,938 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:48,976 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:48,977 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:48,977 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:48,977 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:50,021 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:50,021 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:50,022 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:50,022 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:51,081 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:51,081 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:51,082 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:51,082 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:52,170 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:52,171 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:52,171 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:52,171 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:53,213 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:53,214 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:53,214 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-04 23:54:53,214 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:25:39,587 - Log4JLogChute initialized using file 'velocity.log'
+2019-02-09 15:25:39,589 - Initializing Velocity, Calling init()...
+2019-02-09 15:25:39,589 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2019-02-09 15:25:39,589 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2019-02-09 15:25:39,589 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2019-02-09 15:25:39,589 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2019-02-09 15:25:39,589 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-02-09 15:25:39,589 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-02-09 15:25:39,595 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:25:39,608 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-02-09 15:25:39,661 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-02-09 15:25:39,662 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-02-09 15:25:39,663 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-02-09 15:25:39,664 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-02-09 15:25:39,665 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-02-09 15:25:39,666 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-02-09 15:25:39,667 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-02-09 15:25:39,668 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-02-09 15:25:39,669 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-02-09 15:25:39,701 - Created '20' parsers.
+2019-02-09 15:25:39,707 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-02-09 15:25:39,707 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2019-02-09 15:25:39,707 - Velocimacro : Default library not found.
+2019-02-09 15:25:39,707 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-02-09 15:25:39,707 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-02-09 15:25:39,707 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2019-02-09 15:25:39,707 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2019-02-09 15:25:39,726 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:25:39,738 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:25:39,747 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:25:39,748 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:25:42,416 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:25:42,418 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:25:42,420 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:25:42,421 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:25:45,065 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:25:45,067 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:25:45,069 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:25:45,070 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:25:54,051 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:25:54,054 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:25:54,056 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:25:54,057 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:25:59,776 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:25:59,779 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:25:59,781 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:05,825 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:05,827 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:05,829 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:05,829 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:07,839 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:07,840 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:07,842 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:07,843 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:09,462 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:09,464 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:09,465 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:11,589 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:11,591 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:11,591 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:11,592 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:12,930 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:12,932 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:12,932 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:13,810 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:13,811 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:13,813 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:13,813 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:15,118 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:15,119 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:15,120 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:16,143 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:16,145 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:16,146 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:16,147 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:18,498 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:18,499 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:18,500 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:20,137 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:20,138 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:20,138 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:20,139 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:22,005 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:22,006 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:22,006 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:26,618 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:26,619 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:26,620 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:26,621 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:27,978 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:27,979 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:27,979 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:28,762 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:28,763 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:28,765 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:28,765 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:29,392 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:29,393 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:29,394 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:30,074 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:30,075 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:30,075 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:37,249 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:37,250 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:37,251 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:51,808 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:51,810 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:51,810 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:51,811 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:55,730 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:55,731 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:55,732 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:56,609 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:56,610 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:56,611 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:56,612 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:57,575 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:57,576 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:57,577 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:58,309 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:58,310 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:58,311 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:26:58,311 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:27,152 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:27,153 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:27,153 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:29,373 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:29,374 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:29,375 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:29,375 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:42,336 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:42,337 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:42,338 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:42,338 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:44,572 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:44,573 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:44,574 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:44,575 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:52,472 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:52,473 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:52,474 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:55,564 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:55,565 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:55,566 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:58,439 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:58,441 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:58,442 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:58,442 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:59,635 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:59,636 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:59,637 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:27:59,637 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:00,633 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:00,635 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:00,635 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:10,290 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:10,291 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:10,292 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:12,225 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:12,226 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:12,226 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:14,190 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:14,191 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:14,192 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:18,107 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:18,109 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:18,110 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:18,110 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:20,183 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:20,184 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:20,185 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:20,186 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:21,418 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:21,419 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:21,420 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:21,421 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:22,400 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:22,401 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:28:22,402 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:23,085 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:23,086 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:23,087 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:23,088 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:24,310 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:24,311 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:24,312 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:24,312 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:25,237 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:25,238 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:25,239 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:25,239 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:27,531 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:27,533 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:27,533 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:29,590 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:29,591 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:29,592 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:29,593 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:30,217 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:30,218 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:30,219 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:30,219 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:31,764 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:31,765 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:31,766 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:31,766 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:33,256 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:33,257 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:33,258 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:33,258 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:33,918 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:33,919 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:33,920 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:33,920 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:34,714 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:34,715 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:29:34,716 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:39:18,811 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:39:18,817 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:39:18,818 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:02,875 - Log4JLogChute initialized using file 'velocity.log'
+2019-02-09 15:42:02,880 - Initializing Velocity, Calling init()...
+2019-02-09 15:42:02,880 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2019-02-09 15:42:02,880 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2019-02-09 15:42:02,880 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2019-02-09 15:42:02,880 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2019-02-09 15:42:02,880 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-02-09 15:42:02,880 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-02-09 15:42:02,883 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:02,889 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-02-09 15:42:02,890 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-02-09 15:42:02,891 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-02-09 15:42:02,891 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-02-09 15:42:02,892 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-02-09 15:42:02,893 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-02-09 15:42:02,894 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-02-09 15:42:02,895 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-02-09 15:42:02,896 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-02-09 15:42:02,897 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-02-09 15:42:02,925 - Created '20' parsers.
+2019-02-09 15:42:02,930 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-02-09 15:42:02,930 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2019-02-09 15:42:02,931 - Velocimacro : Default library not found.
+2019-02-09 15:42:02,931 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-02-09 15:42:02,931 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-02-09 15:42:02,931 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2019-02-09 15:42:02,931 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2019-02-09 15:42:02,945 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:02,954 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:02,959 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:25,304 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:25,307 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:25,308 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:27,298 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:27,301 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:27,302 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:30,318 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:30,321 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:30,325 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:30,325 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:35,087 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:35,088 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:35,089 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:35,089 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:36,960 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:36,961 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:36,963 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:36,964 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:40,600 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:40,602 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:40,602 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:47,250 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:47,255 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:47,270 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:48,981 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:48,982 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:48,983 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:50,543 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:50,545 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:50,545 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:53,351 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:53,352 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:53,353 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:53,354 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:59,465 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:59,466 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:42:59,467 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:43:06,866 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:43:06,867 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:43:06,868 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:43:07,830 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:43:07,831 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:43:07,831 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:43:09,757 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:43:09,758 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:43:09,759 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:43:14,442 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:43:14,443 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:43:14,444 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:43:23,364 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:43:23,365 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:43:23,366 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:43:24,245 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:43:24,246 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 15:43:24,247 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:21:32,623 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:21:32,624 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:21:32,625 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:21:34,318 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:21:34,319 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:21:34,320 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:22:35,454 - ResourceManager : found /static/message.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:22:54,074 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:22:54,075 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:22:54,075 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:23:07,207 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:23:07,208 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:23:07,209 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:23:07,209 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:23:19,237 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:23:19,238 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:23:19,239 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:23:19,239 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:23:30,857 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:23:30,858 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:23:30,859 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:23:51,262 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:23:51,264 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:23:51,265 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:23:51,266 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:23:52,588 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:23:52,589 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:23:52,590 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:23:52,590 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:23:59,683 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:23:59,684 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:23:59,685 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:23:59,685 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:01,120 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:01,122 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:01,123 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:03,171 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:03,173 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:03,174 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:03,174 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:04,978 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:04,980 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:04,980 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:07,425 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:07,427 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:07,428 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:07,429 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:08,085 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:08,086 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:08,087 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:08,088 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:20,599 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:20,601 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:20,602 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:20,603 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:23,723 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:23,724 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:23,725 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:24,711 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:24,713 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:24,714 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:24,715 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:27,759 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:27,760 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:27,761 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:27,762 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:28,737 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:28,739 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:28,740 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:30,042 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:30,043 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:30,044 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:30,465 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:30,467 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:30,467 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:30,468 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:34,899 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:34,900 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:34,900 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:37,346 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:37,347 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:37,347 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:37,348 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:38,997 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:38,998 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:38,999 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:38,999 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:40,247 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:40,248 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-09 18:24:40,248 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:09:56,943 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:09:56,944 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:09:56,945 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:09:59,058 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:09:59,059 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:09:59,060 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:01,808 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:01,810 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:01,810 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:03,727 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:03,730 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:03,731 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:03,732 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:04,618 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:04,619 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:04,620 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:04,620 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:05,439 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:05,440 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:05,441 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:05,441 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:08,353 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:08,356 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:08,357 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:10,266 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:10,269 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:10,270 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:10,271 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:10,988 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:10,989 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:10,990 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:10,991 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:14,019 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:14,021 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:14,022 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:14,023 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:14,684 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:14,685 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:14,686 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:14,687 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:15,400 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:15,401 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:15,401 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:19,328 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:19,330 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:19,331 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:20,290 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:20,291 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:20,291 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:23,061 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:23,062 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:23,063 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:23,063 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:25,855 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:25,857 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:25,858 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:25,858 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:26,651 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:26,652 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:26,652 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:28,537 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:28,538 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:28,539 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:28,540 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:29,420 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:29,421 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:29,422 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:29,422 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:30,249 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:30,250 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:30,251 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:30,251 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:32,102 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:32,103 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:32,103 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:41,582 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:41,587 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:41,588 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:41,589 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:43,504 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:43,506 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:43,507 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:43,507 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:44,355 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:44,356 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:44,357 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:44,358 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:45,814 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:45,816 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:10:45,817 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:12:53,892 - ResourceManager : found /static/graph11.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:12:53,894 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-10 18:12:53,895 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-11 10:57:24,350 - Log4JLogChute initialized using file 'velocity.log'
+2019-02-11 10:57:24,350 - Initializing Velocity, Calling init()...
+2019-02-11 10:57:24,350 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2019-02-11 10:57:24,351 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2019-02-11 10:57:24,351 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2019-02-11 10:57:24,351 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2019-02-11 10:57:24,351 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-02-11 10:57:24,351 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-02-11 10:57:24,353 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-11 10:57:24,362 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-02-11 10:57:24,363 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-02-11 10:57:24,365 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-02-11 10:57:24,365 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-02-11 10:57:24,366 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-02-11 10:57:24,367 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-02-11 10:57:24,368 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-02-11 10:57:24,369 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-02-11 10:57:24,370 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-02-11 10:57:24,371 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-02-11 10:57:24,398 - Created '20' parsers.
+2019-02-11 10:57:24,403 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-02-11 10:57:24,403 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2019-02-11 10:57:24,403 - Velocimacro : Default library not found.
+2019-02-11 10:57:24,403 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-02-11 10:57:24,403 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-02-11 10:57:24,403 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2019-02-11 10:57:24,403 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2019-02-11 10:57:24,417 - ResourceManager : found /static/graph03.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-11 10:57:24,426 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-11 10:57:24,434 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-11 10:57:24,435 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-11 10:57:52,592 - ResourceManager : found /static/graph2.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-11 10:57:52,594 - ResourceManager : found /static/header.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-11 10:57:52,596 - ResourceManager : found /static/search.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2019-02-11 10:57:52,597 - ResourceManager : found /static/fooder.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
