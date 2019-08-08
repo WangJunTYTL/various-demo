@@ -26,6 +26,8 @@ import org.apache.thrift.TException;
 import org.apache.thrift.transport.TTransport;
 
 /**
+ * 采用二进制编码
+ *
  * Binary protocol implementation for thrift.
  *
  */

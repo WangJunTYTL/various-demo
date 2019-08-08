@@ -28,7 +28,7 @@ import org.apache.thrift.TException;
 import org.apache.thrift.transport.TTransport;
 
 /**
- * 对int类型数据压缩（varint）
+ * 对int类型数据压缩（varint算法）
  *
  * TCompactProtocol2 is the Java implementation of the compact protocol specified
  * in THRIFT-110. The fundamental approach to reducing the overhead of 

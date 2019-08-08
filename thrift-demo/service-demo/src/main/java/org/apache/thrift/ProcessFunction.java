@@ -30,7 +30,7 @@ public abstract class ProcessFunction<I, T extends TBase> {
       return;
     }
     iprot.readMessageEnd();
-    // 执行请求
+    // 执行方法
     TBase result = getResult(iface, args);
     // 响应
     // 写入头部消息TMessage

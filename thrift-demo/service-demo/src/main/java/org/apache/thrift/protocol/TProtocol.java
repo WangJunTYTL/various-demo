@@ -27,6 +27,8 @@ import org.apache.thrift.scheme.StandardScheme;
 import org.apache.thrift.transport.TTransport;
 
 /**
+ * 定义各种类型应该如何编码和解码，是序列化和反序列化的核心抽象
+ *
  * Protocol interface definition.
  *
  */
@@ -60,25 +62,29 @@ public abstract class TProtocol {
   /**
    * Writing methods.
    */
-
+  // TMessage 请求和响应头部信息，用于描述调用的方法name，调用过程：call、reply、exception ，客户端调用自增id
   public abstract void writeMessageBegin(TMessage message) throws TException;
 
   public abstract void writeMessageEnd() throws TException;
 
+  // TStruct  描述对象
   public abstract void writeStructBegin(TStruct struct) throws TException;
 
   public abstract void writeStructEnd() throws TException;
 
+  // TField 描述属性，包含属性的id、name、type
   public abstract void writeFieldBegin(TField field) throws TException;
 
   public abstract void writeFieldEnd() throws TException;
 
   public abstract void writeFieldStop() throws TException;
 
+  // TMap 描述Map类型，keyType，valueType，size
   public abstract void writeMapBegin(TMap map) throws TException;
 
   public abstract void writeMapEnd() throws TException;
 
+  // TList 描述List类型，elementType，size
   public abstract void writeListBegin(TList list) throws TException;
 
   public abstract void writeListEnd() throws TException;

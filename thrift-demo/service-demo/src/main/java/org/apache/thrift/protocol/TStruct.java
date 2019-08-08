@@ -20,6 +20,7 @@
 package org.apache.thrift.protocol;
 
 /**
+ * Struct 等同于 Java语言的Object，在Thrift idl中描述Object用Struct
  * Helper class that encapsulates struct metadata.
  *
  */

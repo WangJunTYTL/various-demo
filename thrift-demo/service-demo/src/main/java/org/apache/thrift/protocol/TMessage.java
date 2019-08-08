@@ -20,38 +20,44 @@
 package org.apache.thrift.protocol;
 
 /**
- * Helper class that encapsulates struct metadata.
+ * TMessage是Thrift调用协议的头部信息，用于描述方法调用、方法调用响应或方法调用异常
+ * +------------+----------------------+---------------------+
+ * |name(str)   |type(byte)            |seqid(i32)           |
+ * +------------+----------------------+---------------------+
+ * |方法名称     |调用过程：调用、响应、异常|调用自增id，防止消息错乱|
+ * +------------+----------------------+---------------------+
  *
+ * Helper class that encapsulates struct metadata.
  */
 public final class TMessage {
-  public TMessage() {
-    this("", TType.STOP, 0);
-  }
-
-  public TMessage(String n, byte t, int s) {
-    name = n;
-    type = t;
-    seqid = s;
-  }
-
-  public final String name;
-  public final byte type;
-  public final int seqid;
-
-  @Override
-  public String toString() {
-    return "<TMessage name:'" + name + "' type: " + type + " seqid:" + seqid + ">";
-  }
-
-  @Override
-  public boolean equals(Object other) {
-    if (other instanceof TMessage) {
-      return equals((TMessage) other);
+    public TMessage() {
+        this("", TType.STOP, 0);
     }
-    return false;
-  }
 
-  public boolean equals(TMessage other) {
-    return name.equals(other.name) && type == other.type && seqid == other.seqid;
-  }
+    public TMessage(String n, byte t, int s) {
+        name = n;
+        type = t;
+        seqid = s;
+    }
+
+    public final String name;
+    public final byte type;
+    public final int seqid;
+
+    @Override
+    public String toString() {
+        return "<TMessage name:'" + name + "' type: " + type + " seqid:" + seqid + ">";
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (other instanceof TMessage) {
+            return equals((TMessage) other);
+        }
+        return false;
+    }
+
+    public boolean equals(TMessage other) {
+        return name.equals(other.name) && type == other.type && seqid == other.seqid;
+    }
 }

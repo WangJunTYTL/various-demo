@@ -40,10 +40,15 @@ public abstract class TServer {
 
   public static abstract class AbstractServerArgs<T extends AbstractServerArgs<T>> {
     final TServerTransport serverTransport;
+    // 远程调用函数处理类
     TProcessorFactory processorFactory;
+    // 输入处理
     TTransportFactory inputTransportFactory = new TTransportFactory();
+    // 输出处理
     TTransportFactory outputTransportFactory = new TTransportFactory();
+    // 输入协议处理
     TProtocolFactory inputProtocolFactory = new TBinaryProtocol.Factory();
+    // 输出协议处理
     TProtocolFactory outputProtocolFactory = new TBinaryProtocol.Factory();
 
     public AbstractServerArgs(TServerTransport transport) {

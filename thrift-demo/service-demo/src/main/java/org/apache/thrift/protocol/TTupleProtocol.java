@@ -25,6 +25,9 @@ import org.apache.thrift.scheme.IScheme;
 import org.apache.thrift.scheme.TupleScheme;
 import org.apache.thrift.transport.TTransport;
 
+/**
+ * 采用bitset设置对应id是否设置值，序列化后更节省所用字节
+ */
 public final class TTupleProtocol extends TCompactProtocol {
   public static class Factory implements TProtocolFactory {
     public Factory() {}

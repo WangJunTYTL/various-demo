@@ -20,6 +20,7 @@
 package org.apache.thrift.protocol;
 
 /**
+ *
  * Message type constants in the Thrift protocol.
  *
  */

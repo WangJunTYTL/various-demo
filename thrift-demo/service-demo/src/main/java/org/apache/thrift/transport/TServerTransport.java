@@ -32,6 +32,7 @@ public abstract class TServerTransport {
     public abstract void listen() throws TTransportException;
 
     public final TTransport accept() throws TTransportException {
+        // 等同于一个连接实例
         TTransport transport = acceptImpl();
         if (transport == null) {
             throw new TTransportException("accept() may not return NULL");

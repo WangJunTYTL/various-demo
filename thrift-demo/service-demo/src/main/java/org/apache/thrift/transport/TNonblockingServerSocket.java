@@ -74,6 +74,7 @@ public class TNonblockingServerSocket extends TNonblockingServerTransport {
         this(bindAddr, 0);
     }
 
+    // 打开服务端
     public TNonblockingServerSocket(InetSocketAddress bindAddr, int clientTimeout) throws TTransportException {
         clientTimeout_ = clientTimeout;
         try {
@@ -108,7 +109,7 @@ public class TNonblockingServerSocket extends TNonblockingServerTransport {
             throw new TTransportException(TTransportException.NOT_OPEN, "No underlying server socket.");
         }
         try {
-            // 开始监听请求
+            // 开始监听请求,等待连接，连接后一个socketChannel代表一个连接示列
             SocketChannel socketChannel = serverSocketChannel.accept();
             if (socketChannel == null) {
                 return null;
