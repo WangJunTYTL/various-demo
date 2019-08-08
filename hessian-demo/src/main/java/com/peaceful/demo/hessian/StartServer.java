@@ -7,6 +7,8 @@ import org.eclipse.jetty.servlet.ServletContextHandler;
 /**
  * 嵌入jetty：http://www.eclipse.org/jetty/documentation/current/embedding-jetty.html
  *
+ * hessian: http://hessian.caucho.com
+ *
  * Created by wangjun on 2016/11/10.
  */
 public class StartServer {
@@ -21,7 +23,7 @@ public class StartServer {
         context.setResourceBase(System.getProperty("java.io.tmpdir"));
         server.setHandler(context);
         // Add myself servlet  127.0.0.1:8787/dump
-        context.addServlet(HelloServicePublish.class, "/hessian");
+        context.addServlet(HelloServiceDefImpl.class, "/hessian");
         // Add default servlet
         context.addServlet(DefaultServlet.class, "/");
         server.start();

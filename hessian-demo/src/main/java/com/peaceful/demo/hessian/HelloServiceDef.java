@@ -3,9 +3,9 @@ package com.peaceful.demo.hessian;
 import java.util.List;
 
 /**
- * Created by wangjun38 on 2018/8/23.
+ * Created by Jun on 2018/8/23.
  */
-public interface HelloService {
+public interface HelloServiceDef {
 
     String hello();
 
@@ -15,9 +15,9 @@ public interface HelloService {
 
     List<String> hello3(List<String> msgList);
 
-    User hello(User user);
+    UserTO hello(UserTO user);
 
-    List<User> hello(List<User> userList);
+    List<UserTO> hello(List<UserTO> userList);
 
     void hello4();
 }

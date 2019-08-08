@@ -5,9 +5,9 @@ import com.caucho.hessian.server.HessianServlet;
 import java.util.List;
 
 /**
- * Created by wangjun38 on 2018/8/23.
+ * Created by Jun on 2018/8/23.
  */
-public class HelloServicePublish extends HessianServlet implements HelloService {
+public class HelloServiceDefImpl extends HessianServlet implements HelloServiceDef {
 
     public String hello() {
         return "Hi";
@@ -25,11 +25,11 @@ public class HelloServicePublish extends HessianServlet implements HelloService 
         return msgList;
     }
 
-    public User hello(User user) {
+    public UserTO hello(UserTO user) {
         return user;
     }
 
-    public List<User> hello(List<User> userList) {
+    public List<UserTO> hello(List<UserTO> userList) {
         return userList;
     }
 

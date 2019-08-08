@@ -3,9 +3,9 @@ package com.peaceful.demo.hessian;
 import java.io.Serializable;
 
 /**
- * Created by wangjun38 on 2018/8/23.
+ * Created by Jun on 2018/8/23.
  */
-public class User implements Serializable {
+public class UserTO implements Serializable {
 
     private String name;
 
