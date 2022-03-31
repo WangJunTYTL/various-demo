@@ -19,7 +19,7 @@
         <assert.compress>install</assert.compress>
         <jetty.stop.port>9999</jetty.stop.port>
         <jetty.run.port>8888</jetty.run.port>
-        <version.spring.webmvc>4.1.1.RELEASE</version.spring.webmvc>
+        <version.spring.webmvc>5.3.18</version.spring.webmvc>
         <version.jstl>1.2</version.jstl>
         <version.freemarker>2.3.20</version.freemarker>
     </properties>
