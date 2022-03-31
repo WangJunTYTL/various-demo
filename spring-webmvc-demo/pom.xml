@@ -25,7 +25,7 @@
     </licenses>
 
     <properties>
-        <version.spring.webmvc>4.1.1.RELEASE</version.spring.webmvc>
+        <version.spring.webmvc>5.3.18</version.spring.webmvc>
         <version.jstl>1.2</version.jstl>
         <version.freemarker>2.3.20</version.freemarker>
     </properties>
