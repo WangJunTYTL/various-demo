@@ -60,7 +60,7 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>4.1.8.Final</version>
+            <version>5.3.20.Final</version>
         </dependency>
 
         <!-- for JPA, use hibernate-entitymanager instead of hibernate-core -->
