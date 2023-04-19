@@ -1,6 +1,6 @@
 package com.peaceful.other;
 
-import com.peaceful.common.util.Util;
+import com.peaceful.Util;
 
 /**
  * <a mailto:wangjuntytl@163.com>Email:wangjuntytl@163.com</a>

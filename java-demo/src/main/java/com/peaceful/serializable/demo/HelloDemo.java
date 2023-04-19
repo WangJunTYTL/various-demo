@@ -2,7 +2,7 @@ package com.peaceful.serializable.demo;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
-import com.peaceful.common.util.Util;
+import com.peaceful.Util;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Type;

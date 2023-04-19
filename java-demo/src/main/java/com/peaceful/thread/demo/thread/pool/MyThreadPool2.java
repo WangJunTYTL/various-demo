@@ -1,6 +1,6 @@
 package com.peaceful.thread.demo.thread.pool;
 
-import com.peaceful.common.util.Util;
+import com.peaceful.Util;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
 package com.peaceful.thread.demo;
 
-import com.peaceful.common.util.Util;
+import com.peaceful.Util;
 
 /**
  * daemon 线程

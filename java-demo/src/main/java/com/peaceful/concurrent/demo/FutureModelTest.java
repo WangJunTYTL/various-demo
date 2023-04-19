@@ -1,6 +1,6 @@
 package com.peaceful.concurrent.demo;
 
-import com.peaceful.common.util.Util;
+import com.peaceful.Util;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;

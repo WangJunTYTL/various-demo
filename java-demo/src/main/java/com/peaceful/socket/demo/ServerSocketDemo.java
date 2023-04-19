@@ -1,6 +1,6 @@
 package com.peaceful.socket.demo;
 
-import com.peaceful.common.util.Util;
+import com.peaceful.Util;
 
 import java.io.IOException;
 import java.io.InputStream;

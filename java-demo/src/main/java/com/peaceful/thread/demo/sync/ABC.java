@@ -1,6 +1,6 @@
 package com.peaceful.thread.demo.sync;
 
-import com.peaceful.common.util.Util;
+import com.peaceful.Util;
 
 /**
  * Created by wangjun on 16/3/4.

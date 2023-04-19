@@ -1,6 +1,6 @@
 package com.peaceful.jdk.demo;
 
-import com.peaceful.common.util.Util;
+import com.peaceful.Util;
 
 /**
  * Created by wangjun on 14/11/30.

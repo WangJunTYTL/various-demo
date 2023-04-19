@@ -1,6 +1,6 @@
 package com.peaceful.lock.demo;
 
-import com.peaceful.common.util.Util;
+import com.peaceful.Util;
 
 /**
  * @author WangJun <wangjuntytl@163.com>

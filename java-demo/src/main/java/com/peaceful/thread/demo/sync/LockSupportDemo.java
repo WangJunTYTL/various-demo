@@ -1,6 +1,6 @@
 package com.peaceful.thread.demo.sync;
 
-import com.peaceful.common.util.Util;
+import com.peaceful.Util;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.LockSupport;

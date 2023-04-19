@@ -1,6 +1,6 @@
 package com.peaceful.io.demo.bio;
 
-import com.peaceful.common.util.Util;
+import com.peaceful.Util;
 
 import java.io.*;
 import java.net.Socket;

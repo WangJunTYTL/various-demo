@@ -1,6 +1,6 @@
 package com.peaceful.collection.demo.sort;
 
-import com.peaceful.common.util.Util;
+import com.peaceful.Util;
 
 /**
  * 快速排序：然后将所有比它小的数都放到它前面，所有比它大的数都放到它后面，这个过程称为一趟快速排序。

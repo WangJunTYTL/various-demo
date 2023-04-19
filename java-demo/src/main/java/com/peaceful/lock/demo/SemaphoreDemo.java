@@ -1,7 +1,7 @@
 package com.peaceful.lock.demo;
 
 
-import com.peaceful.common.util.Util;
+import com.peaceful.Util;
 
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;

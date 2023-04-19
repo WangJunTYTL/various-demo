@@ -1,6 +1,6 @@
 package com.peaceful.jdk.demo;
 
-import com.peaceful.common.util.Util;
+import com.peaceful.Util;
 
 /**
  * Java 位运算,以二进制的方式运算

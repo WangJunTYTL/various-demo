@@ -1,6 +1,6 @@
 package com.peaceful.lock.demo;
 
-import com.peaceful.common.util.Util;
+import com.peaceful.Util;
 
 /**
  * Created by wangjun on 16/2/26.
