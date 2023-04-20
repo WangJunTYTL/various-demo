@@ -1,7 +1,7 @@
 package com.peaceful.concurrent.demo;
 
 
-import com.peaceful.common.util.Util;
+import com.peaceful.Util;
 
 /**
  * 获取机器可利用的线程个数

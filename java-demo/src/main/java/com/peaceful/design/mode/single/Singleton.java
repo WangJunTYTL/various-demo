@@ -1,6 +1,6 @@
 package com.peaceful.design.mode.single;
 
-import com.peaceful.common.util.Util;
+import com.peaceful.Util;
 
 /**
  * Date 14/10/20.

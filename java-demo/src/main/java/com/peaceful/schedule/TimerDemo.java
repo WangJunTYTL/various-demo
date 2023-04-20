@@ -1,6 +1,6 @@
 package com.peaceful.schedule;
 
-import com.peaceful.common.util.Util;
+import com.peaceful.Util;
 
 import java.util.Timer;
 import java.util.TimerTask;

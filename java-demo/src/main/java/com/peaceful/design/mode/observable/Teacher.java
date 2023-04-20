@@ -1,6 +1,6 @@
 package com.peaceful.design.mode.observable;
 
-import com.peaceful.common.util.Util;
+import com.peaceful.Util;
 
 import java.util.Observable;
 

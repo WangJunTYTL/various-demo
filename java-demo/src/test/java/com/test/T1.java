@@ -1,6 +1,6 @@
 package com.test;
 
-import com.peaceful.common.util.Util;
+import com.peaceful.Util;
 import org.junit.Test;
 
 /**

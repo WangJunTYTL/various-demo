@@ -1,6 +1,7 @@
 package com.peaceful.lock.demo;
 
-import org.slf4j.helpers.Util;
+
+import com.peaceful.Util;
 
 /**
  * Created by wangjun on 16/8/24.

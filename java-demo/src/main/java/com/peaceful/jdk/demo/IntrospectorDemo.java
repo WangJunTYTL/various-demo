@@ -1,6 +1,6 @@
 package com.peaceful.jdk.demo;
 
-import com.peaceful.common.util.Util;
+import com.peaceful.Util;
 
 import java.beans.BeanInfo;
 import java.beans.IntrospectionException;

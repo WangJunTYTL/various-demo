@@ -1,6 +1,6 @@
 package com.peaceful.io.demo.nio;
 
-import com.peaceful.common.util.Util;
+import com.peaceful.Util;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

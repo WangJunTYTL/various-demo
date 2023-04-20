@@ -1,6 +1,6 @@
 package com.peaceful.thread.demo;
 
-import com.peaceful.common.util.Util;
+import com.peaceful.Util;
 
 /**
  * 在实际使用线程时,为了方便管理 监控线程会用到threadGroup的概念

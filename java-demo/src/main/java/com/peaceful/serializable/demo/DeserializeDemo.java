@@ -1,6 +1,6 @@
 package com.peaceful.serializable.demo;
 
-import com.peaceful.common.util.Util;
+import com.peaceful.Util;
 
 import java.io.IOException;
 

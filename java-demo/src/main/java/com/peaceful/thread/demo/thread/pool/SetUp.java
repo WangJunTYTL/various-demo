@@ -1,6 +1,7 @@
 package com.peaceful.thread.demo.thread.pool;
 
-import org.slf4j.helpers.Util;
+
+import com.peaceful.Util;
 
 /**
  * Created by wangjun on 16/2/22.

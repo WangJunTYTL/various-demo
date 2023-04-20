@@ -1,7 +1,7 @@
 package com.peaceful.collection.demo;
 
 import com.alibaba.fastjson.JSON;
-import com.peaceful.common.util.Util;
+import com.peaceful.Util;
 
 import java.util.LinkedList;
 import java.util.List;

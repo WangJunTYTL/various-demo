@@ -1,6 +1,7 @@
 package com.peaceful.design.mode.proxy;
 
-import com.peaceful.common.util.Util;
+
+import com.peaceful.Util;
 
 /**
  * Date 14/10/20.

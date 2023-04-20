@@ -1,6 +1,6 @@
 package com.peaceful.collection.demo;
 
-import com.peaceful.common.util.Util;
+import com.peaceful.Util;
 
 import java.util.Collections;
 import java.util.HashMap;
