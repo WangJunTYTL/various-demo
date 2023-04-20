@@ -1,0 +1,34 @@
+## 1SafeVerifyCenter.av
+
+##某场景下支持的验证模型: 1表示短信+身份证后6位、 2表示人脸
+let verifyModelEnum = seq.map("SMS_IDTail6", 1, "FACE", 2);
+let sceneSupportedVerifyModelMap = seq.map();
+seq.put(sceneSupportedVerifyModelMap, 101, tuple(verifyModelEnum.FACE, verifyModelEnum.SMS_IDTail6));
+seq.put(sceneSupportedVerifyModelMap, 201, tuple(verifyModelEnum.FACE, verifyModelEnum.SMS_IDTail6));
+seq.put(sceneSupportedVerifyModelMap, 301, tuple(verifyModelEnum.SMS_IDTail6));
+
+##入参检查
+if scene == nil || scene <= 0 || !seq.contains_key(sceneSupportedVerifyModelMap, long(scene)) {
+    return nil;
+}
+if verifyModelList == nil || count(verifyModelList) == 0 {
+    return nil;
+}
+
+##过滤掉不支持的验证模型
+let verifyModelListWithScene = seq.get(sceneSupportedVerifyModelMap, long(scene));
+let availableVerifyModelList = seq.list();
+for x in verifyModelList {
+    if include(verifyModelListWithScene, x) {
+        seq.add(availableVerifyModelList, x)
+    }
+}
+
+##验证模型规则：人脸可用时优先人脸，否则选可用的第一个
+if availableVerifyModelList == nil || count(availableVerifyModelList) == 0 {
+    return nil;
+} elsif count(availableVerifyModelList) >= 1 && include(availableVerifyModelList, verifyModelEnum.FACE) {
+    return verifyModelEnum.FACE;
+} else {
+    return availableVerifyModelList[0];
+}

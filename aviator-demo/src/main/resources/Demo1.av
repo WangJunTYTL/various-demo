@@ -1,0 +1,21 @@
+## 这是一行注释
+println("hello world");
+p("hello world");
+
+## 定义变量 let可以省略
+let a = 1;
+let b = 2;
+let c = a + b;
+p(c);
+
+## 字符串
+let str = "hello world";
+p(str);
+
+## 三目运算
+d = a > b ? a : b;
+p(d);
+
+println(type(str));
+println(type(d));
+

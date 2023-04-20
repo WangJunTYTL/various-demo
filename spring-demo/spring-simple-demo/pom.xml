@@ -8,7 +8,6 @@
     <artifactId>spring-simple-demo</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>

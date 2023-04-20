@@ -1,0 +1,14 @@
+## examples/hello.av
+
+
+##let verifyModelList =  tuple();
+let supportVerifyModelList = tuple(1,2);
+##let 102supportVerifyModelList = tuple(1,2,3);
+
+if scene == 101 {
+    for x in supportVerifyModelList {
+        p("决策结果->")
+    }
+}
+
+1

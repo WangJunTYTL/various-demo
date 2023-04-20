@@ -267,7 +267,8 @@ public class HessianProxy implements InvocationHandler, Serializable {
     throws IOException
   {
     HessianConnection conn = null;
-    
+
+    // 每次调用会创建http连接
     conn = _factory.getConnectionFactory().open(_url);
     boolean isValid = false;
 

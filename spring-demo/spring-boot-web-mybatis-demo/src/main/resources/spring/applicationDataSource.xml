@@ -2,8 +2,6 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
-    <!--<context:component-scan base-package="com.peaceful.demo.spring.dao"/>-->
-    <!--<context:component-scan base-package="com.peaceful.demo.spring.service"/>-->
 
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close">
@@ -32,6 +30,7 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="mapperLocations" value="classpath*:sqlmap/*.xml"/>
         <property name="configLocation" value="classpath:mybatis-config.xml"></property>
+        <property name="vfs" value="org.mybatis.spring.boot.autoconfigure.SpringBootVFS"></property>
     </bean>
 
 

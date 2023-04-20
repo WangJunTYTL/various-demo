@@ -938,8 +938,7 @@ public class FirstRequest implements org.apache.thrift.TBase<FirstRequest, First
             iprot.readStructEnd();
 
             // check for required fields of primitive type, which can't be checked in the validate method
-            struct.validate();
-        }
+            struct.validate();        }
 
         public void write(org.apache.thrift.protocol.TProtocol oprot, FirstRequest struct) throws org.apache.thrift.TException {
             struct.validate();

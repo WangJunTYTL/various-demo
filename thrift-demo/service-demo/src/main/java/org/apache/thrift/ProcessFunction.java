@@ -30,9 +30,9 @@ public abstract class ProcessFunction<I, T extends TBase> {
       return;
     }
     iprot.readMessageEnd();
-    // 执行方法
+    // 执行服务端方法，会调用通过idl生成的服务端代码
     TBase result = getResult(iface, args);
-    // 响应
+    // 响应.应答
     // 写入头部消息TMessage
     oprot.writeMessageBegin(new TMessage(getMethodName(), TMessageType.REPLY, seqid));
     // 写入结果
@@ -42,7 +42,7 @@ public abstract class ProcessFunction<I, T extends TBase> {
     oprot.getTransport().flush();
   }
 
-  // 客户端实现，会通过idl编译器自动生成
+  // 客户端实现，会通过idl编译器自动生成，服务端会更改方法名称找到对应的执行方法
   protected abstract TBase getResult(I iface, T args) throws TException;
 
   protected abstract T getEmptyArgsInstance();
